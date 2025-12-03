@@ -1,4 +1,4 @@
-# JSF'ten Modern Mimariye: Tarihsel Döngü ve Pratik Dönüşüm Rehberi
+# Tarih Tekerrürden İbarettir: JSF'ten Modern Mimariye Büyük Dönüş
 
 **Ana Tema:** "Tarih Tekerrürden İbarettir: Sunucudan Ayrılış ve Eve Dönüş"
 
@@ -13,6 +13,16 @@ Bu doküman bir teknoloji karşılaştırması **değildir**. Bu, web geliştirm
 1. **Mimari Sarkacın Hareketini Anlamak**: Her teknolojinin **neden** ortaya çıktığını, **hangi problemi** çözdüğünü ve **hangi yeni problemleri** yarattığını keşfetmek.
 
 2. **Gizli Abstraction'ları Görünür Kılmak**: Modern software stack'lerin katmanları arasına gizlenmiş component'leri, mekanizmaları ve tasarım kararlarını açığa çıkarmak. Birçok developer, kullandığı framework'ün "magic" diye gördüğü özelliklerin aslında 20 yıl önceki çözümlerin modern versiyonları olduğunu bilmez.
+
+### 👥 Kim Ne Öğrenecek? (Audience Takeaways)
+
+Bu sunumda herkes için bir "Aha!" anı var:
+
+*   **Backend (Java) Geliştiricileri:** "Next.js aslında benim bildiğim JSF/Servlet mantığıymış, sadece JSON yerine HTML dönüyor." diyecekler. Yıllardır biriktirdikleri *State Management* bilgisinin ne kadar değerli olduğunu görecekler.
+*   **Frontend (React) Geliştiricileri:** "Server Actions" veya "RSC"nin sihir olmadığını, arkada dönen RPC (Remote Procedure Call) mekanizmasını ve *Network Waterfall* sorununu nasıl çözdüğünü anlayacaklar.
+*   **Mobil Geliştiricileri:** Backend'in neden 2010'da onlara (REST API) yaklaştığını, şimdi ise neden tekrar Web'e (SSR) döndüğünü görecekler.
+*   **DevOps & Mimarlar:** Deployment karmaşıklığının nasıl **"Uygulama Sunucusu Konfigürasyonu"**ndan **"CI/CD Pipeline Karmaşıklığına"** evrildiğini fark edecekler.
+*   **Fullstack Geliştiricileri:** Büyük resmi görecek ve "Hangi teknolojiyi seçmeliyim?" sorusuna ezbere değil, mimari gerekçelerle cevap verebilecekler.
 
 ### Sizin Yolculuğunuz
 
@@ -90,7 +100,12 @@ Bu yolculukta tekrar tekrar göreceğiniz üç evrensel hakikat var. Bunları ba
 > [!NOTE]  
 > **"Yeni teknolojiler, eski problemleri yeni söz dizimiyle (syntax) çözer. Problemler sabittir."**
 
-![Sihir gibi görünen şey aslında mühendislik](images/magic_is_engineering.png)  
+![Sihir gibi görünen şey aslında mühendislik](images/magic_is_engineering.png)
+![Sihir gibi görünen şey aslında mühendislik detaylı](images/magic_is_engineering_v2.png)  
+
+> [!TIP] Alternatif Görsel Fikri: **"Buzdağı (Iceberg)"**  
+> Üstte: Basit bir buton (Görünen).  
+> Altta: Devasa dişliler, kablolar ve mekanizmalar (Görünmeyen Mühendislik).
 
 
 ### İlke 1: State Management Asla Kaybolmaz, Sadece Yer Değiştirir
@@ -135,7 +150,11 @@ Sunucunun kullanıcıyı "hatırlaması" için kullanılan yöntemler de evrim g
 
 Fizikteki "Enerjinin Korunumu Yasası" gibi, yazılımda da "**Karmaşıklığın Korunumu**" vardır.
 
-![Karmaşıklık orada bir yerde](images/complexity_conservation.png)  
+![Karmaşıklık orada bir yerde](images/complexity_conservation.png)
+![Karmaşıklık orada bir yerde detaylı](images/complexity_conservation_v2.png)  
+
+> [!TIP] Alternatif Görsel Fikri: **"Su Yatağı (Waterbed Theory)"**  
+> Bir taraftan bastırınca (Sunucuyu basitleştir), diğer taraf şişer (Client karmaşıklaşır). Karmaşıklık hacmi asla azalmaz.
 
 
 - **JSF**: Karmaşıklık sunucuda (Lifecycle, Session)
@@ -195,6 +214,9 @@ $result = mysql_query("SELECT * FROM users");
 2. **Hızlı Geliştirme**: Fikir → Kod → Canlı: 10 dakika
 3. **Düşük Öğrenme Eğrisi**: HTML biliyorsanız, PHP öğrenebilirsiniz
 4. **Deployment Basitliği**: FTP yeterli
+
+> [!NOTE] DevOps Perspektifi: "FTP ile At Çalışsın"
+> O dönemde CI/CD yoktu. Canlıdaki dosyayı Notepad ile açıp editlemek "normal" sayılırdı. Rollback stratejisi: "Eski dosyanın yedeğini `index_bak.php` yapmaktı." Basit ama tehlikeli.
 
 ### ❌ PHP'nin Sınırları
 
@@ -316,7 +338,11 @@ graph TD
     style F fill:#e1ffe1
 ```
 
-![JSF Lifecycle Faz Akışı](images/jsf_lifecycle_phases.png)  
+![JSF Lifecycle Faz Akışı](images/jsf_lifecycle_phases.png)
+![JSF Lifecycle Faz Akışı detaylı](images/jsf_lifecycle_phases_v2.png)  
+
+> [!TIP] Alternatif Görsel Fikri: **"Fabrika Montaj Hattı"**  
+> Ham madde (Request) girer → 1. İstasyon (Restore) → 2. İstasyon (Apply) ... → Ürün (Response) çıkar. Hatalı ürün (Validation Error) hattan erken atılır.
 
 
 #### Faz 1, 2, 3: Verinin Yolculuğu Başlıyor
@@ -376,7 +402,11 @@ public String login() {
 
 #### Gizli Kahraman: Component Tree (UIViewRoot)
 
-![Component Tree Yapısı](images/component_tree_uiviewroot.png)  
+![Component Tree Yapısı](images/component_tree_uiviewroot.png)
+![Component Tree Yapısı (v2)](images/component_tree_uiviewroot_v2.png)  
+
+> [!TIP] Alternatif Görsel Fikri: **"Ayna Yansıması"**  
+> Sol tarafta HTML DOM (Tarayıcı). Sağ tarafta aynadaki yansıması: Java Nesne Ağacı (Sunucu). Birebir eşleşmeyi gösterir.
 
 
 **HTML tarafı**:
@@ -433,7 +463,14 @@ React'te "Virtual DOM" diye bir şey duydunuz değil mi? Tarayıcı hafızasınd
 </script>
 ```
 
-![PrimeFaces jQuery Üretimi](images/primefaces_jquery_generation.png)  
+![PrimeFaces jQuery Üretimi](images/primefaces_jquery_generation.png)
+![PrimeFaces jQuery Üretimi (v2)](images/primefaces_jquery_generation_v2.png)  
+
+> [!TIP] ikinci Görsel Fikri: **"Matruşka Bebek"**  
+> En dışta: JSF Component.  
+> İçinde: PrimeFaces Renderer.  
+> En içte: jQuery Plugin.  
+> Kullanıcı sadece en dışı görür.
 
 
 **Konuşmacı Notu**:  
@@ -475,6 +512,9 @@ graph TD
 | Yüksek Güvenlik (Business Logic sunucuda) | Network trafiği (Her tıklamada sunucuya git-gel) |
 | Tip Güvenliği (Java end-to-end) | Öğrenme eğrisi (Lifecycle, Scopes, Converters) |
 | Component Reusability | Session Replication (Cluster ortamda zorluk) |
+
+> [!NOTE] DevOps Perspektifi: "Uygulama Sunucusu Cehennemi"
+> JSF döneminde DevOps'un kabusu **Stateful Scaling** idi. Sunucu RAM'inde session tutulduğu için, bir sunucu çökünce kullanıcı logout olurdu. Çözüm? **Sticky Session** veya karmaşık **Session Replication** ayarları (Multicast, JGroups). Deployment, 50MB'lık bir `.war` dosyasını WildFly'a atmaktan ibaretti ama o sunucuyu ayakta tutmak sanattı.
 
 > [!NOTE]  
 > **Kapanış**: JSF'in içini açtık. Gördük ki bu bir karmaşa değil, HTTP'nin eksiklerini kapatmak için tasarlanmış **çok katı kuralları olan bir devlet dairesi** gibi. İşler yavaş ama güvenli yürür, kurallar bellidir.
@@ -798,7 +838,12 @@ public class ProductBean implements Serializable {
 11. `UserForm.tsx`
 12. `UserPage.tsx`
 
-![12 Dosya vs 3 Dosya](images/file_explosion.png)  
+![12 Dosya vs 3 Dosya](images/file_explosion.png)
+![12 Dosya vs 3 Dosya detaylı](images/file_explosion_v2.png)  
+
+> [!TIP] Alternatif Görsel Fikri: **"Hazır Yemek vs Malzemeler"**  
+> JSF (3 Dosya): Paketlenmiş, ısıt-ye hazır yemek (Hızlı ama içeriği değiştiremezsin).  
+> React (12 Dosya): Un, yumurta, şeker, süt... (Tam kontrol ama birleştirmek senin işin).
 
 
 ### Accidental Complexity (Arızi Karmaşıklık)
@@ -815,44 +860,9 @@ public class ProductBean implements Serializable {
 
 ### Kod Karşılaştırması: User Kaydetme
 
-**JSF + PrimeFaces (2010)**:
-```xml
-<h:form>
-    <h:inputText value="#{userBean.username}" />
-    <h:inputText value="#{userBean.email}" />
-    <h:commandButton value="Kaydet" action="#{userBean.save}" />
-</h:form>
-```
+**Görsel 1: Sol tarafta JSF'in 3 satırlık `save` metodu, sağ tarafta React'in aynı işi yapan dağıtık yapısı (Slice, Component, API).**
 
-```java
-public void save() {
-    User user = new User(this.username, this.email);
-    userRepository.save(user);
-}
-```
-**2 dosya. Tip güvenliği var. State senkronizasyonu yok.**
-
-**React SPA - Sadece Frontend Kısmı** (Backend 7 dosya ekstra):
-```typescript
-// types/User.ts
-export interface User {
-    username: string;
-    email: string;
-}
-
-// store/userSlice.ts (Redux - 40+ satır boilerplate)
-export const createUser = createAsyncThunk('users/create', ...);
-
-// components/UserForm.tsx
-const [username, setUsername] = useState('');
-const [email, setEmail] = useState('');
-const dispatch = useDispatch();
-
-const handleSubmit = async (e) => {
-    e.preventDefault();
-    await dispatch(createUser({ username, email }));
-};
-```
+![Simple vs Complex Code](images/comparison_save_user.png)
 
 ### Diğer SPA Sorunları
 
@@ -861,46 +871,19 @@ const handleSubmit = async (e) => {
 3. **SEO**: JavaScript yüklenmeden sayfa boş
 4. **Offline Development**:  Backend API çalışmadan frontend test edilemez
 
+> [!NOTE] DevOps Perspektifi: "Build Pipeline Patlaması"
+> SPA ile birlikte DevOps'un işi **Runtime**'dan **Build Time**'a kaydı.
+> *   **Eskiden:** `javac` -> `.war` (Bitti)
+> *   **Şimdi:** `npm install` (500MB node_modules) -> `webpack build` -> `docker build` -> `k8s deploy`.
+> *   **Sorunlar:** CORS ayarları, Nginx history-mode config, Environment variable yönetimi (.env vs Runtime env). Karmaşıklık koddan altyapıya kaydı.
+
 ### "Killer Feature" Karşılaştırması: DataTable
 
 **Senaryo**: 10,000 kayıtlık kullanıcı listesi. Pagination, sorting, filtering.
 
-**JSF + PrimeFaces** (~10 satır):
-```xml
-<p:dataTable var="usr" value="#{userView.lazyModel}"
-             paginator="true" rows="10"
-             lazy="true" sortMode="single">
-    
-    <p:column headerText="Ad" sortBy="#{usr.name}" filterBy="#{usr.name}">
-        <h:outputText value="#{usr.name}" />
-    </p:column>
-</p:dataTable>
-```
-*JSF arka planda `LazyDataModel` ile sadece 10 kaydı çeker (`LIMIT 10 OFFSET 0`).*
+![Declarative vs Imperative Code](images/comparison_datatable.png)
 
-**React + TanStack Table** (~150+ satır):
-```typescript
-// 1. State management
-const [pageIndex, setPageIndex] = useState(0);
-const [pageSize, setPageSize] = useState(10);
-const [sorting, setSorting] = useState([]);
-const [data, setData] = useState([]);
-const [loading, setLoading] = useState(false);
-
-// 2. API çağrısı
-useEffect(() => {
-    setLoading(true);
-    fetch(`/api/users?page=${pageIndex}&size=${pageSize}&sort=${sorting}`)
-        .then(res => res.json())
-        .then(data => setData(data))
-        .finally(() => setLoading(false));
-}, [pageIndex, pageSize, sorting]);
-
-// 3. Table setup (30+ satır TanStack konfigürasyonu)
-const table = useReactTable({ data, columns, ... });
-
-// 4. HTML rendering (50+ satır <table>, <thead>, <tbody>)
-```
+**Görsel 2: PrimeFaces'in declarative (ne istediğini söyle) yapısı vs React Table'ın imperative (nasıl yapılacağını söyle) kurulumu.**
 
 > [!NOTE]  
 > **Veri odaklı işlerde JSF'in ROI (Yatırım Getirisi) rakipsizdir.** Bir kurumsal admin panelinde 50 tablo varsa, JSF ile 1 haftada yaparsınız. React ile her tablo için tekerleği yeniden icat edersiniz.
@@ -920,40 +903,20 @@ const table = useReactTable({ data, columns, ... });
 
 **Senaryo**: "Kaydet" butonuna basınca sadece mesaj güncellensin (sayfa yenilenmesin).
 
-**JSF (Declarative - NE istediğimizi söyleriz)**:
-```xml
-<h:commandButton value="Kaydet" action="#{bean.save}">
-    <f:ajax execute="@form" render="mesajPaneli" />
-</h:commandButton>
+![What vs How Code](images/comparison_ajax.png)
 
-<h:panelGroup id="mesajPaneli">
-    <h:outputText value="#{bean.sonuc}" />
-</h:panelGroup>
-```
-
-**React (Imperative - NASIL yapılacağını kodlarız)**:
-```typescript
-const [message, setMessage] = useState("");
-const [loading, setLoading] = useState(false);
-
-const handleSave = async () => {
-    setLoading(true); // 1. Loading aç
-    try {
-        const res = await api.post("/save", formData);
-        setMessage(res.data.result); // 2. State güncelle
-    } catch (err) {
-        console.error(err); // 3. Hata yönet
-    } finally {
-        setLoading(false); // 4. Loading kapat
-    }
-};
-```
+**Görsel 3: JSF'te AJAX sadece bir etikettir (`<f:ajax>`). React'te ise state yönetimi, hata yakalama ve loading durumlarını elle kodlamanız gerekir.Declarative vs Imperative**
 
 **Fark**: JSF'te **NE** istediğimizi söylüyoruz (`render="mesajPaneli"`). React'te **NASIL** yapılacağını adım adım kodluyoruz. Karmaşık mantıkta declarative yaklaşım hatayı azaltır.
 
 ### Görünmeyen Kod: "Glue Code" Analizi
 
-![Buzdağı Analizi](images/glue_code_iceberg.png)  
+![Buzdağı Analizi](images/glue_code_iceberg.png)
+![Buzdağı Analizi (v2)](images/glue_code_iceberg_v2.png)  
+
+> [!TIP] Alternatif Görsel Fikri: **"Koli Bandı Mimarisi (Duct Tape Architecture)"**  
+> Modern Stack: Harika görünen parçalar, ama hepsi birbirine koli bandıyla (Glue Code) tutturulmuş.  
+> JSF: Tek parça döküm blok (Monolitik sağlamlık).
 
 
 **JSF Projesi:**
@@ -996,6 +959,10 @@ SPA'nın sorunları giderek belirginleşti:
 - Server Actions sunucuda çalışır
 
 ![Sarkaç Eve Döndü](images/pendulum_returns.png)  
+
+> [!TIP] Alternatif Görsel Fikri: **"Spiral Merdiven"**  
+> Kuş bakışı bakınca aynı yere dönmüş gibiyiz (Sunucu).  
+> Yandan bakınca çok daha yüksekteyiz (Modern Tooling, TypeScript, Edge).
 
 
 ### JSF ile Next.js Karşılaştırması
@@ -1060,34 +1027,9 @@ Gelin, 20 yıl arayla yazılmış iki kod parçasına bakalım. Benzerlik şok e
 
 ### Senaryo: Bir Kullanıcıyı Kaydetmek
 
-#### 2006: JSF (Managed Bean)
-```java
-// UserBean.java
-public void saveUser() {
-    // 1. Sunucu hafızasındaki veriyi al
-    User user = new User(this.username);
-    // 2. Veritabanına yaz
-    userDao.save(user);
-    // 3. Mesaj ver
-    FacesContext.getCurrentInstance().addMessage(null, "Kaydedildi!");
-}
-```
-*Tetikleyici:* `<h:commandButton action="#{userBean.saveUser}" />`
+![History Repeats Code](images/comparison_server_action.png)
 
-#### 2026: Next.js (Server Action)
-```typescript
-// actions.ts
-'use server' // Bu bir "Managed Bean" metodudur!
-export async function saveUser(formData: FormData) {
-    // 1. Form verisini al
-    const username = formData.get('username');
-    // 2. Veritabanına yaz
-    await db.user.create({ data: { username } });
-    // 3. Mesaj dön
-    return { message: "Kaydedildi!" };
-}
-```
-*Tetikleyici:* `<form action={saveUser} />`
+**Görsel 4: Tarih tekerrür ediyor. 2006'daki Managed Bean metodu ile 2024'teki Server Action arasındaki şaşırtıcı benzerlik.**
 
 **Yorum:** REST API yok. JSON parse etmek yok. `fetch()` yok. Sadece fonksiyon çağrısı var. **Tarih tekerrür etti.**
 
