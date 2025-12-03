@@ -90,8 +90,8 @@ Bu yolculukta tekrar tekrar göreceğiniz üç evrensel hakikat var. Bunları ba
 > [!NOTE]  
 > **"Yeni teknolojiler, eski problemleri yeni söz dizimiyle (syntax) çözer. Problemler sabittir."**
 
-![Sihir gibi görünen şey aslında mühendislik](_images/magic_is_engineering.png)  
-*📷 Görsel üretilecek: Sihirbaz şapkasından tavşan çıkarmak (illüzyon) vs. Arka planda mekanik düzenek (gerçek)]*
+![Sihir gibi görünen şey aslında mühendislik](images/magic_is_engineering.png)  
+
 
 ### İlke 1: State Management Asla Kaybolmaz, Sadece Yer Değiştirir
 
@@ -135,8 +135,8 @@ Sunucunun kullanıcıyı "hatırlaması" için kullanılan yöntemler de evrim g
 
 Fizikteki "Enerjinin Korunumu Yasası" gibi, yazılımda da "**Karmaşıklığın Korunumu**" vardır.
 
-![Karmaşıklık orada bir yerde](_images/complexity_conservation.png)  
-*📷 Görsel üretilecek: Karmaşıklık topu el değiştiriyor (Server → Network → Client → Build Tools)*
+![Karmaşıklık orada bir yerde](images/complexity_conservation.png)  
+
 
 - **JSF**: Karmaşıklık sunucuda (Lifecycle, Session)
 - **SPA**: Karmaşıklık istemcide (State sync, Tooling)  
@@ -316,8 +316,8 @@ graph TD
     style F fill:#e1ffe1
 ```
 
-![JSF Lifecycle Faz Akışı](_images/jsf_lifecycle_phases.png)  
-*📷 Görsel üretilecek: 6 fazlı lifecycle waterfall diagram, her fazda ne olduğu gösterilecek*
+![JSF Lifecycle Faz Akışı](images/jsf_lifecycle_phases.png)  
+
 
 #### Faz 1, 2, 3: Verinin Yolculuğu Başlıyor
 
@@ -376,8 +376,8 @@ public String login() {
 
 #### Gizli Kahraman: Component Tree (UIViewRoot)
 
-![Component Tree Yapısı](_images/component_tree_uiviewroot.png)  
-*📷 Görsel üretilecek: Sol tarafta HTML DOM ağacı, sağ tarafta Java Nesne Ağacı (UIViewRoot) eşleşmesi*
+![Component Tree Yapısı](images/component_tree_uiviewroot.png)  
+
 
 **HTML tarafı**:
 ```html
@@ -433,8 +433,8 @@ React'te "Virtual DOM" diye bir şey duydunuz değil mi? Tarayıcı hafızasınd
 </script>
 ```
 
-![PrimeFaces jQuery Üretimi](_images/primefaces_jquery_generation.png)  
-*📷 Görsel üretilecek: PrimeFaces component (üstte) → jQuery factory (ortada) → Tarayıcıda jQuery plugin (altta)*
+![PrimeFaces jQuery Üretimi](images/primefaces_jquery_generation.png)  
+
 
 **Konuşmacı Notu**:  
 "Siz Java yazarsınız, o sizin yerinize jQuery scripti yazar ve sayfaya basar. Bugün jQuery kullanmak 'ayıp' sayılıyor ama PrimeFaces kullandığınızda aslında **en ağır şekilde jQuery kullanıyorsunuz**. Sadece elinizi kirletmiyorsunuz."
@@ -798,8 +798,8 @@ public class ProductBean implements Serializable {
 11. `UserForm.tsx`
 12. `UserPage.tsx`
 
-![12 Dosya vs 3 Dosya](_images/file_explosion.png)  
-*📷 Görsel üretilecek: JSF (3 dosya, basit) vs SPA (12 dosya, karmaşık) karşılaştırması*
+![12 Dosya vs 3 Dosya](images/file_explosion.png)  
+
 
 ### Accidental Complexity (Arızi Karmaşıklık)
 
@@ -953,8 +953,8 @@ const handleSave = async () => {
 
 ### Görünmeyen Kod: "Glue Code" Analizi
 
-![Buzdağı Analizi](_images/glue_code_iceberg.png)  
-*📷 Görsel üretilecek: Buzdağı - JSF (küçük görünür kod) vs Modern Stack (büyük Glue Code)*
+![Buzdağı Analizi](images/glue_code_iceberg.png)  
+
 
 **JSF Projesi:**
 - **Görünen Kod**: %80 İş Mantığı (Java), %20 UI (XHTML)
@@ -995,8 +995,8 @@ SPA'nın sorunları giderek belirginleşti:
 - Component  tree sunucuda render  edilir
 - Server Actions sunucuda çalışır
 
-![Sarkaç Eve Döndü](_images/pendulum_returns.png)  
-*📷 Görsel üretilecek: Sarkaç hareketi - Server (2006) → Client (2015) → Server (2024)*
+![Sarkaç Eve Döndü](images/pendulum_returns.png)  
+
 
 ### JSF ile Next.js Karşılaştırması
 

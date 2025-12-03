@@ -24,3 +24,6 @@ Complexity (Karmaşıklık) yok edilemez, sadece transfer edilir.
 
 ![complexity is there](/images/comlexity_is_there.png)
 
+
+baska gorsel koymamiz gerektigini dusundugun kisimlar var mi? kod karsilatirmalari veya kodlarin kendi kaymalar olmamasi icin gorsel olarak yapilabilir mi? Gorsel eklendi ise gorsel uretilecegine dair olan kisimlar kaldirabilirsin. 
+
