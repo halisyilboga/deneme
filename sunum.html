@@ -1,0 +1,2834 @@
+<!DOCTYPE html>
+<html lang="tr"><head>
+<script src="sunum_files/libs/clipboard/clipboard.min.js"></script>
+<script src="sunum_files/libs/quarto-html/tabby.min.js"></script>
+<script src="sunum_files/libs/quarto-html/popper.min.js"></script>
+<script src="sunum_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="sunum_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="sunum_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="sunum_files/libs/quarto-html/quarto-syntax-highlighting-dark-1b3db88def35042d172274863c1cdcf0.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.8.26">
+
+  <title>Dijital Ouroboros: Geleceğin Arkeolojisi</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="sunum_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="sunum_files/libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+      }
+    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    div.sourceCode
+      { color: #f8f8f2; background-color: #2e3440; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #f8f8f2; } /* Normal */
+    code span.al { color: #ff5555; font-weight: bold; } /* Alert */
+    code span.an { color: #75715e; } /* Annotation */
+    code span.at { color: #f92672; } /* Attribute */
+    code span.bn { color: #ae81ff; } /* BaseN */
+    code span.bu { color: #66d9ef; } /* BuiltIn */
+    code span.cf { color: #f92672; } /* ControlFlow */
+    code span.ch { color: #e6db74; } /* Char */
+    code span.cn { color: #ae81ff; } /* Constant */
+    code span.co { color: #75715e; } /* Comment */
+    code span.cv { color: #75715e; } /* CommentVar */
+    code span.do { color: #75715e; } /* Documentation */
+    code span.dt { color: #66d9ef; font-style: italic; } /* DataType */
+    code span.dv { color: #ae81ff; } /* DecVal */
+    code span.er { color: #ff5555; text-decoration: underline; } /* Error */
+    code span.ex { color: #a6e22e; font-weight: bold; } /* Extension */
+    code span.fl { color: #ae81ff; } /* Float */
+    code span.fu { color: #a6e22e; } /* Function */
+    code span.im { color: #f92672; } /* Import */
+    code span.in { color: #f1fa8c; } /* Information */
+    code span.kw { color: #f92672; } /* Keyword */
+    code span.op { color: #f8f8f2; } /* Operator */
+    code span.ot { color: #a6e22e; } /* Other */
+    code span.pp { color: #f92672; } /* Preprocessor */
+    code span.re { color: #75715e; } /* RegionMarker */
+    code span.sc { color: #ae81ff; } /* SpecialChar */
+    code span.ss { color: #e6db74; } /* SpecialString */
+    code span.st { color: #e6db74; } /* String */
+    code span.va { color: #f8f8f2; } /* Variable */
+    code span.vs { color: #e6db74; } /* VerbatimString */
+    code span.wa { color: #ff5555; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="sunum_files/libs/revealjs/dist/theme/quarto-b6be8fc008f82dd1a37d31644861b9b0.css">
+  <link href="sunum_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="sunum_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="sunum_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="sunum_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="sunum_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+  <link href="sunum_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+</head>
+<body class="quarto-dark">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" data-background-image="images/ouroboros_generated.png" data-background-opacity="0.2" data-background-size="contain" class="quarto-title-block center">
+  <h1 class="title">Dijital Ouroboros: Geleceğin Arkeolojisi</h1>
+  <p class="subtitle">Tarih Tekerrürden İbarettir: Sunucudan Ayrılış ve Eve Dönüş</p>
+
+<div class="quarto-title-authors">
+</div>
+
+</section>
+<section class="slide level2 center">
+
+
+<img data-src="images/ouroboros_generated.png" class="r-stretch quarto-figure-center"><p class="caption">Dijital Ouroboros</p><p><strong>Alt Başlık:</strong> Tarih Tekerrürden İbarettir: Sunucudan Ayrılış ve Eve Dönüş</p>
+<p><strong>🐍 Ouroboros Nedir?</strong> &gt; Antik mitolojide <strong>“kendi kuyruğunu yiyen yılan”</strong> sembolüdür. Sonsuz döngüyü, kendini yeniden yaratmayı, başlangıcın son, sonun ise başlangıç olduğunu simgeler. &gt; <strong>Yazılım dünyası bir Ouroboros’tur.</strong> Sektör sürekli “eskiyi” (kuyruğunu) yer, onu sindirir ve “yeni” bir deriyle (modern teknolojiyle) tekrar ortaya çıkarır. Bugün inceleyeceğimiz Next.js ve Modern Mimari, aslında 20 yıl önce terk ettiğimiz JSF mimarisinin “sindirilmiş ve yeniden doğmuş” halidir.</p>
+</section>
+<section id="bakış-açımız" class="slide level2 center scrollable">
+<h2>🎯 Bakış Açımız</h2>
+<p>Bu sunum, teknolojileri birbiriyle yarıştırmaktan ziyade, <strong>birlikte geçtiğimiz 25 yıllık yolu</strong> anlamlandırma çabasıdır.</p>
+<ol type="1">
+<li><strong>Değişimi Okumak:</strong> Teknolojilerin neden değiştiğini ve o günün şartlarında hangi ihtiyaca cevap verdiğini hatırlamak.</li>
+<li><strong>Sihrin Arkasına Bakmak:</strong> Bugün “standart” kabul ettiğimiz kolaylıkların arkasında yatan mühendislik mirasını fark etmek.</li>
+</ol>
+</section>
+<section class="slide level2 center">
+
+<div class="r-stack" style="transform: scale(1.5); margin-top: -50px;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/magic_is_engineering.png" style="width:60.0%"></p>
+<figcaption>İlk bakışta gördüğümüz sadelik (Abstraction)</figcaption>
+</figure>
+</div>
+<div class="fragment">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/magic_is_engineering_v2.png" class="fade-in" style="width:90.0%"></p>
+<figcaption>Aslında arka planda çalışan mühendislik</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="yol-haritamız" class="slide level2 center">
+<h2>🗺️ Yol Haritamız</h2>
+<p>Bu oturumu tek taraflı bir anlatımdan ziyade, <strong>birlikte çıkacağımız teknik bir keşif gezisi</strong> olarak kurgulamaya çalıştım.</p>
+<p>Rotamızda üç ana durak var:</p>
+<ul>
+<li><p><strong>🔍 Görünmeyene Odaklanmak:</strong> Kodun satır aralarında kalan; ViewState, Closure veya Lifecycle gibi <strong>arka plan mekanizmalarının</strong> aslında işi nasıl sırtlandığını incelemek.</p></li>
+<li><p><strong>🎭 Bağlantıları Kurmak:</strong> Bugün “devrimsel” dediğimiz Server Actions veya RSC gibi kavramların, aslında geçmişteki (RPC, SSR) hangi köklü çözümlerin <strong>modern birer yorumu</strong> olduğunu fark etmek.</p></li>
+<li><p><strong>⚖️ Teraziyi Anlamak:</strong> Yazılımda “en iyi” çözümün olmadığını hatırlayıp; RAM vs Bant Genişliği gibi <strong>mimari takasların (trade-offs)</strong> neden yapıldığını konuşmak.</p></li>
+</ul>
+</section>
+<section id="kararlarımıza-yön-veren-etkenler" class="slide level2 center">
+<h2>⚖️ Kararlarımıza Yön Veren Etkenler</h2>
+<h3 id="yazılım-mimarisinde-tercihlerimizi-belirlerken-özellikle-şu-iki-teknik-gerçekliğin-bizi-sıkça-yönlendirdiğini-görüyoruz">Yazılım mimarisinde tercihlerimizi belirlerken, özellikle şu iki teknik gerçekliğin bizi sıkça yönlendirdiğini görüyoruz:</h3>
+<div style="margin-top: 10px;font-size: 1.5em;">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Not</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>1. Veriye Olan Mesafe (Data Proximity)</strong> İş mantığını kullanıcının cihazında (Client) kurduğumuzda, veriye ulaşmak için ağ üzerinden defalarca gidip gelmemiz gerekebiliyor (<strong>Network Waterfall</strong>). Mantığı verinin olduğu yere, yani sunucuya taşıdığımızda ise veritabanına erişim neredeyse anlık hale geliyor.</p>
+</div>
+</div>
+</div>
+</div>
+<div style="margin-top: 10px;font-size: 1.5em;">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Not</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>2. Güvenlik İhtiyacı</strong> Hassas iş kurallarını ve API anahtarlarını tarayıcıya göndermek, her zaman yönetilmesi gereken bir risk oluşturmuştur. Bu hassas yükü sunucunun güvenli alanında tutmak, mimari kararlarımızda belirleyici bir rol oynuyor.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="mimarinin-doğası-üzerine" class="slide level2 center">
+<h2>🕰️ Mimarinin Doğası Üzerine</h2>
+<p>Bu 25 yıllık sürece baktığımızda, aslında bir “teknoloji yarışı”ndan ziyade, tarihsel bir döngüye şahitlik ediyoruz.</p>
+<div style="margin-top: 10px;font-size: 1.5em;">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Not</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>“Mükemmel mimari yoktur, sadece o anki bağlama uygun çözümler vardır.”</strong></p>
+</div>
+</div>
+</div>
+</div>
+<p>Bugün bize “eski” veya “yetersiz” görünen teknolojiler, aslında kendi dönemlerinin en büyük problemlerini çözen devrimsel adımlardı. Tıpkı bugün “modern” dediğimiz çözümlerin, yarın bir başka ihtiyaca cevap vermek için yerini yenilerine bırakacağı gibi. Bizim amacımız bu sarkaç hareketini ve nedenlerini doğru okuyabilmek.</p>
+</section>
+<section class="slide level2 center">
+
+<h4 id="önemli-not-eskiye-dönmüyoruz-spiral-çıkıyoruz">Önemli Not: “Eskiye Dönmüyoruz, Spiral Çıkıyoruz”</h4>
+<p>Bu sunum boyunca JSF (2006) ile Next.js (2024) arasındaki benzerlikleri göreceğiz. Bu varsayım <strong>doğru</strong> olsa da, <strong>“Eskiye dönüyoruz”</strong> demek yanlış olur.</p>
+<p><strong>Sarkaç geri dönüyor ama bir üst seviyeden dönüyor:</strong> - JSF: Sunucu odaklı, ama modern tooling yok, type safety zayıf - Next.js: Sunucu odaklı <strong>+</strong> TypeScript end-to-end <strong>+</strong> Modern DX <strong>+</strong> Edge computing (Burada jsf yada herhangi bir server dili ile yazilmis bir programlama dili neden type safety zayıf bunu soru olarak sorabiliriz.)</p>
+<p>Bir sarkaçtan çok, <strong>yukarı doğru bir spiral</strong> hareketi bu. Her döngüde bir önceki çözümün öğrendiklerini alıp, yeni teknolojiyle harmanlıyoruz.</p>
+</section>
+<section class="slide level2 center">
+
+<h3 id="yol-haritamız-1">Yol Haritamız</h3>
+
+<img data-src="images/diagram_01_timeline_evolution.png" class="r-stretch quarto-figure-center"><p class="caption">Web Mimarisi Evrimi Timeline</p></section>
+<section id="üç-temel-ilke-değişmeyen-hakikatler" class="slide level2 center">
+<h2>🎯 Üç Temel İlke: Değişmeyen Hakikatler</h2>
+<p>Bu yolculukta tekrar tekrar göreceğiniz üç evrensel hakikat var. Bunları baştan bilmek, teknolojiler arasındaki geçişleri anlamanızı kolaylaştıracak.</p>
+</section>
+<section class="slide level2 center">
+
+<h3 id="ilke-1-state-management-asla-kaybolmaz-sadece-yer-değiştirir">İlke 1: State Management Asla Kaybolmaz, Sadece Yer Değiştirir</h3>
+<p><strong>Durum yönetimi</strong> web’in temel problemidir. HTTP protokolü “stateless” (durumsuz) olduğu için, kullanıcının durumunu bir yerde tutmalıyız:</p>
+<ul>
+<li><strong>JSF (2006)</strong>: Sunucu RAM’inde (Session + ViewState)</li>
+<li><strong>React SPA (2015)</strong>: Tarayıcı hafızasında (Redux, Context)</li>
+<li><strong>Next.js (2024)</strong>: Hibrit (Sunucu + Client, closure ile)</li>
+</ul>
+<p><strong>Değişen:</strong> Nerede saklandığı<br>
+<strong>Değişmeyen:</strong> Saklanması gerektiği</p>
+</section>
+<section class="slide level2 center">
+
+
+<img data-src="images/diagram_02_state_management.png" class="r-stretch quarto-figure-center"><p class="caption">State Management Evrimi</p></section>
+<section class="slide level2 center">
+
+<h4 id="state-saklama-yöntemlerinin-evrimi">State Saklama Yöntemlerinin Evrimi</h4>
+<p>Sunucunun kullanıcıyı “hatırlaması” için kullanılan yöntemler de evrim geçirdi:</p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 18%">
+<col style="width: 25%">
+<col style="width: 18%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Dönem</th>
+<th>Yöntem</th>
+<th>Teknoloji</th>
+<th>Artısı</th>
+<th>Eksisi</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>1990’lar</strong></td>
+<td>Dosya (Disk)</td>
+<td>Text Files</td>
+<td>Basit</td>
+<td>Çok yavaş, kilitlenme</td>
+</tr>
+<tr class="even">
+<td><strong>2000’ler</strong></td>
+<td>RAM (In-Memory)</td>
+<td>Servlet Session</td>
+<td>Çok hızlı</td>
+<td>Sunucu kapanırsa uçar</td>
+</tr>
+<tr class="odd">
+<td><strong>2005-2015</strong></td>
+<td><strong>Veritabanı</strong></td>
+<td>SQL Session Table</td>
+<td><strong>Kalıcı, Web Farm</strong></td>
+<td><strong>DB’yi yorar</strong></td>
+</tr>
+<tr class="even">
+<td><strong>2010+</strong></td>
+<td>Cache Sunucusu</td>
+<td><strong>Redis, Memcached</strong></td>
+<td>Hızlı + Paylaşılır</td>
+<td>Ekstra altyapı</td>
+</tr>
+<tr class="odd">
+<td><strong>2015+</strong></td>
+<td>Client-Side</td>
+<td>JWT Token</td>
+<td>Sunucu masrafsız</td>
+<td>Logout yönetimi zor</td>
+</tr>
+</tbody>
+</table>
+<div style="font-size: 1.5em;">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Not</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>Bankacılık ve yüksek güvenlikli sistemler</strong> bugün bile Redis ile birlikte veritabanını kullanır. “Kesinlikle kaybolmaması gereken” session verileri için performans kaybı göze alınır.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2 center">
+
+<h3 id="ilke-2-abstraction-arttıkça-kontrol-azalır">İlke 2: Abstraction Arttıkça Kontrol Azalır</h3>
+<p><strong>Abstraction</strong> (soyutlama), kodun üstünü örtmektir. Ne kadar çok örtersen, o kadar az görürsün ve kontrol edersen.</p>
+<ul>
+<li><strong>Düşük Abstraction</strong> (PHP): Her şeyi görürsün, her şeyi manuel yaparsın</li>
+<li><strong>Orta Abstraction</strong> (JSF): Lifecycle gizli, ama yönetilebilir</li>
+<li><strong>Yüksek Abstraction</strong> (Modern frameworks): “Magic” gibi çalışır, ama hata ayıklama zor</li>
+</ul>
+<p><strong>Tradeoff:</strong> Rahatlık vs Kontrol</p>
+</section>
+<section class="slide level2 center">
+
+<h3 id="ilke-3-complexity-yok-edilemez-sadece-transfer-edilir">İlke 3: Complexity Yok Edilemez, Sadece Transfer Edilir</h3>
+<p>Fizikteki “Enerjinin Korunumu Yasası” gibi, yazılımda da “<strong>Karmaşıklığın Korunumu</strong>” vardır. - <strong>JSF</strong>: Karmaşıklık sunucuda (Lifecycle, Session) - <strong>SPA</strong>: Karmaşıklık istemcide (State sync, Tooling)<br>
+- <strong>Modern Stack</strong>: Karmaşıklık dağıtıldı (Sunucu + İstemci + Build Time)</p>
+
+<img data-src="images/complexity_conservation_v2.png" class="r-stretch quarto-figure-center"><p class="caption">Karmaşıklık orada bir yerde</p></section>
+<section class="slide level2 center">
+
+<p><strong>Sonuç:</strong> Karmaşıklığı yok edemezsiniz, sadece en az zarar vereceği yere taşırsınız.</p>
+
+<img data-src="images/complexity_conservation.png" class="r-stretch quarto-figure-center"><p class="caption">Karmaşıklık orada bir yerde</p></section>
+<section class="slide level2 center">
+
+<h4 id="karmaşıklık-yönetimi-üzerine-bir-bakış">📈 Karmaşıklık Yönetimi Üzerine Bir Bakış</h4>
+<p>Sektörün tekrar sunucu odaklı (SSR) yaklaşımlara yönelmesindeki temel motivasyonlardan biri, <strong>“Arızi Karmaşıklık” (Accidental Complexity)</strong> dediğimiz; işin kendisinden değil, kullandığımız araçlardan kaynaklanan yükü hafifletme arayışıdır.</p>
+<p>Bu durumu iki farklı mimari yaklaşım üzerinden şöyle okuyabiliriz:</p>
+<ul>
+<li><p><strong>Ayrık Yapı (Geleneksel SPA + REST):</strong> Veri akışını sağlamak için; Backend Controller, DTO, API Client, Client State (Store) ve UI Component gibi <strong>birçok katmanın senkronize edilmesi</strong> gerekebiliyor.</p></li>
+<li><p><strong>Bütünleşik Yapı (Modern SSR):</strong> Veritabanı erişimi ve Arayüz (UI) mantığı aynı çatı altında (colocation) bulunuyor. Bu yakınlık, aradaki <strong>“tutkal kod”</strong> (glue code) ihtiyacını azaltarak, geliştiricinin doğrudan iş mantığına odaklanmasına olanak tanıyor.</p></li>
+</ul>
+</section>
+<section class="slide level2 center">
+
+
+<img data-src="images/diagram_07_complexity_curve.png" style="width:85.0%" class="r-stretch quarto-figure-center"><p class="caption">Karmaşıklık Eğrisi</p></section>
+<section id="başlangıç-php-çağı-2000-2005" class="slide level2 center">
+<h2>1️⃣ Başlangıç: PHP Çağı (2000-2005)</h2>
+<h3 id="bağlam-2000lerin-webi">Bağlam: 2000’lerin Web’i</h3>
+<ul>
+<li>İnternet hızları: 56k modem, ADSL yeni yeni</li>
+<li>E-ticaret patlaması (Amazon, eBay)</li>
+<li>Web uygulamaları çoğunlukla basit CRUD</li>
+<li>Güvenlik henüz birincil öncelik değil</li>
+</ul>
+</section>
+<section class="slide level2 center">
+
+<h3 id="phpnin-tek-dosya-felsefesi">PHP’nin “Tek Dosya” Felsefesi</h3>
+<p>PHP, web geliştirmeyi demokratikleştirdi. Herhangi biri bir <code>.php</code> dosyası oluşturup FTP ile sunucuya atabilirdi.</p>
+<p><strong>Örnek: Kullanıcı Listesi (users.php)</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource php number-lines code-with-copy"><code class="sourceCode php"><span id="cb1-1"><a href=""></a><span class="kw">&lt;?php</span></span>
+<span id="cb1-2"><a href=""></a><span class="co">// Veritabanı bağlantısı</span></span>
+<span id="cb1-3"><a href=""></a><span class="va">$conn</span> <span class="op">=</span> <span class="er">mysql_connect</span>(<span class="st">"localhost"</span><span class="ot">,</span> <span class="st">"root"</span><span class="ot">,</span> <span class="st">"password"</span>)<span class="ot">;</span></span>
+<span id="cb1-4"><a href=""></a><span class="er">mysql_select_db</span>(<span class="st">"myapp"</span><span class="ot">,</span> <span class="va">$conn</span>)<span class="ot">;</span></span>
+<span id="cb1-5"><a href=""></a></span>
+<span id="cb1-6"><a href=""></a><span class="co">// Veri çekme</span></span>
+<span id="cb1-7"><a href=""></a><span class="va">$result</span> <span class="op">=</span> <span class="er">mysql_query</span>(<span class="st">"SELECT * FROM users"</span>)<span class="ot">;</span></span>
+<span id="cb1-8"><a href=""></a><span class="kw">?&gt;</span></span>
+<span id="cb1-9"><a href=""></a></span>
+<span id="cb1-10"><a href=""></a><span class="op">&lt;!</span><span class="cn">DOCTYPE</span> html<span class="op">&gt;</span></span>
+<span id="cb1-11"><a href=""></a><span class="op">&lt;</span>html<span class="op">&gt;</span></span>
+<span id="cb1-12"><a href=""></a><span class="op">&lt;</span>head<span class="op">&gt;&lt;</span>title<span class="op">&gt;</span>Kullanıcılar<span class="op">&lt;/</span>title<span class="op">&gt;&lt;/</span>head<span class="op">&gt;</span></span>
+<span id="cb1-13"><a href=""></a><span class="op">&lt;</span>body<span class="op">&gt;</span></span>
+<span id="cb1-14"><a href=""></a>    <span class="op">&lt;</span>h1<span class="op">&gt;</span>Kullanıcı Listesi<span class="op">&lt;/</span>h1<span class="op">&gt;</span></span>
+<span id="cb1-15"><a href=""></a>    <span class="op">&lt;</span>table border<span class="op">=</span><span class="st">"1"</span><span class="op">&gt;</span></span>
+<span id="cb1-16"><a href=""></a>        <span class="op">&lt;</span>tr<span class="op">&gt;&lt;</span>th<span class="op">&gt;</span><span class="cn">ID</span><span class="op">&lt;/</span>th<span class="op">&gt;&lt;</span>th<span class="op">&gt;</span>İsim<span class="op">&lt;/</span>th<span class="op">&gt;&lt;</span>th<span class="op">&gt;</span>Email<span class="op">&lt;/</span>th<span class="op">&gt;&lt;/</span>tr<span class="op">&gt;</span></span>
+<span id="cb1-17"><a href=""></a>        <span class="op">&lt;</span><span class="ot">?</span>php <span class="cf">while</span>(<span class="va">$row</span> <span class="op">=</span> <span class="er">mysql_fetch_assoc</span>(<span class="va">$result</span>))<span class="ot">:</span> <span class="kw">?&gt;</span></span>
+<span id="cb1-18"><a href=""></a>        <span class="op">&lt;</span>tr<span class="op">&gt;</span></span>
+<span id="cb1-19"><a href=""></a>            <span class="op">&lt;</span>td<span class="op">&gt;&lt;</span><span class="ot">?</span><span class="op">=</span> <span class="va">$row</span>[<span class="st">'id'</span>] <span class="kw">?&gt;</span><span class="op">&lt;/</span>td<span class="op">&gt;</span></span>
+<span id="cb1-20"><a href=""></a>            <span class="op">&lt;</span>td<span class="op">&gt;&lt;</span><span class="ot">?</span><span class="op">=</span> <span class="va">$row</span>[<span class="st">'name'</span>] <span class="kw">?&gt;</span><span class="op">&lt;/</span>td<span class="op">&gt;</span></span>
+<span id="cb1-21"><a href=""></a>            <span class="op">&lt;</span>td<span class="op">&gt;&lt;</span><span class="ot">?</span><span class="op">=</span> <span class="va">$row</span>[<span class="st">'email'</span>] <span class="kw">?&gt;</span><span class="op">&lt;/</span>td<span class="op">&gt;</span></span>
+<span id="cb1-22"><a href=""></a>        <span class="op">&lt;/</span>tr<span class="op">&gt;</span></span>
+<span id="cb1-23"><a href=""></a>        <span class="op">&lt;</span><span class="ot">?</span>php <span class="cf">endwhile</span><span class="ot">;</span> <span class="kw">?&gt;</span></span>
+<span id="cb1-24"><a href=""></a>    <span class="op">&lt;/</span>table<span class="op">&gt;</span></span>
+<span id="cb1-25"><a href=""></a><span class="op">&lt;/</span>body<span class="op">&gt;</span></span>
+<span id="cb1-26"><a href=""></a><span class="op">&lt;/</span>html<span class="op">&gt;</span></span></code></pre></div><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section class="slide level2 center scrollable">
+
+<h3 id="phpnin-güçlü-yönleri">✅ PHP’nin Güçlü Yönleri</h3>
+<ol type="1">
+<li><strong>Locality of Behavior</strong>: Her şey bir yerde, anlaşılır</li>
+<li><strong>Hızlı Geliştirme</strong>: Fikir → Kod → Canlı: 10 dakika</li>
+<li><strong>Düşük Öğrenme Eğrisi</strong>: HTML biliyorsanız, PHP öğrenebilirsiniz</li>
+<li><strong>Deployment Basitliği</strong>: FTP yeterli</li>
+</ol>
+<div style="font-size: 1.5em;">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Not</strong></p>
+</div>
+<div class="callout-content">
+<p>O dönemde CI/CD yoktu. Canlıdaki dosyayı Notepad ile açıp editlemek “normal” sayılırdı. Rollback stratejisi: “Eski dosyanın yedeğini <code>index_bak.php</code> yapmaktı.” Basit ama tehlikeli.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2 center scrollable">
+
+<h3 id="phpnin-sınırları">❌ PHP’nin Sınırları</h3>
+<ol type="1">
+<li><strong>Güvenlik Açıkları</strong>: SQL Injection (yukarıdaki kod savunmasız!)</li>
+<li><strong>Bakım Sorunu</strong>: 5000 satırlık <code>index.php</code> dosyaları</li>
+<li><strong>Separation of Concerns Yok</strong>: SQL, Business Logic, HTML hepsi bir arada</li>
+<li><strong>Ölçekleme Zorluğu</strong>: Session yönetimi, code reusability</li>
+<li><strong>Tip Güvenliği Yok</strong>: Runtime hatalar yaygın</li>
+</ol>
+</section>
+<section class="slide level2 center">
+
+<h3 id="neden-yeterli-değildi">Neden Yeterli Değildi?</h3>
+<p>2005’e gelindiğinde, web uygulamaları karmaşıklaştı: - Banka sistemleri - Kurumsal ERP’ler - Çok kullanıcılı sistemler - Güvenlik kritik hale geldi</p>
+</section>
+<section id="kaosun-içinden-düzen-arayışı" class="slide level2 center scrollable">
+<h2>🛠️ Kaosun İçinden Düzen Arayışı</h2>
+<p>Spaghetti kodun getirdiği bakım maliyeti ve güvenlik riskleri arttıkça, sektör olarak bir “Yapılacaklar Listesi” (Wishlist) oluşturmaya başlandı. Artık sadece kod yazmak değil, <strong>mühendislik</strong> yapmak isteniyordu.</p>
+<p>İhtiyaçlar netleşmişti:</p>
+<ol type="1">
+<li><p><strong>Ayrışma (Separation of Concerns):</strong> SQL sorguları ile HTML etiketleri artık iç içe olmamalıydı. Veri (Model), Arayüz (View) ve İş Mantığı (Controller) birbirinden ayrılmalıydı.</p></li>
+<li><p><strong>Tekrar Kullanılabilirlik (Reusability):</strong> Her form için tekrar tekrar <code>&lt;input&gt;</code> ve <code>&lt;label&gt;</code> yazmak yerine, <code>MyInput</code> gibi hazır bir yapı (Component) kullansak ve her yerde standart olsa?</p></li>
+<li><p><strong>Tip Güvenliği (Type Safety):</strong> <code>$degisken</code> her şey olabilir. Ama biz <code>User user</code> dediğimizde, onun gerçekten bir “User” olduğundan emin olmak istiyorduk. Hataları müşteriden önce derleyici (Compiler) yakalamalıydı.</p></li>
+<li><p><strong>State Yönetimi:</strong> <code>$_SESSION['sepet']</code> gibi manuel yönetim yerine, sunucu kullanıcının durumunu bizim için otomatik takip etmeliydi.</p></li>
+</ol>
+<div class="fragment">
+<div style="font-size: 1.3em; text-align: center; margin-top: 1em;">
+<div class="callout callout-important no-icon callout-style-simple">
+<div class="callout-body">
+<div class="callout-content">
+<p>“PHP’nin basitliğini koruyabilir, ama Java’nın güvenliğini ve yapısını ekleyebilir miyiz?” Cevap: <strong>JSP ve JSF</strong></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2 center">
+
+<h3 id="jsfin-kalbi-request-processing-lifecycle">🔍 JSF’in Kalbi: Request Processing Lifecycle</h3>
+<div style="font-size: 1.5em;">
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Önemli</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>“Çoğu geliştirici JSF’i ‘Sihirli bir kutu’ olarak görür. Bir inputText koyarsınız, veritabanına gider. Arada ne olur? Bilinmez. Bugün o kutuyu açıyoruz. Göreceğimiz şey sihir değil; HTTP protokolünü Java nesnelerine, Java nesnelerini HTML’e çeviren devasa bir ’Çeviri Motoru’dur.”</strong></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2 center">
+
+<h4 id="fazlı-döngü-her-istekte-aynı-hikaye">6 Fazlı Döngü: Her İstekte Aynı Hikaye</h4>
+<p>Bir JSF sayfasına tıkladığınızda, sunucu tarafında bu <strong>6 adım asla şaşmaz</strong>. Modern frontend framework’lerinde <code>useEffect</code> karmaşası yaşarken, JSF 20 yıldır bu katı disiplini uygular.</p>
+
+<img data-src="images/jsf_lifecycle_phases.png" class="r-stretch quarto-figure-center"><p class="caption">JSF Lifecycle Faz Akışı</p></section>
+<section class="slide level2 center scrollable">
+
+<h4 id="detaylı-görsel">Detaylı Görsel</h4>
+
+<img data-src="images/jsf_lifecycle_phases_v2.png" class="r-stretch quarto-figure-center"><p class="caption">JSF Lifecycle Faz Akışı detaylı</p><p>Ham madde (Request) girer</p>
+<ol type="1">
+<li>İstasyon (Restore)</li>
+<li>İstasyon (Apply) …</li>
+<li>Ürün (Response) çıkar. Hatalı ürün (Validation Error) hattan erken atılır.</li>
+</ol>
+<h4 id="faz-1-2-3-verinin-yolculuğu-başlıyor">Faz 1, 2, 3: Verinin Yolculuğu Başlıyor</h4>
+</section>
+<section class="slide level2 center scrollable">
+
+<p><strong>Senaryo</strong>: Kullanıcı “Kullanıcı Adı”nı girdi ve “Giriş” butonuna bastı.</p>
+<h5 id="restore-view-hafızayı-çağır">1. Restore View (Hafızayı Çağır)</h5>
+<p>JSF bakar: <em>“Bu kullanıcı daha önce bu sayfada mıydı?”</em></p>
+<ul>
+<li><strong>Evet ise</strong>: Sunucu RAM’inden o sayfanın nesne ağacını (<code>UIViewRoot</code>) bulur</li>
+<li><strong>Hayır ise</strong>: Yeni bir <code>UIViewRoot</code> oluşturur</li>
+</ul>
+<p><strong>Analiz</strong>: React’in “Re-hydration” (istemci tarafında canlandırma) işleminin sunucu tarafındaki atasıdır.</p>
+<h5 id="apply-request-values-ham-veriyi-al">2. Apply Request Values (Ham Veriyi Al)</h5>
+<p>HTTP POST isteğindeki <code>input_1=Ahmet</code> parametresini okur:</p>
+<ol type="1">
+<li>İlgili <code>UIInput</code> bileşenini bulur</li>
+<li>Değerini set eder</li>
+<li><strong>Henüz Java Bean’e dokunmaz!</strong> Sadece UI bileşeni güncellenir</li>
+</ol>
+<h5 id="process-validations-kapı-bekçisi">3. Process Validations (Kapı Bekçisi)</h5>
+<p>Bileşende <code>required="true"</code> veya <code>&lt;f:validateLength&gt;</code> var mı? - Kontrol edilir - <strong>Hata varsa</strong>: Yaşam döngüsü burada kesilir ve <strong>Faz 6’ya atlanır</strong> (Hata mesajı göstermek için) - <strong>Başarılı ise</strong>: Devam et</p>
+</section>
+<section class="slide level2 center">
+
+<h4 id="faz-4-ve-5-asıl-iş-şimdi-yapılıyor">Faz 4 ve 5: Asıl İş Şimdi Yapılıyor</h4>
+<h5 id="update-model-values-java-ile-buluşma">4. Update Model Values (Java ile Buluşma)</h5>
+<p>Validasyon geçtiyse, UI bileşenindeki “Ahmet” değeri, arka plandaki <strong>Java Sınıfına</strong> (<code>UserBean.username</code>) yazılır.</p>
+<p><strong>Kritik Nokta</strong>: Tip dönüşümü (Converter) burada yapılır: - String “10” → Integer 10</p>
+<h5 id="invoke-application-aksiyon-zamanı">5. Invoke Application (Aksiyon Zamanı)</h5>
+<p>Butona bağlı olan metodu (<code>#{userBean.login}</code>) çalıştırır: - Veritabanı sorgusu - İş mantığı - Navigasyon (Sayfa yönlendirmesi)</p>
+<p><strong>Kod Örneği (Backing Bean)</strong>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource java number-lines code-with-copy"><code class="sourceCode java"><span id="cb2-1"><a href=""></a><span class="co">// Sadece 5. Fazda (Invoke Application) buraya geliriz!</span></span>
+<span id="cb2-2"><a href=""></a><span class="kw">public</span> <span class="bu">String</span> <span class="fu">login</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb2-3"><a href=""></a>    User user <span class="op">=</span> userService<span class="op">.</span><span class="fu">find</span><span class="op">(</span><span class="kw">this</span><span class="op">.</span><span class="fu">username</span><span class="op">);</span> <span class="co">// Business Logic</span></span>
+<span id="cb2-4"><a href=""></a>    <span class="cf">if</span> <span class="op">(</span>user <span class="op">!=</span> <span class="kw">null</span><span class="op">)</span> <span class="cf">return</span> <span class="st">"dashboard?faces-redirect=true"</span><span class="op">;</span></span>
+<span id="cb2-5"><a href=""></a>    <span class="cf">return</span> <span class="kw">null</span><span class="op">;</span> <span class="co">// Aynı sayfada kal</span></span>
+<span id="cb2-6"><a href=""></a><span class="op">}</span></span></code></pre></div><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></div>
+<div style="font-size: 1.5em;">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Not</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>Dikkat ettiniz mi?</strong> Sizin yazdığınız Java kodu (<code>login</code> metodu) ancak <strong>5. aşamada</strong> çalıştı. Önceki 4 aşamayı JSF sizin için halletti. Modern frameworklerde (React, Angular) ise validasyonu, veri binding’i, tip dönüşümünü <strong>manuel olarak</strong> kodlamak zorundasınız.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2 center">
+
+<h3 id="component-tree-ui-nerede-yaşıyor">Component Tree: UI Nerede Yaşıyor?</h3>
+<p>UI bileşenlerimiz (Button, Input, Panel) <strong>nerede yaşıyor?</strong> Bu sorunun cevabı, mimarinin kalbidir.</p>
+
+<img data-src="images/component_tree_uiviewroot_v2.png" class="r-stretch quarto-figure-center"><p class="caption">Component Tree Yapısı</p><div style="font-size: 1.5em;">
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>İpucu</strong></p>
+</div>
+<div class="callout-content">
+<p>Sol tarafta HTML DOM (Tarayıcı). Sağ tarafta aynadaki yansıması: Java Nesne Ağacı (Sunucu). Birebir eşleşmeyi gösterir.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2 center">
+
+<h4 id="a.-jsf-ağaç-sunucuda-yaşar">A. JSF: “Ağaç Sunucuda Yaşar”</h4>
+<p>JSF’de <code>UIViewRoot</code> sunucu hafızasındadır (Heap). Tarayıcı sadece bir “yansıtıcıdır” (Renderer). * <strong>Avantaj:</strong> Güvenli, veritabanına yakın. * <strong>Dezavantaj:</strong> Sunucu belleği şişer (Session Replication derdi).</p>
+
+<img data-src="images/component_tree_uiviewroot.png" class="r-stretch quarto-figure-center"><p class="caption">Component Tree Yapısı</p></section>
+<section class="slide level2 center">
+
+<h4 id="b.-react-spa-ağaç-tarayıcıya-taşındı">B. React SPA: “Ağaç Tarayıcıya Taşındı”</h4>
+<p>2010’larda ağacı söküp kullanıcının tarayıcısına (Virtual DOM) taşıdık.</p>
+<p><strong>Avantaj:</strong> Sunucu rahatladı (Stateless), etkileşim hızlandı.</p>
+<p>“Virtual DOM” yani tarayıcı hafızasında DOM’un bir kopyasını tutmak. İşte JSF bunu <strong>2004 yılında</strong> “Component Tree” adıyla yapıyordu, tek farkı bunu tarayıcıda değil <strong>sunucuda</strong> yapmasıydı. <strong>Fikir aynı, yer farklı.</strong></p>
+<p><strong>Bedel:</strong> Kullanıcının telefonu ısındı, “Loading…” spinner’ları hayatımıza girdi.</p>
+<div style="font-size: 1.5em;">
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>İpucu</strong></p>
+</div>
+<div class="callout-content">
+<p>Eskiden sunucu, müşteriye <strong>monte edilmiş hazır bir mobilya</strong> (HTML) gönderirdi. Müşteri sadece paketi açar ve kullanırdı.</p>
+<p>SPA ile biz bu modeli değiştirdik. Artık müşteriye <strong>tahtaları (JSON), vidaları ve bir de kurulum kılavuzunu (JavaScript)</strong> kargoluyoruz.</p>
+<p><strong>Dedik ki:</strong> <em>“Bizim depoda (Sunucu) montaj yapmak maliyetli. Sen parçaları al, kendi evinde (Tarayıcı), kendi elektriğini ve zamanını (CPU ve Pil) harcayarak monte et.”</em></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2 center">
+
+<h4 id="c.-modern-mimari-rsc-ağaç-eve-dönüyor">C. Modern Mimari (RSC): “Ağaç Eve Dönüyor”</h4>
+<p>React Server Components (RSC) ile ağacın gövdesini tekrar sunucuya taşıdık, sadece yapraklarını (Interactivity) tarayıcıda bıraktık. Modern React (Next.js Server Actions), sadece veriyi değil, fonksiyonun o anki ortamını (Closure) dondurur.(javascript closure)</p>
+<div style="font-size: 1.5em;">
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>İpucu</strong></p>
+</div>
+<div class="callout-content">
+<p>Bunu bir <strong>Restoran Menüsü</strong> üzerinden anlayabiliriz: &gt; - <strong>Client Side (Eski)</strong>: Garson sana <strong>Yemek Tarifi Kitabı</strong> getirir. Sen masada oturup o tarife bakarak yemeği kendin yaparsın. <em>(Tarayıcı yorulur, JS indirir)</em> - <strong>Server Side (RSC)</strong>: Aşçı mutfakta tarife bakar, yemeği yapar. Garson sana <strong>Hazır Yemek</strong> getirir. <em>(Tarayıcı sadece yer/gösterir)</em></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2 center">
+
+
+<img data-src="images/diagram_04_rsc_class.png" class="r-stretch quarto-figure-center"><p class="caption">RSC Class Diyagramı</p></section>
+<section class="slide level2 center">
+
+<h4 id="gizli-kahraman-component-tree-uiviewroot">Gizli Kahraman: Component Tree (UIViewRoot)</h4>
+
+<img data-src="images/11_component_tree_evolution.png" class="r-stretch quarto-figure-center"><p class="caption">Component Tree Evrimi</p><div style="font-size: 1.5em;">
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>İpucu</strong></p>
+</div>
+<div class="callout-content">
+<p>Zamanla ağacın gövdesini sunucuya taşıdık, sadece yapraklarını tarayıcıda bıraktık.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2 center">
+
+<p><strong>HTML tarafı</strong>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb3-1"><a href=""></a><span class="dt">&lt;</span><span class="kw">input</span><span class="ot"> type</span><span class="op">=</span><span class="st">"text"</span><span class="ot"> id</span><span class="op">=</span><span class="st">"name"</span><span class="dt">&gt;</span></span>
+<span id="cb3-2"><a href=""></a><span class="dt">&lt;</span><span class="kw">button</span><span class="ot"> id</span><span class="op">=</span><span class="st">"submit"</span><span class="dt">&gt;</span>Gönder<span class="dt">&lt;/</span><span class="kw">button</span><span class="dt">&gt;</span></span></code></pre></div><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Java tarafı (Sunucu RAM’i)</strong>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource java number-lines code-with-copy"><code class="sourceCode java"><span id="cb4-1"><a href=""></a>UIViewRoot root <span class="op">=</span> <span class="kw">new</span> <span class="fu">UIViewRoot</span><span class="op">();</span></span>
+<span id="cb4-2"><a href=""></a>UIInput nameInput <span class="op">=</span> <span class="kw">new</span> <span class="fu">UIInput</span><span class="op">();</span></span>
+<span id="cb4-3"><a href=""></a>nameInput<span class="op">.</span><span class="fu">setId</span><span class="op">(</span><span class="st">"name"</span><span class="op">);</span></span>
+<span id="cb4-4"><a href=""></a>root<span class="op">.</span><span class="fu">getChildren</span><span class="op">().</span><span class="fu">add</span><span class="op">(</span>nameInput<span class="op">);</span></span>
+<span id="cb4-5"><a href=""></a></span>
+<span id="cb4-6"><a href=""></a>UICommand submitButton <span class="op">=</span> <span class="kw">new</span> <span class="fu">UICommand</span><span class="op">();</span></span>
+<span id="cb4-7"><a href=""></a><span class="co">// ...</span></span></code></pre></div><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Analiz: Stateful vs Stateless</strong></p>
+<ul>
+<li>JSF, sayfadaki <strong>her bir etiketin Java nesnesi karşılığını</strong> sunucu belleğinde (Session) tutar</li>
+<li><strong>ViewState</strong>: Bu ağacın durumunu koruyan şifreli bir string’dir</li>
+<li><strong>Maliyet</strong>: 1 Kullanıcı = 10KB RAM ise, 100.000 Kullanıcı = <strong>1GB RAM</strong> (Sadece arayüz durumu için!)</li>
+</ul>
+</section>
+<section class="slide level2 center">
+
+<h4 id="primefaces-ve-jquery-gerçeği-the-wrapper">PrimeFaces ve jQuery Gerçeği (The Wrapper)</h4>
+<div style="font-size: 1.5em;">
+<div class="callout callout-warning callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Uyarı</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>Geliştirici sırrı açığa çıkıyor!</strong> PrimeFaces bir büyü değildir. PrimeFaces, sunucu tarafında Java ile konfigüre edilmiş devasa bir <strong>jQuery fabrikası</strong>dır.</p>
+</div>
+</div>
+</div>
+</div>
+<p><strong>Kod İncelemesi</strong>:</p>
+<p><strong>Siz yazarsınız (JSF/PrimeFaces)</strong>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource xml number-lines code-with-copy"><code class="sourceCode xml"><span id="cb5-1"><a href=""></a>&lt;<span class="kw">p:calendar</span><span class="ot"> value=</span><span class="st">"#{bean.date}"</span> /&gt;</span></code></pre></div><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Tarayıcıda oluşan (Generated HTML &amp; Script)</strong>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb6-1"><a href=""></a><span class="dt">&lt;</span><span class="kw">input</span><span class="ot"> id</span><span class="op">=</span><span class="st">"frm:date"</span><span class="ot"> name</span><span class="op">=</span><span class="st">"frm:date"</span><span class="ot"> type</span><span class="op">=</span><span class="st">"text"</span><span class="ot"> </span><span class="dt">/&gt;</span></span>
+<span id="cb6-2"><a href=""></a><span class="dt">&lt;</span><span class="kw">script</span><span class="dt">&gt;</span></span>
+<span id="cb6-3"><a href=""></a>    <span class="co">// JSF/PrimeFaces tarafından otomatik üretilen script</span></span>
+<span id="cb6-4"><a href=""></a>    <span class="fu">$</span>(<span class="kw">function</span>(){</span>
+<span id="cb6-5"><a href=""></a>        PrimeFaces<span class="op">.</span><span class="fu">cw</span>(<span class="st">"Calendar"</span><span class="op">,</span> <span class="st">"widget_frm_date"</span><span class="op">,</span> {</span>
+<span id="cb6-6"><a href=""></a>            <span class="dt">id</span><span class="op">:</span> <span class="st">"frm:date"</span><span class="op">,</span></span>
+<span id="cb6-7"><a href=""></a>            <span class="dt">dateFormat</span><span class="op">:</span> <span class="st">"dd.mm.yy"</span><span class="op">,</span></span>
+<span id="cb6-8"><a href=""></a>            <span class="dt">showButtonPanel</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
+<span id="cb6-9"><a href=""></a>            <span class="co">// ... 50+ satır jQuery konfigürasyonu</span></span>
+<span id="cb6-10"><a href=""></a>        })<span class="op">;</span></span>
+<span id="cb6-11"><a href=""></a>    })<span class="op">;</span></span>
+<span id="cb6-12"><a href=""></a><span class="dt">&lt;/</span><span class="kw">script</span><span class="dt">&gt;</span></span></code></pre></div><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section class="slide level2 center">
+
+
+<img data-src="images/primefaces_jquery_generation.png" style="width:100.0%" class="r-stretch quarto-figure-center"><p class="caption">PrimeFaces jQuery Üretimi</p></section>
+<section class="slide level2 center">
+
+
+<img data-src="images/primefaces_jquery_generation_v2.png" style="width:200.0%" class="r-stretch quarto-figure-center"><p class="caption">PrimeFaces jQuery Üretimi (v2)</p><div style="font-size: 1em;">
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>İpucu</strong></p>
+</div>
+<div class="callout-content">
+<p>En dışta: JSF Component.<br>
+İçinde: PrimeFaces Renderer.<br>
+En içte: jQuery Plugin.<br>
+Kullanıcı sadece en dışı görür.</p>
+</div>
+</div>
+</div>
+</div>
+<div style="font-size: 1em;">
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>İpucu</strong></p>
+</div>
+<div class="callout-content">
+<p>“Siz Java yazarsınız, o sizin yerinize jQuery scripti yazar ve sayfaya basar. Bugün jQuery kullanmak ‘ayıp’ sayılıyor ama PrimeFaces kullandığınızda aslında <strong>en ağır şekilde jQuery kullanıyorsunuz</strong>. Sadece elinizi kirletmiyorsunuz.”</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2 center">
+
+<h4 id="renderer-mekanizması-görünümden-bağımsızlık">Renderer Mekanizması (Görünümden Bağımsızlık)</h4>
+<p>JSF’nin en az anlaşılan gücü: <strong>“Write Once, Render Anywhere”</strong></p>
+<p><strong>Bileşen (Logic)</strong> ile <strong>Görüntü (Renderer)</strong> ayrıdır: - Teorik olarak, JSF kodunuzu hiç değiştirmeden, sadece “Renderer” değiştirerek çıktıyı: - HTML’den → Android XML’ine - PDF’e - JSON API’ye</p>
+<p>çevirebilirsiniz.</p>
+<p><strong>Bu mimari esneklik</strong>, modern kütüphanelerin çoğunda (Tight Coupling yüzünden) yoktur.</p>
+</section>
+<section class="slide level2 center">
+
+
+<img data-src="images/diagram_06_renderer.png" class="r-stretch quarto-figure-center"><p class="caption">Renderer Mekanizması</p></section>
+<section class="slide level2 center">
+
+<h4 id="jsfin-bize-verdiği-vs-bizden-aldığı">JSF’in Bize Verdiği vs Bizden Aldığı</h4>
+<table class="caption-top">
+<colgroup>
+<col style="width: 55%">
+<col style="width: 44%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>JSF’in Bize Verdiği (Abstraction)</th>
+<th>Bizden Aldığı Bedel (Cost)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>HTML/JS yazmadan UI geliştirme</td>
+<td>Sunucu CPU ve RAM kullanımı (Component Tree)</td>
+</tr>
+<tr class="even">
+<td>Otomatik Validasyon ve State Yönetimi</td>
+<td>Esneklik kaybı (Lifecycle dışına çıkmak zordur)</td>
+</tr>
+<tr class="odd">
+<td>Yüksek Güvenlik (Business Logic sunucuda)</td>
+<td>Network trafiği (Her tıklamada sunucuya git-gel)</td>
+</tr>
+<tr class="even">
+<td>Tip Güvenliği (Java end-to-end)</td>
+<td>Öğrenme eğrisi (Lifecycle, Scopes, Converters)</td>
+</tr>
+<tr class="odd">
+<td>Component Reusability</td>
+<td>Session Replication (Cluster ortamda zorluk)</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Not</strong></p>
+</div>
+<div class="callout-content">
+<p>JSF döneminde DevOps’un kabusu <strong>Stateful Scaling</strong> idi. Sunucu RAM’inde session tutulduğu için, bir sunucu çökünce kullanıcı logout olurdu. Çözüm? <strong>Sticky Session</strong> veya karmaşık <strong>Session Replication</strong> ayarları (Multicast, JGroups). Deployment, 50MB’lık bir <code>.war</code> dosyasını WildFly’a atmaktan ibaretti ama o sunucuyu ayakta tutmak sanattı.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Not</strong></p>
+</div>
+<div class="callout-content">
+<p>JSF’in içini açtık. Gördük ki bu bir karmaşa değil, HTTP’nin eksiklerini kapatmak için tasarlanmış <strong>çok katı kuralları olan bir devlet dairesi</strong> gibi. İşler yavaş ama güvenli yürür, kurallar bellidir.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="primefaces-devrimi-2008-2015-jsfin-altın-çağı" class="slide level2 center">
+<h2>3️⃣ PrimeFaces Devrimi (2008-2015): JSF’in Altın Çağı</h2>
+<h3 id="problem-jsf-çıplak-ve-sade">Problem: JSF Çıplak ve Sade</h3>
+<p>Temel JSF component’leri fonksiyoneldi ama <strong>estetikten uzaktı</strong>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource xml number-lines code-with-copy"><code class="sourceCode xml"><span id="cb7-1"><a href=""></a><span class="co">&lt;!-- Temel JSF DataTable - sade ve özelliksiz --&gt;</span></span>
+<span id="cb7-2"><a href=""></a>&lt;<span class="kw">h:dataTable</span><span class="ot"> value=</span><span class="st">"#{userBean.users}"</span><span class="ot"> var=</span><span class="st">"user"</span>&gt;</span>
+<span id="cb7-3"><a href=""></a>    &lt;<span class="kw">h:column</span>&gt;</span>
+<span id="cb7-4"><a href=""></a>        &lt;<span class="kw">f:facet</span><span class="ot"> name=</span><span class="st">"header"</span>&gt;İsim&lt;/<span class="kw">f:facet</span>&gt;</span>
+<span id="cb7-5"><a href=""></a>        #{user.name}</span>
+<span id="cb7-6"><a href=""></a>    &lt;/<span class="kw">h:column</span>&gt;</span>
+<span id="cb7-7"><a href=""></a>    &lt;<span class="kw">h:column</span>&gt;</span>
+<span id="cb7-8"><a href=""></a>        &lt;<span class="kw">f:facet</span><span class="ot"> name=</span><span class="st">"header"</span>&gt;Email&lt;/<span class="kw">f:facet</span>&gt;</span>
+<span id="cb7-9"><a href=""></a>        #{user.email}</span>
+<span id="cb7-10"><a href=""></a>    &lt;/<span class="kw">h:column</span>&gt;</span>
+<span id="cb7-11"><a href=""></a>&lt;/<span class="kw">h:dataTable</span>&gt;</span></code></pre></div><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Sorunlar:</strong> - Pagination yok (kendin yaz) - Sorting yok - Filtering yok - AJAX yok - Görsel olarak 1990’lar stili</p>
+</section>
+<section class="slide level2 center">
+
+<h3 id="primefacesin-getirdiği-devrim">PrimeFaces’in Getirdiği Devrim</h3>
+<p>JSF’i <strong>modern, zengin ve kullanılabilir</strong> hale getirdi.</p>
+
+<img data-src="images/primefacestheme.png" style="width:100.0%" class="r-stretch quarto-figure-center"><p class="caption">PrimeFaces theme</p></section>
+<section class="slide level2 center">
+
+<h4 id="aynı-tablo-primefaces-ile">Aynı Tablo, PrimeFaces ile:</h4>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode numberSource xml number-lines code-with-copy"><code class="sourceCode xml"><span id="cb8-1"><a href=""></a>&lt;<span class="kw">p:dataTable</span><span class="ot"> value=</span><span class="st">"#{userBean.users}"</span><span class="ot"> var=</span><span class="st">"user"</span> </span>
+<span id="cb8-2"><a href=""></a><span class="ot">             paginator=</span><span class="st">"true"</span><span class="ot"> rows=</span><span class="st">"10"</span></span>
+<span id="cb8-3"><a href=""></a><span class="ot">             selectionMode=</span><span class="st">"single"</span><span class="ot"> selection=</span><span class="st">"#{userBean.selectedUser}"</span></span>
+<span id="cb8-4"><a href=""></a><span class="ot">             filterDelay=</span><span class="st">"1000"</span></span>
+<span id="cb8-5"><a href=""></a><span class="ot">             styleClass=</span><span class="st">"myTable"</span>&gt;</span>
+<span id="cb8-6"><a href=""></a>    </span>
+<span id="cb8-7"><a href=""></a>    <span class="co">&lt;!-- AJAX row selection --&gt;</span></span>
+<span id="cb8-8"><a href=""></a>    &lt;<span class="kw">p:ajax</span><span class="ot"> event=</span><span class="st">"rowSelect"</span> </span>
+<span id="cb8-9"><a href=""></a><span class="ot">            listener=</span><span class="st">"#{userBean.onRowSelect}"</span> </span>
+<span id="cb8-10"><a href=""></a><span class="ot">            update=</span><span class="st">":form:userDetail"</span> /&gt;</span>
+<span id="cb8-11"><a href=""></a>    </span>
+<span id="cb8-12"><a href=""></a>    <span class="co">&lt;!-- Sortable ve filterable column --&gt;</span></span>
+<span id="cb8-13"><a href=""></a>    &lt;<span class="kw">p:column</span><span class="ot"> headerText=</span><span class="st">"İsim"</span> </span>
+<span id="cb8-14"><a href=""></a><span class="ot">              sortBy=</span><span class="st">"#{user.name}"</span> </span>
+<span id="cb8-15"><a href=""></a><span class="ot">              filterBy=</span><span class="st">"#{user.name}"</span></span>
+<span id="cb8-16"><a href=""></a><span class="ot">              filterMatchMode=</span><span class="st">"contains"</span>&gt;</span>
+<span id="cb8-17"><a href=""></a>        &lt;<span class="kw">h:outputText</span><span class="ot"> value=</span><span class="st">"#{user.name}"</span> /&gt;</span>
+<span id="cb8-18"><a href=""></a>    &lt;/<span class="kw">p:column</span>&gt;</span>
+<span id="cb8-19"><a href=""></a>    </span>
+<span id="cb8-20"><a href=""></a>    &lt;<span class="kw">p:column</span><span class="ot"> headerText=</span><span class="st">"Email"</span> </span>
+<span id="cb8-21"><a href=""></a><span class="ot">              sortBy=</span><span class="st">"#{user.email}"</span> </span>
+<span id="cb8-22"><a href=""></a><span class="ot">              filterBy=</span><span class="st">"#{user.email}"</span>&gt;</span>
+<span id="cb8-23"><a href=""></a>        &lt;<span class="kw">h:outputText</span><span class="ot"> value=</span><span class="st">"#{user.email}"</span> /&gt;</span>
+<span id="cb8-24"><a href=""></a>    &lt;/<span class="kw">p:column</span>&gt;</span>
+<span id="cb8-25"><a href=""></a>    </span>
+<span id="cb8-26"><a href=""></a>    <span class="co">&lt;!-- Action buttons --&gt;</span></span>
+<span id="cb8-27"><a href=""></a>    &lt;<span class="kw">p:column</span><span class="ot"> headerText=</span><span class="st">"İşlemler"</span>&gt;</span>
+<span id="cb8-28"><a href=""></a>        &lt;<span class="kw">p:commandButton</span><span class="ot"> icon=</span><span class="st">"ui-icon-pencil"</span> </span>
+<span id="cb8-29"><a href=""></a><span class="ot">                         action=</span><span class="st">"#{userBean.edit(user)}"</span></span>
+<span id="cb8-30"><a href=""></a><span class="ot">                         update=</span><span class="st">":form:editDialog"</span> </span>
+<span id="cb8-31"><a href=""></a><span class="ot">                         oncomplete=</span><span class="st">"PF('editDialog').show()"</span> /&gt;</span>
+<span id="cb8-32"><a href=""></a>        &lt;<span class="kw">p:commandButton</span><span class="ot"> icon=</span><span class="st">"ui-icon-trash"</span> </span>
+<span id="cb8-33"><a href=""></a><span class="ot">                         action=</span><span class="st">"#{userBean.delete(user)}"</span></span>
+<span id="cb8-34"><a href=""></a><span class="ot">                         update=</span><span class="st">"@form"</span>&gt;</span>
+<span id="cb8-35"><a href=""></a>            &lt;<span class="kw">p:confirm</span><span class="ot"> message=</span><span class="st">"Silmek istediğinize emin misiniz?"</span> /&gt;</span>
+<span id="cb8-36"><a href=""></a>        &lt;/<span class="kw">p:commandButton</span>&gt;</span>
+<span id="cb8-37"><a href=""></a>    &lt;/<span class="kw">p:column</span>&gt;</span>
+<span id="cb8-38"><a href=""></a>&lt;/<span class="kw">p:dataTable</span>&gt;</span>
+<span id="cb8-39"><a href=""></a></span>
+<span id="cb8-40"><a href=""></a><span class="co">&lt;!-- Confirm Dialog --&gt;</span></span>
+<span id="cb8-41"><a href=""></a>&lt;<span class="kw">p:confirmDialog</span><span class="ot"> global=</span><span class="st">"true"</span><span class="ot"> showEffect=</span><span class="st">"fade"</span>&gt;</span>
+<span id="cb8-42"><a href=""></a>    &lt;<span class="kw">p:commandButton</span><span class="ot"> value=</span><span class="st">"Evet"</span><span class="ot"> styleClass=</span><span class="st">"ui-confirmdialog-yes"</span> /&gt;</span>
+<span id="cb8-43"><a href=""></a>    &lt;<span class="kw">p:commandButton</span><span class="ot"> value=</span><span class="st">"Hayır"</span><span class="ot"> styleClass=</span><span class="st">"ui-confirmdialog-no"</span> /&gt;</span>
+<span id="cb8-44"><a href=""></a>&lt;/<span class="kw">p:confirmDialog</span>&gt;</span></code></pre></div><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>12 satırda:</strong> - ✅ Pagination - ✅ Client-side filtering - ✅ Server-side sorting - ✅ Row selection (AJAX) - ✅ Modal dialog integration - ✅ Confirmation popups - ✅ Themeable UI</p>
+</section>
+<section class="slide level2 center scrollable">
+
+<h3 id="primefaces-ajax-partial-page-rendering">PrimeFaces AJAX: Partial Page Rendering</h3>
+<p>JSF’ bincelerce fonksiyonalite ve özellik sunuyordu. PrimeFaces bunları daha basit bir şekilde sunuyordu:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode numberSource xml number-lines code-with-copy"><code class="sourceCode xml"><span id="cb9-1"><a href=""></a>&lt;<span class="kw">h:form</span><span class="ot"> id=</span><span class="st">"myForm"</span>&gt;</span>
+<span id="cb9-2"><a href=""></a>    &lt;<span class="kw">p:inputText</span><span class="ot"> id=</span><span class="st">"username"</span><span class="ot"> value=</span><span class="st">"#{bean.username}"</span> /&gt;</span>
+<span id="cb9-3"><a href=""></a>    </span>
+<span id="cb9-4"><a href=""></a>    <span class="co">&lt;!-- AJAX blur event --&gt;</span></span>
+<span id="cb9-5"><a href=""></a>    &lt;<span class="kw">p:ajax</span><span class="ot"> event=</span><span class="st">"blur"</span> </span>
+<span id="cb9-6"><a href=""></a><span class="ot">            listener=</span><span class="st">"#{bean.checkUsername}"</span> </span>
+<span id="cb9-7"><a href=""></a><span class="ot">            update=</span><span class="st">"usernameMsg"</span> /&gt;</span>
+<span id="cb9-8"><a href=""></a>    </span>
+<span id="cb9-9"><a href=""></a>    &lt;<span class="kw">h:outputText</span><span class="ot"> id=</span><span class="st">"usernameMsg"</span> </span>
+<span id="cb9-10"><a href=""></a><span class="ot">                  value=</span><span class="st">"#{bean.usernameMessage}"</span> </span>
+<span id="cb9-11"><a href=""></a><span class="ot">                  style=</span><span class="st">"color: #{bean.usernameValid ? 'green' : 'red'}"</span> /&gt;</span>
+<span id="cb9-12"><a href=""></a>&lt;/<span class="kw">h:form</span>&gt;</span></code></pre></div><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Kullanıcı input’tan çıktığında:</strong></p>
+<ol type="1">
+<li>AJAX request sunucuya gider</li>
+<li><code>checkUsername()</code> metodu çalışır</li>
+<li>Sadece <code>usernameMsg</code> component’i güncellenir</li>
+<li><strong>Sayfa yenilenmez!</strong></li>
+</ol>
+<p>Bu, 2010’da <strong>SPA benzeri bir deneyimdi</strong>.</p>
+</section>
+<section class="slide level2 center">
+
+<h3 id="primefaces-showcase-ne-mümkündü">PrimeFaces Showcase: Ne Mümkündü?</h3>
+<p><strong>Component’ler:</strong> - <code>p:dataTable</code>: Advanced grid - <code>p:fileUpload</code>: Drag &amp; drop file upload - <code>p:chart</code>: Google Charts entegrasyonu - <code>p:schedule</code>: Full calendar - <code>p:tree</code>: Hierarchical tree view - <code>p:dialog</code>: Modal dialogs - <code>p:galleria</code>: Image gallery - <code>p:carousel</code>: Carousel slider</p>
+<div style="font-size: 1.5em;">
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>İpucu</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>Karmaşık İç İçe UI’lar İçin</strong>: Dialog içinde dialog, form içinde tablo, nested yapılar gerektiren enterprise uygulamalarda PrimeFaces çok güçlüdür. <code>p:dialog</code> modal state yönetimi otomatiktir. React’te her modal için visibility state, z-index yönetimi, escape handling manuel yapılmalıdır.</p>
+</div>
+</div>
+</div>
+</div>
+<p><strong>Gerçek dünya örneği:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode numberSource xml number-lines code-with-copy"><code class="sourceCode xml"><span id="cb10-1"><a href=""></a><span class="co">&lt;!-- Dosya yükleme + ilerleme çubuğu + AJAX --&gt;</span></span>
+<span id="cb10-2"><a href=""></a>&lt;<span class="kw">p:fileUpload</span><span class="ot"> value=</span><span class="st">"#{bean.file}"</span> </span>
+<span id="cb10-3"><a href=""></a><span class="ot">              mode=</span><span class="st">"advanced"</span> </span>
+<span id="cb10-4"><a href=""></a><span class="ot">              dragDropSupport=</span><span class="st">"true"</span></span>
+<span id="cb10-5"><a href=""></a><span class="ot">              update=</span><span class="st">"messages"</span> </span>
+<span id="cb10-6"><a href=""></a><span class="ot">              sizeLimit=</span><span class="st">"100000000"</span> </span>
+<span id="cb10-7"><a href=""></a><span class="ot">              fileLimit=</span><span class="st">"3"</span> </span>
+<span id="cb10-8"><a href=""></a><span class="ot">              allowTypes=</span><span class="st">"/(\.|\/)(gif|jpe?g|png)$/"</span> /&gt;</span>
+<span id="cb10-9"><a href=""></a></span>
+<span id="cb10-10"><a href=""></a>&lt;<span class="kw">p:growl</span><span class="ot"> id=</span><span class="st">"messages"</span><span class="ot"> showDetail=</span><span class="st">"true"</span> /&gt;</span></code></pre></div><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section class="slide level2 center scrollable">
+
+<h3 id="primefaces-jsf-ekosistemi-enterprise-standart">PrimeFaces + JSF Ekosistemi: Enterprise Standart</h3>
+<p><strong>2010-2015 arası tipik stack:</strong> - <strong>Frontend</strong>: PrimeFaces + JSF - <strong>Backend</strong>: EJB veya CDI Beans - <strong>ORM</strong>: JPA (Hibernate) - <strong>Server</strong>: WildFly, GlassFish, WebLogic - <strong>Database</strong>: Oracle, PostgreSQL</p>
+<p><strong>Tam stack örnek:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode numberSource java number-lines code-with-copy"><code class="sourceCode java"><span id="cb11-1"><a href=""></a><span class="co">// Entity</span></span>
+<span id="cb11-2"><a href=""></a><span class="at">@Entity</span></span>
+<span id="cb11-3"><a href=""></a><span class="kw">public</span> <span class="kw">class</span> Product <span class="op">{</span></span>
+<span id="cb11-4"><a href=""></a>    <span class="at">@Id</span> <span class="at">@GeneratedValue</span></span>
+<span id="cb11-5"><a href=""></a>    <span class="kw">private</span> <span class="bu">Long</span> id<span class="op">;</span></span>
+<span id="cb11-6"><a href=""></a>    <span class="kw">private</span> <span class="bu">String</span> name<span class="op">;</span></span>
+<span id="cb11-7"><a href=""></a>    <span class="kw">private</span> <span class="bu">BigDecimal</span> price<span class="op">;</span></span>
+<span id="cb11-8"><a href=""></a>    <span class="co">// getters/setters</span></span>
+<span id="cb11-9"><a href=""></a><span class="op">}</span></span>
+<span id="cb11-10"><a href=""></a></span>
+<span id="cb11-11"><a href=""></a><span class="co">// Repository (JPA)</span></span>
+<span id="cb11-12"><a href=""></a><span class="at">@Stateless</span></span>
+<span id="cb11-13"><a href=""></a><span class="kw">public</span> <span class="kw">class</span> ProductRepository <span class="op">{</span></span>
+<span id="cb11-14"><a href=""></a>    <span class="at">@PersistenceContext</span></span>
+<span id="cb11-15"><a href=""></a>    <span class="kw">private</span> EntityManager em<span class="op">;</span></span>
+<span id="cb11-16"><a href=""></a>    </span>
+<span id="cb11-17"><a href=""></a>    <span class="kw">public</span> <span class="bu">List</span><span class="op">&lt;</span>Product<span class="op">&gt;</span> <span class="fu">findAll</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb11-18"><a href=""></a>        <span class="cf">return</span> em<span class="op">.</span><span class="fu">createQuery</span><span class="op">(</span><span class="st">"SELECT p FROM Product p"</span><span class="op">,</span> Product<span class="op">.</span><span class="fu">class</span><span class="op">)</span></span>
+<span id="cb11-19"><a href=""></a>                 <span class="op">.</span><span class="fu">getResultList</span><span class="op">();</span></span>
+<span id="cb11-20"><a href=""></a>    <span class="op">}</span></span>
+<span id="cb11-21"><a href=""></a><span class="op">}</span></span>
+<span id="cb11-22"><a href=""></a></span>
+<span id="cb11-23"><a href=""></a><span class="co">// Managed Bean</span></span>
+<span id="cb11-24"><a href=""></a><span class="at">@Named</span></span>
+<span id="cb11-25"><a href=""></a><span class="at">@ViewScoped</span></span>
+<span id="cb11-26"><a href=""></a><span class="kw">public</span> <span class="kw">class</span> ProductBean <span class="kw">implements</span> <span class="bu">Serializable</span> <span class="op">{</span></span>
+<span id="cb11-27"><a href=""></a>    <span class="at">@Inject</span></span>
+<span id="cb11-28"><a href=""></a>    <span class="kw">private</span> ProductRepository productRepo<span class="op">;</span></span>
+<span id="cb11-29"><a href=""></a>    </span>
+<span id="cb11-30"><a href=""></a>    <span class="kw">private</span> <span class="bu">List</span><span class="op">&lt;</span>Product<span class="op">&gt;</span> products<span class="op">;</span></span>
+<span id="cb11-31"><a href=""></a>    <span class="kw">private</span> Product selectedProduct<span class="op">;</span></span>
+<span id="cb11-32"><a href=""></a>    </span>
+<span id="cb11-33"><a href=""></a>    <span class="at">@PostConstruct</span></span>
+<span id="cb11-34"><a href=""></a>    <span class="kw">public</span> <span class="dt">void</span> <span class="fu">init</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb11-35"><a href=""></a>        products <span class="op">=</span> productRepo<span class="op">.</span><span class="fu">findAll</span><span class="op">();</span></span>
+<span id="cb11-36"><a href=""></a>    <span class="op">}</span></span>
+<span id="cb11-37"><a href=""></a>    </span>
+<span id="cb11-38"><a href=""></a>    <span class="kw">public</span> <span class="dt">void</span> <span class="fu">onRowSelect</span><span class="op">(</span>SelectEvent event<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb11-39"><a href=""></a>        FacesMessage msg <span class="op">=</span> <span class="kw">new</span> <span class="fu">FacesMessage</span><span class="op">(</span><span class="st">"Ürün Seçildi"</span><span class="op">,</span> </span>
+<span id="cb11-40"><a href=""></a>            <span class="op">((</span>Product<span class="op">)</span> event<span class="op">.</span><span class="fu">getObject</span><span class="op">()).</span><span class="fu">getName</span><span class="op">());</span></span>
+<span id="cb11-41"><a href=""></a>        FacesContext<span class="op">.</span><span class="fu">getCurrentInstance</span><span class="op">().</span><span class="fu">addMessage</span><span class="op">(</span><span class="kw">null</span><span class="op">,</span> msg<span class="op">);</span></span>
+<span id="cb11-42"><a href=""></a>    <span class="op">}</span></span>
+<span id="cb11-43"><a href=""></a><span class="op">}</span></span></code></pre></div><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode numberSource xml number-lines code-with-copy"><code class="sourceCode xml"><span id="cb12-1"><a href=""></a><span class="co">&lt;!-- View (products.xhtml) --&gt;</span></span>
+<span id="cb12-2"><a href=""></a>&lt;<span class="kw">p:dataTable</span><span class="ot"> value=</span><span class="st">"#{productBean.products}"</span><span class="ot"> var=</span><span class="st">"product"</span></span>
+<span id="cb12-3"><a href=""></a><span class="ot">             selectionMode=</span><span class="st">"single"</span> </span>
+<span id="cb12-4"><a href=""></a><span class="ot">             selection=</span><span class="st">"#{productBean.selectedProduct}"</span>&gt;</span>
+<span id="cb12-5"><a href=""></a>    &lt;<span class="kw">p:ajax</span><span class="ot"> event=</span><span class="st">"rowSelect"</span><span class="ot"> listener=</span><span class="st">"#{productBean.onRowSelect}"</span> /&gt;</span>
+<span id="cb12-6"><a href=""></a>    </span>
+<span id="cb12-7"><a href=""></a>    &lt;<span class="kw">p:column</span><span class="ot"> headerText=</span><span class="st">"Ürün"</span>&gt;#{product.name}&lt;/<span class="kw">p:column</span>&gt;</span>
+<span id="cb12-8"><a href=""></a>    &lt;<span class="kw">p:column</span><span class="ot"> headerText=</span><span class="st">"Fiyat"</span>&gt;#{product.price}&lt;/<span class="kw">p:column</span>&gt;</span>
+<span id="cb12-9"><a href=""></a>&lt;/<span class="kw">p:dataTable</span>&gt;</span></code></pre></div><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>3 dosya:</strong></p>
+<ol type="1">
+<li><code>Product.java</code> (Entity)</li>
+<li><code>ProductBean.java</code> (Logic)</li>
+<li><code>products.xhtml</code> (View)</li>
+</ol>
+<p><strong>Karşılaştırma</strong>: Aynı işi modern React SPA ile yaparsanız → 12 dosya (göreceğiz!)</p>
+</section>
+<section class="slide level2 center scrollable">
+
+<h3 id="neden-jsf-primefaces-başarılıydı">✅ Neden JSF + PrimeFaces Başarılıydı?</h3>
+<ol type="1">
+<li><strong>Tam çözüm</strong>: UI component’leri + backend + veritabanı tek stack</li>
+<li><strong>Tip güvenliği</strong>: Entity → Bean → View, hepsi Java</li>
+<li><strong>AJAX deneyimi</strong>: SPA benzeri UX, ama sunucu kontrolünde</li>
+<li><strong>Enterprise desteği</strong>: Oracle, Red Hat backing</li>
+<li><strong>Büyük ekosistem</strong>: OmniFaces, BootsFaces, vb.</li>
+</ol>
+</section>
+<section class="slide level2 center">
+
+<h3 id="ama-yetmedi.-neden">❌ Ama Yetmedi. Neden?</h3>
+<p>2010’da dünya değişti. <strong>iPhone</strong>.</p>
+</section>
+<section id="büyük-kopuş-mobil-çağ-ve-spa-2010-2015" class="slide level2 center">
+<h2>4️⃣ Büyük Kopuş: Mobil Çağ ve SPA (2010-2015)</h2>
+</section>
+<section class="slide level2 center">
+
+<h3 id="da-ne-değişti">2010’da Ne Değişti?</h3>
+<p><strong>Teknik gerçek:</strong> - iPhone 4 çıktı (2010) - Android patlaması → 2014’te mobil trafik %50’yi geçti - 3G → 4G geçişi</p>
+<p><strong>Kullanıcı beklentisi:</strong> - “Uygulama gibi” deneyim - Anında geri bildirim, smooth transitions - Offline çalışma</p>
+</section>
+<section class="slide level2 center scrollable">
+
+<h3 id="ama-dur-primefaces-zaten-ajax-yapıyordu">Ama Dur! PrimeFaces Zaten AJAX Yapıyordu?</h3>
+<p><strong>Doğru!</strong> PrimeFaces <code>p:ajax</code> ile partial updates yapıyordu. <strong>O halde neden terk edildi?</strong></p>
+<h4 id="teknik-sebepler">Teknik Sebepler:</h4>
+<ol type="1">
+<li><strong>Sınırlı AJAX</strong>: Sadece belirli component’ler update edilebiliyordu</li>
+<li><strong>Sunucu bağımlılığı</strong>: Her tıklama sunucuya gidiyordu</li>
+<li><strong>Routing yok</strong>: URL değişimi = full page load</li>
+<li><strong>Mobile-first değil</strong>: Responsive ama native değil</li>
+</ol>
+</section>
+<section class="slide level2 center scrollable">
+
+<h4 id="sosyalkültürel-sebepler-daha-önemli">Sosyal/Kültürel Sebepler (DAHA ÖNEMLİ!):</h4>
+<ol type="1">
+<li><strong>“Java eski”</strong> algısı (2010’larda güçlendi)</li>
+<li><strong>JavaScript ekosistemi patlaması</strong>: npm, Node.js</li>
+<li><strong>Startup kültürü</strong>: Hızlı prototip (JSF kurumsal/ağır)</li>
+<li><strong>Açık kaynak momentum</strong>: React, Angular GitHub’da patladı</li>
+<li><strong>Mobil developer’lar</strong>: JavaScript biliyorlar, Java değil</li>
+</ol>
+<div style="font-size: 1.5em;">
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Önemli</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>Teknik üstünlük tek başına yeterli değildir.</strong> PrimeFaces teknik olarak AJAX yapabiliyordu ama <strong>algı değişmişti</strong>. “Modern” olmak bir teknoloji sorunu değil, <strong>kültürel momentum</strong> sorunuydu.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2 center">
+
+<h3 id="angularjs-ve-reactin-vaatleri">AngularJS ve React’in Vaatleri</h3>
+<p><strong>AngularJS (2010)</strong>: Two-way data binding, SPA, tamamen JavaScript<br>
+<strong>React (2013)</strong>: Virtual DOM, component-based, “UI = f(state)”</p>
+<p><strong>REST API Ideology</strong>: Frontend ve Backend tamamen bağımsız → Microservices uyumlu</p>
+</section>
+<section id="spa-dönemi-karmaşıklık-patlaması-2015-2023" class="slide level2 center">
+<h2>5️⃣ SPA Dönemi: Karmaşıklık Patlaması (2015-2023)</h2>
+<h3 id="spring-boot-react-yeni-standart">Spring Boot + React: Yeni Standart</h3>
+<p>2015-2020 arası tipik startup stack: - <strong>Frontend</strong>: React + Redux + Axios - <strong>API</strong>: Spring Boot + REST - <strong>Database</strong>: PostgreSQL</p>
+</section>
+<section class="slide level2 center">
+
+<h3 id="dosya-problemi-aynı-özellik-farklı-karmaşıklık">“12 Dosya Problemi”: Aynı Özellik, Farklı Karmaşıklık</h3>
+<p><strong>Özellik</strong>: Kullanıcı listesi göster, düzenle, kaydet.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode numberSource java number-lines code-with-copy"><code class="sourceCode java"><span id="cb13-1"><a href=""></a></span>
+<span id="cb13-2"><a href=""></a><span class="op">**</span>JSF <span class="op">+</span> <span class="fu">PrimeFaces</span> <span class="op">(</span><span class="dv">2010</span><span class="op">)</span> <span class="op">-</span> <span class="dv">3</span> Dosya<span class="op">:**</span></span>
+<span id="cb13-3"><a href=""></a></span>
+<span id="cb13-4"><a href=""></a><span class="fl">1.</span> `User<span class="op">.</span><span class="fu">java</span>` <span class="op">(</span><span class="bu">Entity</span><span class="op">)</span></span>
+<span id="cb13-5"><a href=""></a><span class="fl">2.</span> `UserBean<span class="op">.</span><span class="fu">java</span>` <span class="op">(</span>Logic<span class="op">)</span></span>
+<span id="cb13-6"><a href=""></a><span class="fl">3.</span> `users<span class="op">.</span><span class="fu">xhtml</span>` <span class="op">(</span><span class="bu">View</span><span class="op">)</span></span></code></pre></div><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>React SPA + Spring Boot (2018) - 12 Dosya:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode numberSource java number-lines code-with-copy"><code class="sourceCode java"><span id="cb14-1"><a href=""></a></span>
+<span id="cb14-2"><a href=""></a><span class="op">**</span><span class="fu">Backend</span> <span class="op">(</span><span class="dv">7</span> dosya<span class="op">):**</span></span>
+<span id="cb14-3"><a href=""></a></span>
+<span id="cb14-4"><a href=""></a><span class="fl">1.</span> `User<span class="op">.</span><span class="fu">java</span>` <span class="op">(</span><span class="bu">Entity</span><span class="op">)</span></span>
+<span id="cb14-5"><a href=""></a><span class="fl">2.</span> `UserDTO<span class="op">.</span><span class="fu">java</span>` ← <span class="bu">Entity</span> expose etmeyelim<span class="op">!</span></span>
+<span id="cb14-6"><a href=""></a><span class="fl">3.</span> `UserMapper<span class="op">.</span><span class="fu">java</span>` ← DTO ↔ <span class="bu">Entity</span></span>
+<span id="cb14-7"><a href=""></a><span class="fl">4.</span> `UserRepository<span class="op">.</span><span class="fu">java</span>`</span>
+<span id="cb14-8"><a href=""></a><span class="fl">5.</span> `UserService<span class="op">.</span><span class="fu">java</span>`</span>
+<span id="cb14-9"><a href=""></a><span class="fl">6.</span> `UserController<span class="op">.</span><span class="fu">java</span>` ← REST</span>
+<span id="cb14-10"><a href=""></a><span class="fl">7.</span> `SecurityConfig<span class="op">.</span><span class="fu">java</span>` ← CORS<span class="op">,</span> JWT</span>
+<span id="cb14-11"><a href=""></a></span>
+<span id="cb14-12"><a href=""></a><span class="op">**</span><span class="fu">Frontend</span> <span class="op">(</span><span class="dv">5</span> dosya<span class="op">):**</span></span>
+<span id="cb14-13"><a href=""></a><span class="fl">8.</span> `User<span class="op">.</span><span class="fu">ts</span>` ← <span class="fu">TypeScript</span> <span class="op">(</span>DUPLICATE tanım<span class="op">!)</span></span>
+<span id="cb14-14"><a href=""></a><span class="fl">9.</span> `userApi<span class="op">.</span><span class="fu">ts</span>` ← Axios</span>
+<span id="cb14-15"><a href=""></a><span class="fl">10.</span> `userSlice<span class="op">.</span><span class="fu">ts</span>` ← Redux state</span>
+<span id="cb14-16"><a href=""></a><span class="fl">11.</span> `UserForm<span class="op">.</span><span class="fu">tsx</span>`</span>
+<span id="cb14-17"><a href=""></a><span class="fl">12.</span> `UserPage<span class="op">.</span><span class="fu">tsx</span>`</span></code></pre></div><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></div>
+<div style="font-size: 1.5em;">
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>İpucu</strong></p>
+</div>
+<div class="callout-content">
+<p>JSF (3 Dosya): Paketlenmiş, ısıt-ye hazır yemek (Hızlı ama içeriği değiştiremezsin).<br>
+React (12 Dosya): Un, yumurta, şeker, süt… (Tam kontrol ama birleştirmek senin işin).</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2 center">
+
+
+<img data-src="images/file_explosion.png" class="r-stretch quarto-figure-center"><p class="caption">12 Dosya vs 3 Dosya</p></section>
+<section class="slide level2 center">
+
+
+<img data-src="images/file_explosion_v2.png" class="r-stretch quarto-figure-center"><p class="caption">12 Dosya vs 3 Dosya detaylı</p></section>
+<section class="slide level2 center scrollable">
+
+<h3 id="accidental-complexity-arızi-karmaşıklık">Accidental Complexity (Arızi Karmaşıklık)</h3>
+<p><strong>Essential Complexity</strong>: İş mantığının doğal karmaşıklığı<br>
+<strong>Accidental Complexity</strong>: Araçların getirdiği karmaşıklık</p>
+<p><strong>SPA’da Accidental Complexity:</strong></p>
+<ol type="1">
+<li><strong>Tip senkronizasyonu</strong>: <code>User.java</code> vs <code>UserDTO.java</code> vs <code>User.ts</code> (3 yerde aynı yapı!)</li>
+<li><strong>Mapping katmanı</strong>: Entity → DTO → JSON → TypeScript</li>
+<li><strong>Ağ hatası yönetimi</strong>: Her API için try-catch, retry, timeout</li>
+<li><strong>State senkronizasyonu</strong>: Server vs Client state</li>
+<li><strong>Loading states</strong>: Her API için <code>isLoading</code>, <code>error</code> state’leri</li>
+</ol>
+</section>
+<section class="slide level2 center">
+
+<h3 id="kod-karşılaştırması-user-kaydetme">Kod Karşılaştırması: User Kaydetme</h3>
+<p><strong>JSF + PrimeFaces (2010)</strong>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode numberSource xml number-lines code-with-copy"><code class="sourceCode xml"><span id="cb15-1"><a href=""></a>&lt;<span class="kw">h:form</span>&gt;</span>
+<span id="cb15-2"><a href=""></a>    &lt;<span class="kw">h:inputText</span><span class="ot"> value=</span><span class="st">"#{userBean.username}"</span> /&gt;</span>
+<span id="cb15-3"><a href=""></a>    &lt;<span class="kw">h:inputText</span><span class="ot"> value=</span><span class="st">"#{userBean.email}"</span> /&gt;</span>
+<span id="cb15-4"><a href=""></a>    &lt;<span class="kw">h:commandButton</span><span class="ot"> value=</span><span class="st">"Kaydet"</span><span class="ot"> action=</span><span class="st">"#{userBean.save}"</span> /&gt;</span>
+<span id="cb15-5"><a href=""></a>&lt;/<span class="kw">h:form</span>&gt;</span></code></pre></div><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode numberSource java number-lines code-with-copy"><code class="sourceCode java"><span id="cb16-1"><a href=""></a><span class="kw">public</span> <span class="dt">void</span> <span class="fu">save</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb16-2"><a href=""></a>    User user <span class="op">=</span> <span class="kw">new</span> <span class="fu">User</span><span class="op">(</span><span class="kw">this</span><span class="op">.</span><span class="fu">username</span><span class="op">,</span> <span class="kw">this</span><span class="op">.</span><span class="fu">email</span><span class="op">);</span></span>
+<span id="cb16-3"><a href=""></a>    userRepository<span class="op">.</span><span class="fu">save</span><span class="op">(</span>user<span class="op">);</span></span>
+<span id="cb16-4"><a href=""></a><span class="op">}</span></span></code></pre></div><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>2 dosya. Tip güvenliği var. State senkronizasyonu yok.</strong></p>
+<p><strong>React SPA - Sadece Frontend Kısmı</strong> (Backend 7 dosya ekstra):</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode numberSource typescript number-lines code-with-copy"><code class="sourceCode typescript"><span id="cb17-1"><a href=""></a><span class="co">// types/User.ts</span></span>
+<span id="cb17-2"><a href=""></a><span class="im">export</span> <span class="kw">interface</span> User {</span>
+<span id="cb17-3"><a href=""></a>    username<span class="op">:</span> <span class="dt">string</span><span class="op">;</span></span>
+<span id="cb17-4"><a href=""></a>    email<span class="op">:</span> <span class="dt">string</span><span class="op">;</span></span>
+<span id="cb17-5"><a href=""></a>}</span>
+<span id="cb17-6"><a href=""></a></span>
+<span id="cb17-7"><a href=""></a><span class="co">// store/userSlice.ts (Redux - 40+ satır boilerplate)</span></span>
+<span id="cb17-8"><a href=""></a><span class="im">export</span> <span class="kw">const</span> createUser <span class="op">=</span> <span class="fu">createAsyncThunk</span>(<span class="st">'users/create'</span><span class="op">,</span> <span class="op">...</span>)<span class="op">;</span></span>
+<span id="cb17-9"><a href=""></a></span>
+<span id="cb17-10"><a href=""></a><span class="co">// components/UserForm.tsx</span></span>
+<span id="cb17-11"><a href=""></a><span class="kw">const</span> [username<span class="op">,</span> setUsername] <span class="op">=</span> <span class="fu">useState</span>(<span class="st">''</span>)<span class="op">;</span></span>
+<span id="cb17-12"><a href=""></a><span class="kw">const</span> [email<span class="op">,</span> setEmail] <span class="op">=</span> <span class="fu">useState</span>(<span class="st">''</span>)<span class="op">;</span></span>
+<span id="cb17-13"><a href=""></a><span class="kw">const</span> dispatch <span class="op">=</span> <span class="fu">useDispatch</span>()<span class="op">;</span></span>
+<span id="cb17-14"><a href=""></a></span>
+<span id="cb17-15"><a href=""></a><span class="kw">const</span> handleSubmit <span class="op">=</span> <span class="kw">async</span> (e) <span class="kw">=&gt;</span> {</span>
+<span id="cb17-16"><a href=""></a>    e<span class="op">.</span><span class="fu">preventDefault</span>()<span class="op">;</span></span>
+<span id="cb17-17"><a href=""></a>    <span class="cf">await</span> <span class="fu">dispatch</span>(<span class="fu">createUser</span>({ username<span class="op">,</span> email }))<span class="op">;</span></span>
+<span id="cb17-18"><a href=""></a>}<span class="op">;</span></span></code></pre></div><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Görsel 1: Sol tarafta JSF’in 3 satırlık <code>save</code> metodu, sağ tarafta React’in aynı işi yapan dağıtık yapısı (Slice, Component, API).</strong></p>
+
+<img data-src="images/comparison_save_user.png" class="r-stretch quarto-figure-center"><p class="caption">Simple vs Complex Code</p></section>
+<section class="slide level2 center scrollable">
+
+<h3 id="diğer-spa-sorunları">Diğer SPA Sorunları</h3>
+<ol type="1">
+<li><strong>Bundle Size</strong>: 1.2 MB JavaScript (ilk yüklemede)</li>
+<li><strong>Waterfall Data Fetching</strong>: Component açıldıkça API çağrıları</li>
+<li><strong>SEO</strong>: JavaScript yüklenmeden sayfa boş</li>
+<li><strong>Offline Development</strong>: Backend API çalışmadan frontend test edilemez</li>
+</ol>
+<div style="font-size: 1.5em;">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Not</strong></p>
+</div>
+<div class="callout-content">
+<p>SPA ile birlikte DevOps’un işi <strong>Runtime</strong>’dan <strong>Build Time</strong>’a kaydı. * <strong>Eskiden:</strong> <code>javac</code> -&gt; <code>.war</code> (Bitti) * <strong>Şimdi:</strong> <code>npm install</code> (500MB node_modules) -&gt; <code>webpack build</code> -&gt; <code>docker build</code> -&gt; <code>k8s deploy</code>. * <strong>Sorunlar:</strong> CORS ayarları, Nginx history-mode config, Environment variable yönetimi (.env vs Runtime env). Karmaşıklık koddan altyapıya kaydı.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2 center">
+
+<h3 id="killer-feature-karşılaştırması-datatable">“Killer Feature” Karşılaştırması: DataTable</h3>
+<p><strong>Senaryo</strong>: 10,000 kayıtlık kullanıcı listesi. Pagination, sorting, filtering.</p>
+
+<img data-src="images/comparison_datatable.png" class="r-stretch quarto-figure-center"><p class="caption">Declarative vs Imperative Code</p><p><strong>Görsel 2: PrimeFaces’in declarative (ne istediğini söyle) yapısı vs React Table’ın imperative (nasıl yapılacağını söyle) kurulumu.</strong></p>
+<div style="font-size: 1.5em;">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Not</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>Veri odaklı işlerde JSF’in ROI (Yatırım Getirisi) rakipsizdir.</strong> Bir kurumsal admin panelinde 50 tablo varsa, JSF ile 1 haftada yaparsınız. React ile her tablo için tekerleği yeniden icat edersiniz.</p>
+</div>
+</div>
+</div>
+</div>
+<p><strong>“50 Tablo Gerç” - Neden?</strong></p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 32%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Özellik</th>
+<th>JSF (PrimeFaces)</th>
+<th>React (MUI/AntD/TanStack)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Tablo Kurulumu</strong></td>
+<td>5 satır kod</td>
+<td>50+ satır kod (State + API)</td>
+</tr>
+<tr class="even">
+<td><strong>API İhtiyacı</strong></td>
+<td>❌ Yok (Doğrudan Bean’e bağlı)</td>
+<td>✅ Şart (REST/GraphQL)</td>
+</tr>
+<tr class="odd">
+<td><strong>“Wiring” (Bağlama)</strong></td>
+<td>✅ Otomatik (Framework yapar)</td>
+<td>❌ Manuel (Her tablo için tekrar)</td>
+</tr>
+<tr class="even">
+<td><strong>50 Tablo Süresi</strong></td>
+<td><strong>1 Hafta</strong></td>
+<td><strong>3-4 Hafta</strong> (Framework olmadan)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>React’te sorun kütüphane eksikliği değil, “wiring” maliyetidir</strong>: Her tabloda pagination, sorting, filtering API’ye bağlanmalı. JSF’de bu bağlantı otomatiktir.</p>
+</section>
+<section class="slide level2 center">
+
+<h3 id="declarative-vs-imperative-ajax-örneği">Declarative vs Imperative: AJAX Örneği</h3>
+<p><strong>Senaryo</strong>: “Kaydet” butonuna basınca sadece mesaj güncellensin (sayfa yenilenmesin).</p>
+
+<img data-src="images/comparison_ajax.png" class="r-stretch quarto-figure-center"><p class="caption">What vs How Code</p><p><strong>Görsel 3: JSF’te AJAX sadece bir etikettir (<code>&lt;f:ajax&gt;</code>). React’te ise state yönetimi, hata yakalama ve loading durumlarını elle kodlamanız gerekir.Declarative vs Imperative</strong></p>
+<p><strong>Fark</strong>: JSF’te <strong>NE</strong> istediğimizi söylüyoruz (<code>render="mesajPaneli"</code>). React’te <strong>NASIL</strong> yapılacağını adım adım kodluyoruz. Karmaşık mantıkta declarative yaklaşım hatayı azaltır.</p>
+</section>
+<section class="slide level2 center">
+
+<h3 id="görünmeyen-kod-glue-code-analizi">Görünmeyen Kod: “Glue Code” Analizi</h3>
+<p><img data-src="images/glue_code_iceberg.png" style="transform: scale(1.5);" alt="Buzdağı Analizi"> <img data-src="images/glue_code_iceberg_v2.png" style="transform: scale(1.5);" alt="Buzdağı Analizi (v2){style=“transform: scale(1.5);”}"></p>
+<div style="font-size: 1.5em;">
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>İpucu</strong></p>
+</div>
+<div class="callout-content">
+<p>Modern Stack: Harika görünen parçalar, ama hepsi birbirine koli bandıyla (Glue Code) tutturulmuş.<br>
+JSF: Tek parça döküm blok (Monolitik sağlamlık).</p>
+</div>
+</div>
+</div>
+</div>
+<p><strong>JSF Projesi:</strong> - <strong>Görünen Kod</strong>: %80 İş Mantığı (Java), %20 UI (XHTML) - <strong>Saklanan Kod</strong>: Network handling, DOM manipulation, State syncing → <strong>Framework hallediyor</strong></p>
+<p><strong>Modern Stack Projesi:</strong> - <strong>Görünen Kod</strong>: %40 İş Mantığı, %60 <strong>Glue Code</strong> - <strong>Glue Code Nedir?</strong>: JSON parse, DTO mapping, HTTP status kontrolü, Loading spinner, Error boundary, Retry logic</p>
+<div style="font-size: 1.5em;">
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Önemli</strong></p>
+</div>
+<div class="callout-content">
+<p>2024’ün geliştiricisi, mesaisinin büyük kısmını <strong>“iş problemini çözmeye”</strong> değil, <strong>“teknolojileri birbirine bağlamaya”</strong> harcıyor. JSON formatı uydu mu? State güncellendi mi? JSF bizi bu “hamallıktan” kurtarıyordu. Karşılığında özgürlüğümüzü alıyordu.</p>
+</div>
+</div>
+</div>
+</div>
+<p><strong>Sonuç</strong>: Separation of Concerns kazandırdı, ama karmaşıklık patladı.</p>
+</section>
+<section class="slide level2 center">
+
+</section>
+<section id="modern-ssr-eve-dönüş-2024" class="slide level2 center">
+<h2>6️⃣ Modern SSR: Eve Dönüş (2024+)</h2>
+</section>
+<section class="slide level2 center">
+
+<h3 id="lerde-neler-fark-edildi">2020’lerde Neler Fark Edildi?</h3>
+<p>SPA’nın sorunları giderek belirginleşti: - Bundle size şişti (3-5 MB normal!) - SEO hala problem (Google bile indexlemeyi zor yapıyor) - Waterfall data fetching (her component kendi API’sını çağırıyor) - <strong>Complexity overload</strong>: 12 dosya sadece basit CRUD için</p>
+</section>
+<section class="slide level2 center">
+
+<h3 id="next.js-ve-server-components-vizyonu">Next.js ve Server Components Vizyonu</h3>
+<p><strong>React Server Components (RSC)</strong> + <strong>Server Actions</strong> = JSF’e geri dönüş (ama modern tooling ile)</p>
+<p><strong>JSF demiştik ki:</strong> - UI logic sunucuda (Managed Bean) - Component ağacı sunucuda (UIViewRoot) - Action methods sunucuda çalışır</p>
+<p><strong>Next.js (2024) diyor ki:</strong> - UI logic sunucuda (Server Component) - Component tree sunucuda render edilir - Server Actions sunucuda çalışır</p>
+
+<img data-src="./images/pendulum_returns.png" class="r-stretch quarto-figure-center"><p class="caption">Sarkaç Eve Döndü</p></section>
+<section class="slide level2 center">
+
+<h3 id="jsf-ile-next.js-karşılaştırması">JSF ile Next.js Karşılaştırması</h3>
+<table class="caption-top">
+<colgroup>
+<col style="width: 21%">
+<col style="width: 28%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Özellik</th>
+<th>JSF (2006)</th>
+<th>Next.js RSC (2024)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Render Yeri</strong></td>
+<td>Sunucu (Java)</td>
+<td>Sunucu (Node.js)</td>
+</tr>
+<tr class="even">
+<td><strong>Action Methods</strong></td>
+<td><code>#{bean.save()}</code></td>
+<td><code>'use server'</code> functions</td>
+</tr>
+<tr class="odd">
+<td><strong>State Taşıma</strong></td>
+<td>ViewState (hidden input)</td>
+<td>Closure (encrypted metadata)</td>
+</tr>
+<tr class="even">
+<td><strong>Tip Güvenliği</strong></td>
+<td>Java end-to-end</td>
+<td>TypeScript end-to-end</td>
+</tr>
+<tr class="odd">
+<td><strong>Component Model</strong></td>
+<td>JSF Component Tree</td>
+<td>React Component Tree</td>
+</tr>
+<tr class="even">
+<td><strong>Data Fetching</strong></td>
+<td>Direct DB (JPA)</td>
+<td>Direct DB (Prisma, <strong>supabase</strong>)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>En çarpıcı benzerlik</strong>: Her ikisi de <code>"Veritabanı sunucuya yakın, UI logic da orda olsun"</code> diyor!</p>
+</section>
+<section class="slide level2 center">
+
+<h3 id="next.js-server-action-örneği">Next.js Server Action Örneği</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode numberSource typescript number-lines code-with-copy"><code class="sourceCode typescript"><span id="cb18-1"><a href=""></a><span class="co">// app/actions.ts</span></span>
+<span id="cb18-2"><a href=""></a><span class="st">'use server'</span> <span class="co">// JSF'in @Named gibi!</span></span>
+<span id="cb18-3"><a href=""></a></span>
+<span id="cb18-4"><a href=""></a><span class="im">import</span> { db } <span class="im">from</span> <span class="st">'@/lib/db'</span><span class="op">;</span></span>
+<span id="cb18-5"><a href=""></a></span>
+<span id="cb18-6"><a href=""></a><span class="im">export</span> <span class="kw">async</span> <span class="kw">function</span> <span class="fu">saveUser</span>(formData<span class="op">:</span> <span class="bu">FormData</span>) {</span>
+<span id="cb18-7"><a href=""></a>    <span class="kw">const</span> username <span class="op">=</span> formData<span class="op">.</span><span class="fu">get</span>(<span class="st">'username'</span>) <span class="im">as</span> <span class="dt">string</span><span class="op">;</span></span>
+<span id="cb18-8"><a href=""></a>    </span>
+<span id="cb18-9"><a href=""></a>    <span class="co">// Direkt veritabanına yaz (JPA repository gibi!)</span></span>
+<span id="cb18-10"><a href=""></a>    <span class="cf">await</span> db<span class="op">.</span><span class="at">user</span><span class="op">.</span><span class="fu">create</span>({</span>
+<span id="cb18-11"><a href=""></a>        data<span class="op">:</span> { username }</span>
+<span id="cb18-12"><a href=""></a>    })<span class="op">;</span></span>
+<span id="cb18-13"><a href=""></a>    </span>
+<span id="cb18-14"><a href=""></a>    <span class="fu">revalidatePath</span>(<span class="st">'/users'</span>)<span class="op">;</span> <span class="co">// Sayfayı yenile</span></span>
+<span id="cb18-15"><a href=""></a>}</span></code></pre></div><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode numberSource tsx number-lines code-with-copy"><code class="sourceCode"><span id="cb19-1"><a href=""></a>// app/users/page.tsx (Server Component)</span>
+<span id="cb19-2"><a href=""></a>export default async function UsersPage() {</span>
+<span id="cb19-3"><a href=""></a>    // JSF'in @PostConstruct init() gibi!</span>
+<span id="cb19-4"><a href=""></a>    const users = await db.user.findMany();</span>
+<span id="cb19-5"><a href=""></a>    </span>
+<span id="cb19-6"><a href=""></a>    return &lt;UserList users={users} /&gt;;</span>
+<span id="cb19-7"><a href=""></a>}</span></code></pre></div><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section class="slide level2 center scrollable">
+
+<h3 id="farklar-neden-eskiye-dönüş-değil">Farklar: Neden “Eskiye Dönüş” Değil?</h3>
+<ol type="1">
+<li><strong>TypeScript</strong>: JSF (XML config + Java), Next.js (full type safety)</li>
+<li><strong>Modern Tooling</strong>: Hot reload, Vite, modern DX</li>
+<li><strong>Edge Computing</strong>: Sunucu coğrafi olarak dağıtılabiliyor</li>
+<li><strong>Hibrit</strong>: Client component’ler interactivity için (JSF bu esnekliği vermiyordu)</li>
+<li><strong>Streaming</strong>: HTML parça parça gönderilebiliyor (Suspense)</li>
+</ol>
+<div style="font-size: 1.5em;">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Not</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>“Spiral yukarı çıkarak dönüyor”</strong>: JSF’in felsefesi (server-centric) + Modern tooling + TypeScript + Edge = Next.js</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2 center">
+
+</section>
+<section id="kod-arkeolojisi-isimler-değişir-desenler-kalır" class="slide level2 center">
+<h2>Kod Arkeolojisi: İsimler Değişir, Desenler Kalır</h2>
+<p>Gelin, 20 yıl arayla yazılmış iki kod parçasına bakalım. Benzerlik şok edicidir.</p>
+</section>
+<section class="slide level2 center">
+
+<h3 id="senaryo-bir-kullanıcıyı-kaydetmek">Senaryo: Bir Kullanıcıyı Kaydetmek</h3>
+
+<img data-src="images/comparison_server_action.png" class="r-stretch quarto-figure-center"><p class="caption">History Repeats Code</p><p><strong>Görsel 4: Tarih tekerrür ediyor. 2006’daki Managed Bean metodu ile 2024’teki Server Action arasındaki şaşırtıcı benzerlik.</strong></p>
+<p><strong>Yorum:</strong> REST API yok. JSON parse etmek yok. <code>fetch()</code> yok. Sadece fonksiyon çağrısı var. <strong>Tarih tekerrür etti.</strong></p>
+</section>
+<section class="slide level2 center">
+
+</section>
+<section id="gizli-kahraman-state-yönetimi-viewstate-vs-closure" class="slide level2 center">
+<h2>4. Gizli Kahraman: State Yönetimi (ViewState vs Closure)</h2>
+<p>JSF’in en çok eleştirilen yanı <code>ViewState</code> (o devasa şifreli hidden input) idi. Modern mimari bunu nasıl çözdü?</p>
+<p><strong>Karşılaştırma:</strong></p>
+<ul>
+<li><strong>JSF (2006):</strong> Sunucu durumunu (State) korumak için sayfaya gizli bir <code>&lt;input type="hidden" name="javax.faces.ViewState"&gt;</code> gömerdi.</li>
+<li><strong>Next.js (2024):</strong> Fonksiyonun bağlamını (Context) korumak için <strong>Closure</strong> kullanır ve bunu şifreleyip HTML’e gömer.</li>
+</ul>
+<p>Aslında ikisi de aynı şeyi yapar: <strong>Stateless olan HTTP protokolü üzerinde, Stateful bir deneyim simüle etmek.</strong></p>
+<div style="font-size: 1.5em;">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Not</strong></p>
+</div>
+<div class="callout-content">
+<p>Modern mimari, “Stateless” dogmasından vazgeçip, “Akıllı State” (Smart State) kavramına geçiş yapmıştır. Artık her şeyi sunucuda tutmuyoruz (RAM tasarrufu), ama her şeyi istemciye de yüklemiyoruz (Network tasarrufu).</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2 center">
+
+</section>
+<section id="veri-perspektifi-mimari-kararların-gerçek-maliyeti" class="slide level2 center">
+<h2>7️⃣ Veri Perspektifi: Mimari Kararların Gerçek Maliyeti</h2>
+<p>Mimari seçimler sadece “hangi framework” sorusu değildir. <strong>Verinin nereden geldiği, nasıl işlendiği ve nereye gittiği</strong> en kritik karardır.</p>
+</section>
+<section class="slide level2 center">
+
+<h3 id="temel-soru-veri-nerede-işleniyor">Temel Soru: Veri Nerede İşleniyor?</h3>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Mimari</th>
+<th>Veri Akışı</th>
+<th>Network Hop</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Server-Centric (JSF)</strong></td>
+<td>DB → Java → HTML</td>
+<td>1 (Tek round-trip)</td>
+</tr>
+<tr class="even">
+<td><strong>SPA + REST</strong></td>
+<td>DB → Java → JSON → JS → DOM</td>
+<td>2+ (Çoklu round-trip)</td>
+</tr>
+<tr class="odd">
+<td><strong>RSC (Next.js)</strong></td>
+<td>DB → Node → HTML (+ JSON delta)</td>
+<td>1-2 (Hibrit)</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="slide level2 center">
+
+<h3 id="n1-query-problemi-lazy-loadingin-bedeli">N+1 Query Problemi: Lazy Loading’in Bedeli</h3>
+<div class="quarto-figure quarto-figure-center" style="transform: scale(1.5);">
+<figure>
+<p><img data-src="./images/n_plus_one_problem.png"></p>
+<figcaption>N+1 Query Problemi</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center" style="transform: scale(1.5);">
+<figure>
+<p><img data-src="images/08_n_plus_one.png"></p>
+<figcaption>N+1 Query Problemi</figcaption>
+</figure>
+</div>
+<p><strong>Senaryo</strong>: 100 kullanıcı listesi, her birinin departmanı gösterilecek.</p>
+<div class="quarto-figure quarto-figure-center" style="transform: scale(1.5);">
+<figure>
+<p><img data-src="images/diagram_08_n_plus_one.png"></p>
+<figcaption>N+1 Problem Karşılaştırması</figcaption>
+</figure>
+</div>
+<p><strong>JSF (Sunucu tarafı)</strong>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="sourceCode numberSource java number-lines code-with-copy"><code class="sourceCode java"><span id="cb20-1"><a href=""></a><span class="co">// Tek sorgu ile JOIN - sunucuda çözülür</span></span>
+<span id="cb20-2"><a href=""></a><span class="at">@NamedQuery</span><span class="op">(</span><span class="st">"SELECT u FROM User u JOIN FETCH u.department"</span><span class="op">)</span></span>
+<span id="cb20-3"><a href=""></a><span class="kw">public</span> <span class="bu">List</span><span class="op">&lt;</span>User<span class="op">&gt;</span> <span class="fu">getUsers</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb20-4"><a href=""></a>    <span class="cf">return</span> em<span class="op">.</span><span class="fu">createNamedQuery</span><span class="op">(</span><span class="st">"..."</span><span class="op">,</span> User<span class="op">.</span><span class="fu">class</span><span class="op">).</span><span class="fu">getResultList</span><span class="op">();</span></span>
+<span id="cb20-5"><a href=""></a><span class="op">}</span></span></code></pre></div><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></div>
+<p>→ <strong>1 SQL sorgusu</strong>, HTML client’a hazır gider</p>
+<p><strong>React SPA (Client tarafı)</strong>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21"><pre class="sourceCode numberSource typescript number-lines code-with-copy"><code class="sourceCode typescript"><span id="cb21-1"><a href=""></a><span class="co">// İlk istek: kullanıcılar</span></span>
+<span id="cb21-2"><a href=""></a><span class="kw">const</span> users <span class="op">=</span> <span class="cf">await</span> <span class="fu">fetch</span>(<span class="st">'/api/users'</span>)<span class="op">;</span> <span class="co">// 1 istek</span></span>
+<span id="cb21-3"><a href=""></a></span>
+<span id="cb21-4"><a href=""></a><span class="co">// Her satır renderda: departman lazy load</span></span>
+<span id="cb21-5"><a href=""></a>{users<span class="op">.</span><span class="fu">map</span>(u <span class="kw">=&gt;</span> <span class="op">&lt;</span>DepartmentBadge deptId<span class="op">=</span>{u<span class="op">.</span><span class="at">deptId</span>} <span class="op">/&gt;</span>)} </span>
+<span id="cb21-6"><a href=""></a><span class="co">// Her DepartmentBadge kendi verisini çeker → +100 istek!</span></span></code></pre></div><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></div>
+<p>→ <strong>101 HTTP isteği</strong> (N+1 problem client’a taşındı)</p>
+<div style="font-size: 1.5em;">
+<div class="callout callout-warning callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Uyarı</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>Client tarafında Lazy Loading</strong>, sunucu tarafındaki N+1 probleminin <strong>daha kötü</strong> bir versiyonudur. Çünkü her “lazy” çağrı bir <strong>network round-trip</strong>’tir.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2 center">
+
+<h3 id="over-fetching-vs-under-fetching">Over-fetching vs Under-fetching</h3>
+<table class="caption-top">
+<colgroup>
+<col style="width: 34%">
+<col style="width: 38%">
+<col style="width: 26%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Problem</th>
+<th>Açıklama</th>
+<th>Sonuç</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Over-fetching</strong></td>
+<td>Gereğinden fazla veri çekilir</td>
+<td>REST <code>/users</code> → 50 alan döner, 3’ü kullanılır</td>
+</tr>
+<tr class="even">
+<td><strong>Under-fetching</strong></td>
+<td>Eksik veri, ek istek gerekir</td>
+<td><code>/users</code> sonrası <code>/users/1/orders</code> lazım</td>
+</tr>
+</tbody>
+</table>
+<p><strong>JSF avantajı</strong>: Sunucu neyi render edeceğini bilir, sadece gerekeni çeker.<br>
+<strong>SPA dezavantajı</strong>: API “ne lazım olur” bilmez, ya fazla ya eksik gönderir.</p>
+</section>
+<section class="slide level2 center">
+
+<h3 id="veri-yoğunluğu-ve-mimari-seçimi">Veri Yoğunluğu ve Mimari Seçimi</h3>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Düşük Etkileşim</th>
+<th>Yüksek Etkileşim</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Çok Veri</strong></td>
+<td>✅ Server Components (Admin, Dashboard)</td>
+<td>⚠️ SPA + GraphQL (E-ticaret)</td>
+</tr>
+<tr class="even">
+<td><strong>Az Veri</strong></td>
+<td>🟢 Statik Site (Blog)</td>
+<td>🔵 SPA + REST (Chat, Real-time)</td>
+</tr>
+</tbody>
+</table>
+
+<img data-src="images/diagram_09_data_intensity.png" class="r-stretch quarto-figure-center"><p class="caption">Veri Yoğunluğu vs Etkileşim</p><p><strong>Yorumlama:</strong> - <strong>Sol üst (Çok veri, az etkileşim)</strong>: JSF/PrimeFaces veya Server Components ideal - <strong>Sağ alt (Az veri, çok etkileşim)</strong>: SPA ideal (Chat, real-time) - <strong>Ortada</strong>: Hibrit yaklaşımlar (Next.js RSC)</p>
+</section>
+<section class="slide level2 center">
+
+<h3 id="payload-karşılaştırması-aynı-sayfa-farklı-mimariler">Payload Karşılaştırması: Aynı Sayfa, Farklı Mimariler</h3>
+<p><strong>Senaryo</strong>: 100 satırlık kullanıcı tablosu</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Mimari</th>
+<th>İlk Yükleme</th>
+<th>Veri Transferi</th>
+<th>Toplam</th>
+<th>TTI*</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>JSF + PrimeFaces</strong></td>
+<td>80 KB HTML</td>
+<td>—</td>
+<td><strong>80 KB</strong></td>
+<td>~200ms</td>
+</tr>
+<tr class="even">
+<td><strong>React SPA</strong></td>
+<td>350 KB JS</td>
+<td>+ 45 KB JSON</td>
+<td><strong>395 KB</strong></td>
+<td>~800ms</td>
+</tr>
+<tr class="odd">
+<td><strong>Next.js RSC</strong></td>
+<td>60 KB HTML + 20 KB JS</td>
+<td>—</td>
+<td><strong>80 KB</strong></td>
+<td>~250ms</td>
+</tr>
+</tbody>
+</table>
+<p>*TTI: Time to Interactive</p>
+</section>
+<section class="slide level2 center">
+
+<h3 id="waterfall-clientta-mı-serverda-mı">Waterfall: Client’ta mı, Server’da mı?</h3>
+<div class="quarto-figure quarto-figure-center" style="transform: scale(1.5);">
+<figure>
+<p><img data-src="images/waterfall_comparison.png"></p>
+<figcaption>Waterfall Karşılaştırması</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center" style="transform: scale(1.5);">
+<figure>
+<p><img data-src="./images/diagram_12_waterfall_comparison.png"></p>
+<figcaption>Waterfall Karşılaştırması</figcaption>
+</figure>
+</div>
+<p><strong>Client-side Data Fetching (SPA)</strong>:</p>
+<pre><code>Sayfa yükle → JS parse → Veri iste → Bekle → Render → Alt veri iste → Bekle
+[========]   [=====]    [=======]   [===]   [====]   [==========]   [===]
+                         ↑ Network      ↑ Render      ↑ N+1 başlıyor</code></pre>
+<p>→ <strong>Waterfall</strong>: Kullanıcı uzun süre “Loading…” görür</p>
+<p><strong>Server-side Data Fetching (JSF/RSC)</strong>:</p>
+<pre><code>İstek → Sunucu: Tüm veriyi çek + HTML üret → Tek response
+[===]   [===================================]   [========]
+         ↑ DB sorguları paralel                  ↑ Hazır HTML</code></pre>
+<p>→ <strong>Tek round-trip</strong>: Kullanıcı direkt içerik görür</p>
+</section>
+<section class="slide level2 center">
+
+<h3 id="kritik-içgörü-data-proximity">Kritik İçgörü: Data Proximity</h3>
+
+<img data-src="images/13_data_proximity.png" class="r-stretch quarto-figure-center"><p class="caption">Data Proximity Diagramı</p><p><strong>“Veri sunucuya ne kadar yakınsa, mimari o kadar basit.”</strong></p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Mimari</th>
+<th>Veri Mesafesi</th>
+<th>Tipik Latency</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>JSF</td>
+<td>DB ile aynı JVM</td>
+<td>~1-5ms</td>
+</tr>
+<tr class="even">
+<td>Next.js RSC</td>
+<td>DB ile aynı sunucu/region</td>
+<td>~5-20ms</td>
+</tr>
+<tr class="odd">
+<td>SPA + REST</td>
+<td>Client → API → DB → API → Client</td>
+<td>~100-500ms</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Sonuç</strong>: Veri yoğun uygulamalarda (admin panel, dashboard, raporlama) <strong>sunucu tarafı render</strong> hem daha hızlı hem daha basittir.</p>
+</section>
+<section class="slide level2 center">
+
+</section>
+<section id="jsften-öğrenmemiz-gerekenler-kayıp-best-practiceler" class="slide level2 center">
+<h2>8️⃣ JSF’ten Öğrenmemiz Gerekenler: Kayıp Best Practice’ler</h2>
+<div class="quarto-figure quarto-figure-center" style="transform: scale(1.5);">
+<figure>
+<p><img data-src="images/diagram_14_best_practices.png"></p>
+<figcaption>Best Practices Karşılaştırması</figcaption>
+</figure>
+</div>
+<p><img data-src="./images/best_practices_comparison.png" style="transform: scale(1.5);" alt="Best Practices Karşılaştırması"> <!-- ⚠️ EKSİK GÖRSEL: Bu dosya henüz oluşturulmamış --></p>
+<!-- 📸 GÖRSEL PROMPT: best_practices_comparison.png
+Prompt: "A checklist comparison infographic with two columns:
+LEFT COLUMN 'JSF (2006)': All items have GREEN checkmarks, locked padlock icons
+- Server-side Validation ✓ (locked)
+- CSRF Protection ✓ (locked)
+- Type Safety ✓ (locked)
+- Lifecycle Discipline ✓ (locked)
+- Centralized Errors ✓ (locked)
+- Server State ✓ (locked)
+
+RIGHT COLUMN 'Modern Stack (2024)': Items have YELLOW warning icons, unlocked padlocks
+- Server-side Validation ⚠ (optional)
+- CSRF Protection ⚠ (often skipped)
+- Type Safety ⚠ (manual setup)
+- Lifecycle Discipline ⚠ (useEffect chaos)
+- Centralized Errors ⚠ (scattered)
+- Server State ⚠ (localStorage risk)
+
+Title: 'JSF: Enforced by Framework | Modern: Your Responsibility'
+Style: Clean checklist, corporate training material."
+Boyut: 1200x800px, Format: PNG -->
+<p>JSF’te <strong>framework zorunlu kılıyordu</strong>, modern stack’te <strong>“best practice” diyoruz ama çoğu projede atlanıyor</strong>. Bu bölüm, JSF’in bize öğrettiği disiplinleri ve modern stack’te nasıl uygulanması gerektiğini anlatacağız.</p>
+</section>
+<section class="slide level2 center">
+
+<h3 id="temel-tez">Temel Tez</h3>
+<p><strong>JSF’te “yanlış yapamazdınız” çünkü framework izin vermezdi. Modern stack’te “doğru yapmak” sizin sorumluluğunuzdadır.</strong></p>
+</section>
+<section class="slide level2 center">
+
+<h3 id="server-side-validation-güvenliğin-temeli">1. Server-Side Validation: Güvenliğin Temeli</h3>
+<p><strong>JSF Yaklaşımı (Zorunlu)</strong>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb24"><pre class="sourceCode numberSource xml number-lines code-with-copy"><code class="sourceCode xml"><span id="cb24-1"><a href=""></a>&lt;<span class="kw">h:inputText</span><span class="ot"> value=</span><span class="st">"#{bean.email}"</span><span class="ot"> required=</span><span class="st">"true"</span>&gt;</span>
+<span id="cb24-2"><a href=""></a>    &lt;<span class="kw">f:validateRegex</span><span class="ot"> pattern=</span><span class="st">"^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$"</span> /&gt;</span>
+<span id="cb24-3"><a href=""></a>&lt;/<span class="kw">h:inputText</span>&gt;</span></code></pre></div><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li>Validasyon <strong>her zaman sunucuda</strong> çalışır</li>
+<li>Client bypass edilemez</li>
+<li>Hata mesajları merkezi (<code>&lt;h:messages /&gt;</code>)</li>
+</ul>
+<p><strong>Modern Stack’te Sık Yapılan Hata</strong>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb25"><pre class="sourceCode numberSource typescript number-lines code-with-copy"><code class="sourceCode typescript"><span id="cb25-1"><a href=""></a><span class="co">// ❌ YANLIŞ: Sadece client-side validation</span></span>
+<span id="cb25-2"><a href=""></a><span class="kw">const</span> handleSubmit <span class="op">=</span> () <span class="kw">=&gt;</span> {</span>
+<span id="cb25-3"><a href=""></a>    <span class="cf">if</span> (<span class="op">!</span>email<span class="op">.</span><span class="fu">includes</span>(<span class="st">'@'</span>)) { <span class="co">// Tarayıcıda kolayca bypass edilir!</span></span>
+<span id="cb25-4"><a href=""></a>        <span class="fu">setError</span>(<span class="st">'Geçersiz email'</span>)<span class="op">;</span></span>
+<span id="cb25-5"><a href=""></a>        <span class="cf">return</span><span class="op">;</span></span>
+<span id="cb25-6"><a href=""></a>    }</span>
+<span id="cb25-7"><a href=""></a>    api<span class="op">.</span><span class="fu">post</span>(<span class="st">'/users'</span><span class="op">,</span> { email })<span class="op">;</span></span>
+<span id="cb25-8"><a href=""></a>}<span class="op">;</span></span></code></pre></div><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Modern Stack’te Doğru Yaklaşım</strong>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb26"><pre class="sourceCode numberSource typescript number-lines code-with-copy"><code class="sourceCode typescript"><span id="cb26-1"><a href=""></a><span class="co">// ✅ DOĞRU: Server-side validation (Zod + Server Action)</span></span>
+<span id="cb26-2"><a href=""></a><span class="co">// app/actions.ts</span></span>
+<span id="cb26-3"><a href=""></a><span class="st">'use server'</span></span>
+<span id="cb26-4"><a href=""></a><span class="im">import</span> { z } <span class="im">from</span> <span class="st">'zod'</span><span class="op">;</span></span>
+<span id="cb26-5"><a href=""></a></span>
+<span id="cb26-6"><a href=""></a><span class="kw">const</span> UserSchema <span class="op">=</span> z<span class="op">.</span><span class="fu">object</span>({</span>
+<span id="cb26-7"><a href=""></a>    email<span class="op">:</span> z<span class="op">.</span><span class="fu">string</span>()<span class="op">.</span><span class="fu">email</span>(<span class="st">'Geçersiz email formatı'</span>)<span class="op">,</span></span>
+<span id="cb26-8"><a href=""></a>})<span class="op">;</span></span>
+<span id="cb26-9"><a href=""></a></span>
+<span id="cb26-10"><a href=""></a><span class="im">export</span> <span class="kw">async</span> <span class="kw">function</span> <span class="fu">createUser</span>(formData<span class="op">:</span> <span class="bu">FormData</span>) {</span>
+<span id="cb26-11"><a href=""></a>    <span class="kw">const</span> result <span class="op">=</span> UserSchema<span class="op">.</span><span class="fu">safeParse</span>({</span>
+<span id="cb26-12"><a href=""></a>        email<span class="op">:</span> formData<span class="op">.</span><span class="fu">get</span>(<span class="st">'email'</span>)<span class="op">,</span></span>
+<span id="cb26-13"><a href=""></a>    })<span class="op">;</span></span>
+<span id="cb26-14"><a href=""></a>    </span>
+<span id="cb26-15"><a href=""></a>    <span class="cf">if</span> (<span class="op">!</span>result<span class="op">.</span><span class="at">success</span>) {</span>
+<span id="cb26-16"><a href=""></a>        <span class="cf">return</span> { error<span class="op">:</span> result<span class="op">.</span><span class="at">error</span><span class="op">.</span><span class="fu">flatten</span>() }<span class="op">;</span> <span class="co">// Sunucu doğrulaması!</span></span>
+<span id="cb26-17"><a href=""></a>    }</span>
+<span id="cb26-18"><a href=""></a>    </span>
+<span id="cb26-19"><a href=""></a>    <span class="cf">await</span> db<span class="op">.</span><span class="at">user</span><span class="op">.</span><span class="fu">create</span>({ data<span class="op">:</span> result<span class="op">.</span><span class="at">data</span> })<span class="op">;</span></span>
+<span id="cb26-20"><a href=""></a>}</span></code></pre></div><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></div>
+<div style="font-size: 1.5em;">
+<div class="callout callout-warning callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Uyarı</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>Client-side validation UX içindir, güvenlik için değil.</strong> JSF bunu biliyordu. Her validation sunucuda tekrarlanmalıdır.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2 center">
+
+</section>
+<section class="slide level2 center">
+
+<h3 id="csrf-koruması-sessiz-bekçi">2. CSRF Koruması: Sessiz Bekçi</h3>
+<p><strong>JSF Yaklaşımı (Otomatik)</strong>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb27"><pre class="sourceCode numberSource xml number-lines code-with-copy"><code class="sourceCode xml"><span id="cb27-1"><a href=""></a><span class="co">&lt;!-- JSF otomatik olarak her form'a ViewState token ekler --&gt;</span></span>
+<span id="cb27-2"><a href=""></a>&lt;<span class="kw">h:form</span>&gt;</span>
+<span id="cb27-3"><a href=""></a>    <span class="co">&lt;!-- Arka planda: &lt;input type="hidden" name="javax.faces.ViewState" value="encrypted_token" /&gt; --&gt;</span></span>
+<span id="cb27-4"><a href=""></a>&lt;/<span class="kw">h:form</span>&gt;</span></code></pre></div><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li>Her POST isteği ViewState ile doğrulanır</li>
+<li>Token olmadan işlem yapılamaz</li>
+<li><strong>Sıfır konfigürasyon</strong></li>
+</ul>
+<p><strong>Modern Stack’te Sık Atlanan</strong>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb28"><pre class="sourceCode numberSource typescript number-lines code-with-copy"><code class="sourceCode typescript"><span id="cb28-1"><a href=""></a><span class="co">// ❌ Birçok SPA projesi CSRF koruması olmadan çalışıyor</span></span>
+<span id="cb28-2"><a href=""></a><span class="fu">fetch</span>(<span class="st">'/api/transfer'</span><span class="op">,</span> {</span>
+<span id="cb28-3"><a href=""></a>    method<span class="op">:</span> <span class="st">'POST'</span><span class="op">,</span></span>
+<span id="cb28-4"><a href=""></a>    body<span class="op">:</span> <span class="bu">JSON</span><span class="op">.</span><span class="fu">stringify</span>({ to<span class="op">:</span> <span class="st">'attacker'</span><span class="op">,</span> amount<span class="op">:</span> <span class="dv">10000</span> })</span>
+<span id="cb28-5"><a href=""></a>})<span class="op">;</span></span></code></pre></div><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Modern Stack’te Doğru Yaklaşım</strong>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb29"><pre class="sourceCode numberSource typescript number-lines code-with-copy"><code class="sourceCode typescript"><span id="cb29-1"><a href=""></a><span class="co">// ✅ Next.js Server Actions otomatik CSRF koruması sağlar</span></span>
+<span id="cb29-2"><a href=""></a><span class="co">// Veya manuel: Double Submit Cookie pattern</span></span>
+<span id="cb29-3"><a href=""></a></span>
+<span id="cb29-4"><a href=""></a><span class="co">// middleware.ts</span></span>
+<span id="cb29-5"><a href=""></a><span class="im">import</span> { csrf } <span class="im">from</span> <span class="st">'@/lib/csrf'</span><span class="op">;</span></span>
+<span id="cb29-6"><a href=""></a></span>
+<span id="cb29-7"><a href=""></a><span class="im">export</span> <span class="kw">async</span> <span class="kw">function</span> <span class="fu">POST</span>(request<span class="op">:</span> Request) {</span>
+<span id="cb29-8"><a href=""></a>    <span class="kw">const</span> token <span class="op">=</span> request<span class="op">.</span><span class="at">headers</span><span class="op">.</span><span class="fu">get</span>(<span class="st">'X-CSRF-Token'</span>)<span class="op">;</span></span>
+<span id="cb29-9"><a href=""></a>    <span class="cf">if</span> (<span class="op">!</span>csrf<span class="op">.</span><span class="fu">verify</span>(token)) {</span>
+<span id="cb29-10"><a href=""></a>        <span class="cf">return</span> Response<span class="op">.</span><span class="fu">json</span>({ error<span class="op">:</span> <span class="st">'Invalid CSRF'</span> }<span class="op">,</span> { status<span class="op">:</span> <span class="dv">403</span> })<span class="op">;</span></span>
+<span id="cb29-11"><a href=""></a>    }</span>
+<span id="cb29-12"><a href=""></a>    <span class="co">// ... işlem</span></span>
+<span id="cb29-13"><a href=""></a>}</span></code></pre></div><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Checklist</strong>: - [ ] Her mutasyon (POST/PUT/DELETE) CSRF token gerektiriyor mu? - [ ] Token HttpOnly cookie’de mi saklanıyor? - [ ] SameSite=Strict kullanılıyor mu?</p>
+</section>
+<section class="slide level2 center">
+
+</section>
+<section class="slide level2 center">
+
+<h3 id="tip-güvenliği-uçtan-uca-bütünlük">3. Tip Güvenliği: Uçtan Uca Bütünlük</h3>
+<p><strong>JSF Yaklaşımı (Java End-to-End)</strong>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb30"><pre class="sourceCode numberSource java number-lines code-with-copy"><code class="sourceCode java"><span id="cb30-1"><a href=""></a><span class="co">// Entity</span></span>
+<span id="cb30-2"><a href=""></a><span class="kw">public</span> <span class="kw">class</span> User <span class="op">{</span></span>
+<span id="cb30-3"><a href=""></a>    <span class="kw">private</span> <span class="bu">String</span> email<span class="op">;</span> <span class="co">// Tip: String</span></span>
+<span id="cb30-4"><a href=""></a><span class="op">}</span></span>
+<span id="cb30-5"><a href=""></a></span>
+<span id="cb30-6"><a href=""></a><span class="co">// Bean</span></span>
+<span id="cb30-7"><a href=""></a><span class="kw">public</span> <span class="kw">class</span> UserBean <span class="op">{</span></span>
+<span id="cb30-8"><a href=""></a>    <span class="kw">private</span> User user<span class="op">;</span> <span class="co">// Aynı tip</span></span>
+<span id="cb30-9"><a href=""></a><span class="op">}</span></span>
+<span id="cb30-10"><a href=""></a></span>
+<span id="cb30-11"><a href=""></a><span class="co">// View: #{userBean.user.email} → Derleme zamanı kontrolü</span></span></code></pre></div><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li>Entity → Bean → View: <strong>Tek tip tanımı</strong></li>
+<li>Refactoring güvenli (IDE tüm kullanımları bulur)</li>
+<li>Runtime tip hataları <strong>imkansız</strong></li>
+</ul>
+<p><strong>Modern Stack’te Sık Yapılan Hata</strong>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb31"><pre class="sourceCode numberSource typescript number-lines code-with-copy"><code class="sourceCode typescript"><span id="cb31-1"><a href=""></a><span class="co">// Backend (Java/Node)</span></span>
+<span id="cb31-2"><a href=""></a><span class="kw">class</span> User { <span class="bu">String</span> email<span class="op">;</span> }</span>
+<span id="cb31-3"><a href=""></a></span>
+<span id="cb31-4"><a href=""></a><span class="co">// API Response (JSON) - Tip bilgisi kaybolur</span></span>
+<span id="cb31-5"><a href=""></a>{ <span class="st">"email"</span><span class="op">:</span> <span class="st">"test@test.com"</span> }</span>
+<span id="cb31-6"><a href=""></a></span>
+<span id="cb31-7"><a href=""></a><span class="co">// Frontend (TypeScript) - YENİDEN tanımla!</span></span>
+<span id="cb31-8"><a href=""></a><span class="kw">interface</span> User { email<span class="op">:</span> <span class="dt">string</span><span class="op">;</span> }</span>
+<span id="cb31-9"><a href=""></a></span>
+<span id="cb31-10"><a href=""></a><span class="co">// ❌ 3 FARKLI YERDE AYNI TİP! Senkronizasyon hatası kaçınılmaz.</span></span></code></pre></div><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Modern Stack’te Doğru Yaklaşım</strong>:</p>
+<p><strong>Seçenek A: Shared Types (Monorepo)</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb32"><pre class="sourceCode numberSource typescript number-lines code-with-copy"><code class="sourceCode typescript"><span id="cb32-1"><a href=""></a><span class="co">// packages/shared/types.ts</span></span>
+<span id="cb32-2"><a href=""></a><span class="im">export</span> <span class="kw">interface</span> User {</span>
+<span id="cb32-3"><a href=""></a>    email<span class="op">:</span> <span class="dt">string</span><span class="op">;</span></span>
+<span id="cb32-4"><a href=""></a>}</span>
+<span id="cb32-5"><a href=""></a></span>
+<span id="cb32-6"><a href=""></a><span class="co">// Backend ve Frontend aynı tipi import eder</span></span>
+<span id="cb32-7"><a href=""></a><span class="im">import</span> { User } <span class="im">from</span> <span class="st">'@shared/types'</span><span class="op">;</span></span></code></pre></div><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Seçenek B: Code Generation (OpenAPI/GraphQL)</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb33"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb33-1"><a href=""></a><span class="co"># OpenAPI spec'ten TypeScript tipleri üret</span></span>
+<span id="cb33-2"><a href=""></a><span class="ex">npx</span> openapi-typescript ./api-spec.yaml <span class="at">-o</span> ./types/api.ts</span></code></pre></div><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Seçenek C: tRPC (End-to-End Type Safety)</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb34"><pre class="sourceCode numberSource typescript number-lines code-with-copy"><code class="sourceCode typescript"><span id="cb34-1"><a href=""></a><span class="co">// Server</span></span>
+<span id="cb34-2"><a href=""></a><span class="im">export</span> <span class="kw">const</span> userRouter <span class="op">=</span> <span class="fu">router</span>({</span>
+<span id="cb34-3"><a href=""></a>    create<span class="op">:</span> procedure</span>
+<span id="cb34-4"><a href=""></a>        <span class="op">.</span><span class="fu">input</span>(z<span class="op">.</span><span class="fu">object</span>({ email<span class="op">:</span> z<span class="op">.</span><span class="fu">string</span>()<span class="op">.</span><span class="fu">email</span>() }))</span>
+<span id="cb34-5"><a href=""></a>        <span class="op">.</span><span class="fu">mutation</span>(({ input }) <span class="kw">=&gt;</span> db<span class="op">.</span><span class="at">user</span><span class="op">.</span><span class="fu">create</span>({ data<span class="op">:</span> input }))<span class="op">,</span></span>
+<span id="cb34-6"><a href=""></a>})<span class="op">;</span></span>
+<span id="cb34-7"><a href=""></a></span>
+<span id="cb34-8"><a href=""></a><span class="co">// Client - Otomatik tip çıkarımı!</span></span>
+<span id="cb34-9"><a href=""></a><span class="kw">const</span> result <span class="op">=</span> <span class="cf">await</span> trpc<span class="op">.</span><span class="at">user</span><span class="op">.</span><span class="at">create</span><span class="op">.</span><span class="fu">mutate</span>({ email<span class="op">:</span> <span class="st">'test@test.com'</span> })<span class="op">;</span></span></code></pre></div><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></div>
+<div style="font-size: 1.5em;">
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Önemli</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>JSF’te tip uyumsuzluğu derleme hatasıydı. Modern stack’te runtime hatasıdır.</strong> tRPC veya code generation kullanarak bu boşluğu kapatın.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2 center">
+
+</section>
+<section class="slide level2 center">
+
+<h3 id="lifecycle-disiplini-öngörülebilir-davranış">4. Lifecycle Disiplini: Öngörülebilir Davranış</h3>
+<p><strong>JSF Yaklaşımı (6 Faz Garantisi)</strong>:</p>
+<pre><code>Restore View → Apply Request → Validate → Update Model → Invoke Action → Render</code></pre>
+<ul>
+<li>Her istek <strong>aynı sırayla</strong> işlenir</li>
+<li>Validasyon <strong>her zaman</strong> model güncellenmeden önce çalışır</li>
+<li>Side effect’ler sadece <strong>Invoke Application</strong> fazında</li>
+</ul>
+<p><strong>Modern Stack’te Kaos</strong>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb36"><pre class="sourceCode numberSource typescript number-lines code-with-copy"><code class="sourceCode typescript"><span id="cb36-1"><a href=""></a><span class="co">// ❌ useEffect karmaşası - Sıra garantisi yok</span></span>
+<span id="cb36-2"><a href=""></a><span class="fu">useEffect</span>(() <span class="kw">=&gt;</span> { <span class="fu">fetchUser</span>()<span class="op">;</span> }<span class="op">,</span> [])<span class="op">;</span></span>
+<span id="cb36-3"><a href=""></a><span class="fu">useEffect</span>(() <span class="kw">=&gt;</span> { <span class="fu">validateForm</span>()<span class="op">;</span> }<span class="op">,</span> [formData])<span class="op">;</span></span>
+<span id="cb36-4"><a href=""></a><span class="fu">useEffect</span>(() <span class="kw">=&gt;</span> { <span class="cf">if</span> (isValid) <span class="fu">saveUser</span>()<span class="op">;</span> }<span class="op">,</span> [isValid])<span class="op">;</span></span>
+<span id="cb36-5"><a href=""></a><span class="co">// Hangi sırayla çalışır? Race condition?</span></span></code></pre></div><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Modern Stack’te Doğru Yaklaşım</strong>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb37"><pre class="sourceCode numberSource typescript number-lines code-with-copy"><code class="sourceCode typescript"><span id="cb37-1"><a href=""></a><span class="co">// ✅ Explicit lifecycle with state machine (XState veya manuel)</span></span>
+<span id="cb37-2"><a href=""></a><span class="kw">type</span> State <span class="op">=</span> <span class="st">'idle'</span> <span class="op">|</span> <span class="st">'validating'</span> <span class="op">|</span> <span class="st">'submitting'</span> <span class="op">|</span> <span class="st">'success'</span> <span class="op">|</span> <span class="st">'error'</span><span class="op">;</span></span>
+<span id="cb37-3"><a href=""></a></span>
+<span id="cb37-4"><a href=""></a><span class="kw">const</span> [state<span class="op">,</span> setState] <span class="op">=</span> <span class="fu">useState</span><span class="op">&lt;</span>State<span class="op">&gt;</span>(<span class="st">'idle'</span>)<span class="op">;</span></span>
+<span id="cb37-5"><a href=""></a></span>
+<span id="cb37-6"><a href=""></a><span class="kw">const</span> handleSubmit <span class="op">=</span> <span class="kw">async</span> () <span class="kw">=&gt;</span> {</span>
+<span id="cb37-7"><a href=""></a>    <span class="fu">setState</span>(<span class="st">'validating'</span>)<span class="op">;</span></span>
+<span id="cb37-8"><a href=""></a>    <span class="kw">const</span> validation <span class="op">=</span> <span class="cf">await</span> <span class="fu">validate</span>(formData)<span class="op">;</span></span>
+<span id="cb37-9"><a href=""></a>    </span>
+<span id="cb37-10"><a href=""></a>    <span class="cf">if</span> (<span class="op">!</span>validation<span class="op">.</span><span class="at">success</span>) {</span>
+<span id="cb37-11"><a href=""></a>        <span class="fu">setState</span>(<span class="st">'error'</span>)<span class="op">;</span></span>
+<span id="cb37-12"><a href=""></a>        <span class="cf">return</span><span class="op">;</span></span>
+<span id="cb37-13"><a href=""></a>    }</span>
+<span id="cb37-14"><a href=""></a>    </span>
+<span id="cb37-15"><a href=""></a>    <span class="fu">setState</span>(<span class="st">'submitting'</span>)<span class="op">;</span></span>
+<span id="cb37-16"><a href=""></a>    <span class="cf">await</span> <span class="fu">saveUser</span>(formData)<span class="op">;</span></span>
+<span id="cb37-17"><a href=""></a>    <span class="fu">setState</span>(<span class="st">'success'</span>)<span class="op">;</span></span>
+<span id="cb37-18"><a href=""></a>}<span class="op">;</span></span></code></pre></div><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Veya React 19 + Server Actions</strong>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb38"><pre class="sourceCode numberSource typescript number-lines code-with-copy"><code class="sourceCode typescript"><span id="cb38-1"><a href=""></a><span class="co">// ✅ useActionState - JSF benzeri form lifecycle</span></span>
+<span id="cb38-2"><a href=""></a><span class="kw">const</span> [state<span class="op">,</span> formAction<span class="op">,</span> isPending] <span class="op">=</span> <span class="fu">useActionState</span>(createUser<span class="op">,</span> initialState)<span class="op">;</span></span>
+<span id="cb38-3"><a href=""></a></span>
+<span id="cb38-4"><a href=""></a><span class="cf">return</span> (</span>
+<span id="cb38-5"><a href=""></a>    <span class="op">&lt;</span>form action<span class="op">=</span>{formAction}<span class="op">&gt;</span></span>
+<span id="cb38-6"><a href=""></a>        {state<span class="op">.</span><span class="at">error</span> <span class="op">&amp;&amp;</span> <span class="op">&lt;</span>ErrorMessage error<span class="op">=</span>{state<span class="op">.</span><span class="at">error</span>} <span class="op">/&gt;</span>}</span>
+<span id="cb38-7"><a href=""></a>        <span class="op">&lt;</span>input name<span class="op">=</span><span class="st">"email"</span> <span class="op">/&gt;</span></span>
+<span id="cb38-8"><a href=""></a>        <span class="op">&lt;</span>button disabled<span class="op">=</span>{isPending}<span class="op">&gt;</span></span>
+<span id="cb38-9"><a href=""></a>            {isPending <span class="op">?</span> <span class="st">'Kaydediliyor...'</span> <span class="op">:</span> <span class="st">'Kaydet'</span>}</span>
+<span id="cb38-10"><a href=""></a>        <span class="op">&lt;/</span>button<span class="op">&gt;</span></span>
+<span id="cb38-11"><a href=""></a>    <span class="op">&lt;/</span>form<span class="op">&gt;</span></span>
+<span id="cb38-12"><a href=""></a>)<span class="op">;</span></span></code></pre></div><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section class="slide level2 center">
+
+</section>
+<section class="slide level2 center">
+
+<h3 id="merkezi-hata-yönetimi">5. Merkezi Hata Yönetimi</h3>
+<p><strong>JSF Yaklaşımı (Tek Nokta)</strong>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb39"><pre class="sourceCode numberSource xml number-lines code-with-copy"><code class="sourceCode xml"><span id="cb39-1"><a href=""></a>&lt;<span class="kw">h:messages</span><span class="ot"> globalOnly=</span><span class="st">"true"</span><span class="ot"> styleClass=</span><span class="st">"error-messages"</span> /&gt;</span>
+<span id="cb39-2"><a href=""></a><span class="co">&lt;!-- Tüm hatalar tek yerde toplanır --&gt;</span></span></code></pre></div><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Modern Stack’te Dağınık Hatalar</strong>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb40"><pre class="sourceCode numberSource typescript number-lines code-with-copy"><code class="sourceCode typescript"><span id="cb40-1"><a href=""></a><span class="co">// ❌ Her component kendi hatasını yönetir</span></span>
+<span id="cb40-2"><a href=""></a><span class="kw">const</span> [error1<span class="op">,</span> setError1] <span class="op">=</span> <span class="fu">useState</span>(<span class="kw">null</span>)<span class="op">;</span></span>
+<span id="cb40-3"><a href=""></a><span class="kw">const</span> [error2<span class="op">,</span> setError2] <span class="op">=</span> <span class="fu">useState</span>(<span class="kw">null</span>)<span class="op">;</span></span>
+<span id="cb40-4"><a href=""></a><span class="co">// 50 component = 50 error state = bakım kabusu</span></span></code></pre></div><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Modern Stack’te Doğru Yaklaşım</strong>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb41"><pre class="sourceCode numberSource typescript number-lines code-with-copy"><code class="sourceCode typescript"><span id="cb41-1"><a href=""></a><span class="co">// ✅ Error Boundary + Toast System</span></span>
+<span id="cb41-2"><a href=""></a><span class="co">// app/layout.tsx</span></span>
+<span id="cb41-3"><a href=""></a><span class="im">export</span> <span class="im">default</span> <span class="kw">function</span> <span class="fu">Layout</span>({ children }) {</span>
+<span id="cb41-4"><a href=""></a>    <span class="cf">return</span> (</span>
+<span id="cb41-5"><a href=""></a>        <span class="op">&lt;</span>ErrorBoundary fallback<span class="op">=</span>{<span class="op">&lt;</span>ErrorPage <span class="op">/&gt;</span>}<span class="op">&gt;</span></span>
+<span id="cb41-6"><a href=""></a>            <span class="op">&lt;</span>ToastProvider<span class="op">&gt;</span></span>
+<span id="cb41-7"><a href=""></a>                {children}</span>
+<span id="cb41-8"><a href=""></a>            <span class="op">&lt;/</span>ToastProvider<span class="op">&gt;</span></span>
+<span id="cb41-9"><a href=""></a>        <span class="op">&lt;/</span>ErrorBoundary<span class="op">&gt;</span></span>
+<span id="cb41-10"><a href=""></a>    )<span class="op">;</span></span>
+<span id="cb41-11"><a href=""></a>}</span>
+<span id="cb41-12"><a href=""></a></span>
+<span id="cb41-13"><a href=""></a><span class="co">// Herhangi bir component'ten:</span></span>
+<span id="cb41-14"><a href=""></a><span class="kw">const</span> { toast } <span class="op">=</span> <span class="fu">useToast</span>()<span class="op">;</span></span>
+<span id="cb41-15"><a href=""></a><span class="cf">try</span> {</span>
+<span id="cb41-16"><a href=""></a>    <span class="cf">await</span> <span class="fu">saveUser</span>(data)<span class="op">;</span></span>
+<span id="cb41-17"><a href=""></a>    toast<span class="op">.</span><span class="fu">success</span>(<span class="st">'Kaydedildi'</span>)<span class="op">;</span></span>
+<span id="cb41-18"><a href=""></a>} <span class="cf">catch</span> (e) {</span>
+<span id="cb41-19"><a href=""></a>    toast<span class="op">.</span><span class="fu">error</span>(e<span class="op">.</span><span class="at">message</span>)<span class="op">;</span> <span class="co">// Merkezi bildirim</span></span>
+<span id="cb41-20"><a href=""></a>}</span></code></pre></div><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section class="slide level2 center">
+
+</section>
+<section class="slide level2 center">
+
+<h3 id="session-ve-state-tutarlılığı">6. Session ve State Tutarlılığı</h3>
+<p><strong>JSF Yaklaşımı (Sunucu Otoritesi)</strong>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb42"><pre class="sourceCode numberSource java number-lines code-with-copy"><code class="sourceCode java"><span id="cb42-1"><a href=""></a><span class="at">@SessionScoped</span></span>
+<span id="cb42-2"><a href=""></a><span class="kw">public</span> <span class="kw">class</span> CartBean <span class="op">{</span></span>
+<span id="cb42-3"><a href=""></a>    <span class="kw">private</span> <span class="bu">List</span><span class="op">&lt;</span>Item<span class="op">&gt;</span> items<span class="op">;</span> <span class="co">// Sunucu = Tek gerçek kaynak (Single Source of Truth)</span></span>
+<span id="cb42-4"><a href=""></a><span class="op">}</span></span></code></pre></div><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li>Sepet durumu <strong>sadece sunucuda</strong></li>
+<li>Tarayıcı sekmesi, mobil uygulama → Hepsi aynı durumu görür</li>
+<li>Manipülasyon <strong>imkansız</strong></li>
+</ul>
+<p><strong>Modern Stack’te Tutarsızlık</strong>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb43"><pre class="sourceCode numberSource typescript number-lines code-with-copy"><code class="sourceCode typescript"><span id="cb43-1"><a href=""></a><span class="co">// ❌ Client state = Güvenilmez</span></span>
+<span id="cb43-2"><a href=""></a>localStorage<span class="op">.</span><span class="fu">setItem</span>(<span class="st">'cart'</span><span class="op">,</span> <span class="bu">JSON</span><span class="op">.</span><span class="fu">stringify</span>(items))<span class="op">;</span></span>
+<span id="cb43-3"><a href=""></a><span class="co">// Kullanıcı DevTools'tan fiyatları değiştirebilir!</span></span></code></pre></div><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Modern Stack’te Doğru Yaklaşım</strong>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb44"><pre class="sourceCode numberSource typescript number-lines code-with-copy"><code class="sourceCode typescript"><span id="cb44-1"><a href=""></a><span class="co">// ✅ Server as Source of Truth</span></span>
+<span id="cb44-2"><a href=""></a><span class="co">// Sepet sunucuda, client sadece görüntüler</span></span>
+<span id="cb44-3"><a href=""></a><span class="kw">const</span> { data<span class="op">:</span> cart } <span class="op">=</span> <span class="fu">useQuery</span>([<span class="st">'cart'</span>]<span class="op">,</span> fetchCart)<span class="op">;</span></span>
+<span id="cb44-4"><a href=""></a></span>
+<span id="cb44-5"><a href=""></a><span class="co">// Ekleme işlemi sunucuya gider</span></span>
+<span id="cb44-6"><a href=""></a><span class="kw">const</span> addToCart <span class="op">=</span> <span class="fu">useMutation</span>({</span>
+<span id="cb44-7"><a href=""></a>    mutationFn<span class="op">:</span> (item) <span class="kw">=&gt;</span> api<span class="op">.</span><span class="fu">post</span>(<span class="st">'/cart/add'</span><span class="op">,</span> item)<span class="op">,</span></span>
+<span id="cb44-8"><a href=""></a>    onSuccess<span class="op">:</span> () <span class="kw">=&gt;</span> queryClient<span class="op">.</span><span class="fu">invalidateQueries</span>([<span class="st">'cart'</span>])<span class="op">,</span></span>
+<span id="cb44-9"><a href=""></a>})<span class="op">;</span></span></code></pre></div><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section class="slide level2 center">
+
+</section>
+<section class="slide level2 center scrollable">
+
+<h3 id="aksiyon-listesi-projenizi-denetleyin">Aksiyon Listesi: Projenizi Denetleyin</h3>
+<p>Mevcut SPA/SSR projenizde şu soruları sorun:</p>
+<ol type="1">
+<li><strong>Validation</strong>: Tüm form validasyonları sunucuda tekrarlanıyor mu?</li>
+<li><strong>CSRF</strong>: Mutasyon endpoint’leri token doğrulaması yapıyor mu?</li>
+<li><strong>Types</strong>: Backend-Frontend tip senkronizasyonu otomatik mi?</li>
+<li><strong>Lifecycle</strong>: Form submission state’leri explicit mi (loading, error, success)?</li>
+<li><strong>Errors</strong>: Hata mesajları merkezi bir sistemden mi geliyor?</li>
+<li><strong>State</strong>: Kritik veriler (sepet, kullanıcı) sunucuda mı tutuluyor?</li>
+</ol>
+<div style="font-size: 1.5em;">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Not</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>JSF bu soruların hepsine “evet” demek zorundaydı.</strong> Modern stack’te “evet” demek sizin tercihinizdir. Tercih etmezseniz, güvenlik ve tutarlılık riske girer.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2 center">
+
+</section>
+<section id="hangi-mimariyi-seçmeli-karar-çerçevesi" class="slide level2 center">
+<h2>9️⃣ Hangi Mimariyi Seçmeli? (Karar Çerçevesi)</h2>
+<p><strong>Soruyu doğru sormalıyız</strong>: “Hangi teknoloji daha iyi?” değil, <strong>“Hangi mimari bu projenin ihtiyaçlarına uygun?”</strong></p>
+</section>
+<section class="slide level2 center">
+
+<h3 id="karar-ağacı-decision-tree">Karar Ağacı (Decision Tree)</h3>
+
+<img data-src="images/diagram_10_decision_tree.png" class="r-stretch quarto-figure-center"><p class="caption">Karar Ağacı</p></section>
+<section class="slide level2 center">
+
+<h3 id="mimari-seçim-kriterleri">Mimari Seçim Kriterleri</h3>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Kriter</th>
+<th>Server-Centric (JSF)</th>
+<th>Client-Centric (SPA)</th>
+<th>Hybrid (SSR)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>SEO Önemli mi?</strong></td>
+<td>✅ Mükemmel</td>
+<td>❌ Zor</td>
+<td>✅ Mükemmel</td>
+</tr>
+<tr class="even">
+<td><strong>Veri Yoğun UI</strong></td>
+<td>✅ İdeal</td>
+<td>❌ Yorucu</td>
+<td>⚠️ Orta</td>
+</tr>
+<tr class="odd">
+<td><strong>Real-time Updates</strong></td>
+<td>❌ Zayıf</td>
+<td>✅ İdeal</td>
+<td>✅ İyi</td>
+</tr>
+<tr class="even">
+<td><strong>Geliştirme Hızı (CRUD)</strong></td>
+<td>✅ Çok Hızlı</td>
+<td>❌ Yavaş</td>
+<td>⚠️ Orta</td>
+</tr>
+<tr class="odd">
+<td><strong>Özelleştirme</strong></td>
+<td>❌ Zor</td>
+<td>✅ Tam Kontrol</td>
+<td>✅ İyi</td>
+</tr>
+<tr class="even">
+<td><strong>Java Team</strong></td>
+<td>✅ İdeal</td>
+<td>❌ Öğrenme eğrisi</td>
+<td>⚠️ Orta</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="slide level2 center">
+
+<h3 id="pratik-öneriler">Pratik Öneriler</h3>
+<p><strong>JSF (PrimeFaces) seçin eğer:</strong> - Çoğunlukla veri girişi, tablolar, formlar varsa - Ekip Java biliyorsa, JavaScript bilmiyorsa - Hız kritik (6 ayda 50 ekran yapılacak) - İç kullanıcılar için (B2B/Internal)</p>
+<p><strong>Modern SPA seçin eğer:</strong> - SEO kritikse (B2C, marketing) - Çok dinamik, interaktif UI gerekiyorsa - Ekip frontend uzmanıysa - Mobil first tasarım şartsa</p>
+<p><strong>Hybrid (Next.js SSR) seçin eğer:</strong> - İkisinin avantajlarını istiyorsanız - SEO + Dinamik UI gerekiyorsa - Type safety uçtan uca istiyorsanız</p>
+<div style="font-size: 1.5em;">
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Önemli</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>Mimari kararı teknoloji değil, bağlamdır.</strong> “Modern” olmak için React seçmek, 3x daha yavaş geliştirmeyi kabullenmek demektir. “Eski” kaldı diye JSF’i terk etmek, kanıtlanmış çözümden vazgeçmektir.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="büyük-resim-mimari-sarkaç-the-pendulum" class="slide level2 center">
+<h2>2️⃣ Büyük Resim: Mimari Sarkaç (The Pendulum)</h2>
+<p>Yazılım dünyası doğrusal bir çizgide ilerlemez; bir sarkaç gibi salınır. Biz şu an, sarkacın tekrar “Sunucu” (Server) tarafına döndüğü tarihi bir ana tanıklık ediyoruz.</p>
+
+<img data-src="images/diagram_03_pendulum.png" class="r-stretch quarto-figure-center"><p class="caption">Mimari Sarkaç</p></section>
+<section class="slide level2 center">
+
+<h3 id="aydınlanma-anı-the-aha-moment">Aydınlanma Anı (The Aha! Moment)</h3>
+<ul>
+<li><strong>Dün (JSF):</strong> <code>h:commandButton</code> ile sunucudaki bir Java metodunu çağırırdık.</li>
+<li><strong>Bugün (Next.js):</strong> <code>Server Actions</code> ile sunucudaki bir TypeScript fonksiyonunu çağırıyoruz.</li>
+<li><strong>Fark:</strong> Aradaki teknoloji (XML vs JSX, HTTP Session vs Closure) değişti, ama <strong>Mindset</strong> aynı: “Veri nerede duruyorsa, işlem orada yapılmalıdır.”</li>
+</ul>
+</section>
+<section class="slide level2 center">
+
+<h3 id="ne-konuştuk-farklı-perspektiflerden-neler-gördük">🎯 Ne Konuştuk? Farklı Perspektiflerden Neler Gördük?</h3>
+<p><strong>“Bu sunum bana ne katacak?”</strong> — Uzmanlık alanınıza göre konuşacağımız konular:</p>
+</section>
+<section class="slide level2 center">
+
+<h4 id="backend-developer-javaspringnode">👨‍💻 Backend Developer (Java/Spring/Node)</h4>
+<ul>
+<li>REST API’lerinizin neden <strong>“glue code fabrikası”</strong> haline geldiğini konuşacağız</li>
+<li>N+1 query probleminin client’a taşındığında <strong>nasıl katlanarak büyüdüğünü</strong> göstereceğiz</li>
+<li>Server Actions’ın aslında <strong>RPC’nin modern hali</strong> olduğunu keşfedeceğiz</li>
+<li><strong>“Frontend ekibi neden bu kadar dosya istiyor?”</strong> sorusunun mimari cevabını tartışacağız</li>
+</ul>
+</section>
+<section class="slide level2 center">
+
+<h4 id="frontend-developer-reactvueangular">🎨 Frontend Developer (React/Vue/Angular)</h4>
+<ul>
+<li><code>useEffect</code> kaosunun neden kaçınılmaz olduğunu ve <strong>JSF’in bunu 20 yıl önce nasıl çözdüğünü</strong> inceleyeceğiz</li>
+<li>Redux/Zustand karmaşıklığının <strong>state’in yanlış yerde tutulmasından</strong> kaynaklandığını göstereceğiz</li>
+<li>Server Components’ın neden <strong>“geri adım” değil, “yukarı çıkış”</strong> olduğunu tartışacağız</li>
+<li><strong>12 dosya probleminin</strong> kök nedenini ve nasıl azaltılacağını ele alacağız</li>
+</ul>
+</section>
+<section class="slide level2 center">
+
+<h4 id="mobile-developer-react-nativeflutter">📱 Mobile Developer (React Native/Flutter)</h4>
+<ul>
+<li>Web’in <strong>“her tıklamada sunucuya git”</strong> problemini neden yeniden kucakladığını konuşacağız</li>
+<li>Offline-first mimarinin web’de neden <strong>hala zor</strong> olduğunu karşılaştıracağız</li>
+<li>API tasarımında <strong>over-fetching vs under-fetching</strong> dengesini inceleyeceğiz</li>
+<li>BFF (Backend for Frontend) pattern’inin neden mobil için <strong>kritik</strong> olduğunu tartışacağız</li>
+</ul>
+</section>
+<section class="slide level2 center">
+
+<h4 id="fullstack-developer">🔧 Fullstack Developer</h4>
+<ul>
+<li><strong>“Her iki tarafı da biliyorum ama neden bu kadar yoruluyorum?”</strong> sorusunun cevabını arayacağız</li>
+<li>JSF’in tek stack avantajını, modern tooling ile <strong>nasıl geri kazanacağınızı</strong> göstereceğiz</li>
+<li>tRPC/Server Actions ile <strong>tip güvenliğini uçtan uca</strong> nasıl sağlayacağınızı tartışacağız</li>
+<li>Mimari seçimlerinizi <strong>hıza, güvenliğe ve bakım maliyetine</strong> göre değerlendireceğiz</li>
+</ul>
+</section>
+<section class="slide level2 center">
+
+<h3 id="büyük-resim-mimari-sarkaç-the-pendulum-1">🔄 Büyük Resim: Mimari Sarkaç (The Pendulum)</h3>
+<p>Yazılım dünyası doğrusal bir çizgide ilerlemez; bir sarkaç gibi salınır. Biz şu an, sarkacın tekrar “Sunucu” (Server) tarafına döndüğü tarihi bir ana tanıklık ediyoruz.</p>
+
+<img data-src="images/diagram_03_pendulum.png" class="r-stretch quarto-figure-center"><p class="caption">Mimari Sarkaç</p></section>
+<section class="slide level2 center">
+
+<h3 id="aydınlanma-anı-the-aha-moment-1">Aydınlanma Anı (The Aha! Moment)</h3>
+<ul>
+<li><strong>Dün (JSF):</strong> <code>h:commandButton</code> ile sunucudaki bir Java metodunu çağırırdık.</li>
+<li><strong>Bugün (Next.js):</strong> <code>Server Actions</code> ile sunucudaki bir TypeScript fonksiyonunu çağırıyoruz.</li>
+<li><strong>Fark:</strong> Aradaki teknoloji (XML vs JSX, HTTP Session vs Closure) değişti, ama <strong>Mindset</strong> aynı: “Veri nerede duruyorsa, işlem orada yapılmalıdır.”</li>
+</ul>
+</section>
+<section class="slide level2 center">
+
+<h3 id="ne-konuştuk-farklı-perspektiflerden-neler-gördük-1">🎯 Ne Konuştuk? Farklı Perspektiflerden Neler Gördük?</h3>
+<p><strong>“Bu sunumda neler konuştuk?”</strong> — Uzmanlık alanınıza göre ele aldığımız konular:</p>
+</section>
+<section class="slide level2 center">
+
+<h4 id="backend-developer-javaspringnode-1">👨‍💻 Backend Developer (Java/Spring/Node)</h4>
+<ul>
+<li>REST API’lerinizin neden <strong>“glue code fabrikası”</strong> haline geldiğini konuştuk</li>
+<li>N+1 query probleminin client’a taşındığında <strong>nasıl katlanarak büyüdüğünü</strong> gördük</li>
+<li>Server Actions’ın aslında <strong>RPC’nin modern hali</strong> olduğunu keşfettik</li>
+<li><strong>“Frontend ekibi neden bu kadar dosya istiyor?”</strong> sorusunun mimari cevabını tartıştık</li>
+</ul>
+</section>
+<section class="slide level2 center">
+
+<h4 id="frontend-developer-reactvueangular-1">🎨 Frontend Developer (React/Vue/Angular)</h4>
+<ul>
+<li><code>useEffect</code> kaosunun neden kaçınılmaz olduğunu ve <strong>JSF’in bunu 20 yıl önce nasıl çözdüğünü</strong> inceledik</li>
+<li>Redux/Zustand karmaşıklığının <strong>state’in yanlış yerde tutulmasından</strong> kaynaklandığını gördük</li>
+<li>Server Components’ın neden <strong>“geri adım” değil, “yukarı çıkış”</strong> olduğunu tartıştık</li>
+<li><strong>12 dosya probleminin</strong> kök nedenini ve nasıl azaltılabileceğini ele aldık</li>
+</ul>
+</section>
+<section class="slide level2 center">
+
+<h4 id="mobile-developer-react-nativeflutter-1">📱 Mobile Developer (React Native/Flutter)</h4>
+<ul>
+<li>Web’in <strong>“her tıklamada sunucuya git”</strong> problemini neden yeniden kucakladığını konuştuk</li>
+<li>Offline-first mimarinin web’de neden <strong>hala zor</strong> olduğunu karşılaştırdık</li>
+<li>API tasarımında <strong>over-fetching vs under-fetching</strong> dengesini inceledik</li>
+<li>BFF (Backend for Frontend) pattern’inin neden mobil için <strong>kritik</strong> olduğunu tartıştık</li>
+</ul>
+</section>
+<section class="slide level2 center">
+
+<h4 id="fullstack-developer-1">🔧 Fullstack Developer</h4>
+<ul>
+<li><strong>“Her iki tarafı da biliyorum ama neden bu kadar yoruluyorum?”</strong> sorusunun cevabını aradık</li>
+<li>JSF’in tek stack avantajını, modern tooling ile <strong>nasıl geri kazanabileceğinizi</strong> gösterdik</li>
+<li>tRPC/Server Actions ile <strong>tip güvenliğini uçtan uca</strong> nasıl sağlayabileceğinizi tartıştık</li>
+<li>Mimari seçimlerinizi <strong>hıza, güvenliğe ve bakım maliyetine</strong> göre değerlendirdik</li>
+</ul>
+</section>
+<section class="slide level2 center">
+
+<h4 id="devops-platform-engineer">⚙️ DevOps / Platform Engineer</h4>
+<ul>
+<li>JSF’in <strong>“tek WAR, tek sunucu”</strong> basitliğinden <strong>“12 servis, 3 CDN, 2 edge”</strong> karmaşıklığına geçişi inceledik</li>
+<li><strong>Stateful vs Stateless</strong> deployment’ın altyapı maliyetine etkisini konuştuk</li>
+<li>Session Replication (JSF) vs JWT/Redis (SPA) <strong>operasyonel farklarını</strong> karşılaştırdık</li>
+<li><strong>Bundle size, cold start, edge caching</strong> gibi modern deployment zorluklarını ele aldık</li>
+<li>“Neden artık <strong>sadece <code>mvn deploy</code> yetmiyor?</strong>” sorusunu cevapladık</li>
+</ul>
+</section>
+<section class="slide level2 center">
+
+<h4 id="architect-tech-lead">🏗️ Architect / Tech Lead</h4>
+<ul>
+<li>Teknoloji seçimlerinin <strong>25 yıllık tarihsel bağlamını</strong> birlikte keşfettik</li>
+<li><strong>“Modern olmak”</strong> ile <strong>“doğru mimari”</strong> arasındaki farkı netleştirdik</li>
+<li>Ekip kompozisyonuna göre <strong>hangi stack’in ROI’si yüksek</strong> olduğunu değerlendirdik</li>
+<li>JSF’in <strong>zorunlu kıldığı best practice’leri</strong> modern stack’te nasıl uygulayabileceğinizi tartıştık</li>
+</ul>
+</section>
+<section class="slide level2 center">
+
+<h4 id="junior-developer">🎓 Junior Developer /</h4>
+<ul>
+<li>Web mimarisinin <strong>“neden böyle evrildiğini”</strong> hikaye formatında anlattık</li>
+<li>Buzzword’lerin arkasındaki <strong>gerçek problemleri</strong> açıkladık</li>
+<li>Kariyerinizde karşılaşacağınız <strong>mimari tartışmalara</strong> hazırladık</li>
+<li><strong>“Eski teknoloji = kötü”</strong> yanılgısını birlikte sorguladık</li>
+</ul>
+</section>
+<section class="slide level2 center">
+
+</section>
+<section id="kapanış" class="slide level2 center">
+<h2>🏁 Kapanış</h2>
+<div class="quarto-figure quarto-figure-center" style="transform: scale(1.5);">
+<figure>
+<p><img data-src="images/diagram_15_spiral_ascent.png"></p>
+<figcaption>Spiral Yükseliş</figcaption>
+</figure>
+</div>
+<p><img data-src="./images/spiral_ascent_final.png" style="transform: scale(1.5);" alt="Spiral Yükseliş"> <!-- ⚠️ EKSİK GÖRSEL: Bu dosya henüz oluşturulmamış --></p>
+<!-- 📸 GÖRSEL PROMPT: spiral_ascent_final.png
+Prompt: "A dramatic upward spiral staircase illustration:
+- Bottom level (dark, old): 'JSF 2006' with Java logo
+- Middle level (bright, chaotic): 'SPA 2015' with React/Angular logos, scattered files
+- Top level (bright, organized): 'RSC 2024' with Next.js logo, clean architecture
+The spiral clearly goes UP, not just around. Light coming from above.
+Text overlay: 'We're not going back. We're going UP.'
+Style: Architectural visualization, inspirational."
+Boyut: 1200x1000px, Format: PNG -->
+<p><strong>Son Söz:</strong> JSF öğrenmiş bir mühendis, Next.js öğrenirken zorlanmaz. Çünkü o, <strong>dağıtık sistemlerin zorluklarını ve sunucu tarafı render etmenin konforunu</strong> zaten biliyordur.</p>
+<p><strong>“Teknolojiler değişir, mimari prensipler baki kalır.”</strong></p>
+
+</section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<p><img src="images/ouroboros_generated.png" class="slide-logo"></p>
+<div class="footer footer-default">
+
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="sunum_files/libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="sunum_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="sunum_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="sunum_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="sunum_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="sunum_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
+  <script src="sunum_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="sunum_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="sunum_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="sunum_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="sunum_files/libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': true,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"8\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'chalkboard': {"buttons":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: true,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'slide',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1920,
+
+        height: 1080,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 5.0e-2,
+
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
+          }
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Kopyalandı");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Kopyalandı");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp('/' + window.location.host + '/');
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
+        }
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
+    
+
+</body></html>
