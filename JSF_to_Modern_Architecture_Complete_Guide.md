@@ -1,5 +1,7 @@
 # Dijital Ouroboros: Geleceğin Arkeolojisi
 
+![Dijital Ouroboros](images/ouroboros_generated.png)
+
 **Alt Başlık:** Tarih Tekerrürden İbarettir: Sunucudan Ayrılış ve Eve Dönüş
 
 > **🐍 Ouroboros Nedir?**
@@ -17,6 +19,13 @@ Bu doküman bir teknoloji karşılaştırması **değildir**. Bu, web geliştirm
 1. **Mimari Sarkacın Hareketini Anlamak**: Her teknolojinin **neden** ortaya çıktığını, **hangi problemi** çözdüğünü ve **hangi yeni problemleri** yarattığını keşfetmek.
 
 2. **Gizli Abstraction'ları Görünür Kılmak**: Modern software stack'lerin katmanları arasına gizlenmiş component'leri, mekanizmaları ve tasarım kararlarını açığa çıkarmak. Birçok developer, kullandığı framework'ün "magic" diye gördüğü özelliklerin aslında 20 yıl önceki çözümlerin modern versiyonları olduğunu bilmez.
+
+![Sihir gibi görünen şey aslında mühendislik](images/magic_is_engineering.png)
+![Sihir gibi görünen şey aslında mühendislik detaylı](images/magic_is_engineering_v2.png)  
+
+> [!TIP] Alternatif Görsel Fikri: **"Buzdağı (Iceberg)"**  
+> Üstte: Basit bir buton (Görünen).  
+> Altta: Devasa dişliler, kablolar ve mekanizmalar (Görünmeyen Mühendislik).
 
 ### 🎯 Bu Sunumda Neler Konuşacağız?
 
@@ -114,15 +123,6 @@ Bir sarkaçtan çok, **yukarı doğru bir spiral** hareketi bu. Her döngüde bi
 
 Bu yolculukta tekrar tekrar göreceğiniz üç evrensel hakikat var. Bunları baştan bilmek, teknolojiler arasındaki geçişleri anlamanızı kolaylaştıracak.
 
-> [!NOTE]  
-> **"Yeni teknolojiler, eski problemleri yeni söz dizimiyle (syntax) çözer. Problemler sabittir."**
-
-![Sihir gibi görünen şey aslında mühendislik](images/magic_is_engineering.png)
-![Sihir gibi görünen şey aslında mühendislik detaylı](images/magic_is_engineering_v2.png)  
-
-> [!TIP] Alternatif Görsel Fikri: **"Buzdağı (Iceberg)"**  
-> Üstte: Basit bir buton (Görünen).  
-> Altta: Devasa dişliler, kablolar ve mekanizmalar (Görünmeyen Mühendislik).
 
 
 ### İlke 1: State Management Asla Kaybolmaz, Sadece Yer Değiştirir
@@ -172,8 +172,6 @@ Fizikteki "Enerjinin Korunumu Yasası" gibi, yazılımda da "**Karmaşıklığı
 ![Karmaşıklık orada bir yerde](images/complexity_conservation.png)
 ![Karmaşıklık orada bir yerde detaylı](images/complexity_conservation_v2.png)  
 
-> [!TIP] Alternatif Görsel Fikri: **"Su Yatağı (Waterbed Theory)"**  
-> Bir taraftan bastırınca (Sunucuyu basitleştir), diğer taraf şişer (Client karmaşıklaşır). Karmaşıklık hacmi asla azalmaz.
 
 
 - **JSF**: Karmaşıklık sunucuda (Lifecycle, Session)
@@ -181,6 +179,15 @@ Fizikteki "Enerjinin Korunumu Yasası" gibi, yazılımda da "**Karmaşıklığı
 - **Modern Stack**: Karmaşıklık dağıtıldı (Sunucu + İstemci + Build Time)
 
 **Sonuç:** Karmaşıklığı yok edemezsiniz, sadece en az zarar vereceği yere taşırsınız.
+
+#### Karmaşıklık Eğrisi: Görsel Analiz
+
+Neden SPA'dan SSR'a dönülüyor? Çünkü "Arızi Karmaşıklık" (Accidental Complexity) yönetilemez hale geldi.
+
+![Karmaşıklık Eğrisi](images/diagram_07_complexity_curve.png)
+
+*   **SPA + REST:** Basit bir "Merhaba Dünya" için bile DTO, Controller, Service, Axios, Redux, Store, Component gerekir. (10+ Dosya)
+*   **Modern Monolit (SSR):** Veritabanı ve UI yan yana. (2-3 Dosya). Tip güvenliği (Type Safety) uçtan uca otomatik.
 
 ---
 
@@ -268,41 +275,7 @@ Yazılım dünyası doğrusal bir çizgide ilerlemez; bir sarkaç gibi salınır
 ### Aydınlanma Anı (The Aha! Moment)
 *   **Dün (JSF):** `h:commandButton` ile sunucudaki bir Java metodunu çağırırdık.
 *   **Bugün (Next.js):** `Server Actions` ile sunucudaki bir TypeScript fonksiyonunu çağırıyoruz.
-*   **Fark:** Aradaki teknoloji (XML vs JSX, HTTP Session vs Closure) değişti, ama **zihniyet** (Mindset) aynı: "Veri nerede duruyorsa, işlem orada yapılmalıdır."
-
-### Component Ağacı: UI Nerede Yaşıyor?
-
-UI bileşenlerimiz (Button, Input, Panel) nerede yaşıyor? Bu sorunun cevabı, mimarinin kalbidir.
-
-![Component Tree Evrimi](images/11_component_tree_evolution.png)
-
-<!-- TODO: review -->
-![Component Tree Evrimi](/images/component_tree_evolution.png)
-<!-- ⚠️ EKSİK GÖRSEL: Bu dosya henüz oluşturulmamış -->
-
-<!-- 📸 GÖRSEL PROMPT: component_tree_evolution.png
-Prompt: "Three-panel horizontal illustration showing component tree location over time:
-PANEL 1 (2006 - JSF): Tree inside a SERVER box, browser shows only reflection
-PANEL 2 (2015 - React): Tree inside BROWSER box, server is empty/minimal
-PANEL 3 (2024 - RSC): Tree split - trunk/branches in SERVER, leaves in BROWSER
-Arrows showing evolution. Timeline at bottom.
-Title: 'Where Does the UI Tree Live?'"
-Boyut: 1600x500px, Format: PNG -->
-
-#### A. JSF: "Ağaç Sunucuda Yaşar"
-JSF'de `UIViewRoot` sunucu hafızasındadır (Heap). Tarayıcı sadece bir "yansıtıcıdır" (Renderer).
-*   **Avantaj:** Güvenli, veritabanına yakın.
-*   **Dezavantaj:** Sunucu belleği şişer (Session Replication derdi).
-
-#### B. React SPA: "Ağaç Tarayıcıya Taşındı"
-2010'larda ağacı söküp kullanıcının tarayıcısına (Virtual DOM) taşıdık.
-*   **Avantaj:** Sunucu rahatladı (Stateless), etkileşim hızlandı.
-*   **Bedel:** Kullanıcının telefonu ısındı, "Loading..." spinner'ları hayatımıza girdi.
-
-#### C. Modern Mimari (RSC): "Ağaç Eve Dönüyor"
-React Server Components (RSC) ile ağacın gövdesini tekrar sunucuya taşıdık, sadece yapraklarını (Interactivity) tarayıcıda bıraktık.
-
-![RSC Class Diyagramı](images/diagram_04_rsc_class.png)
+*   **Fark:** Aradaki teknoloji (XML vs JSX, HTTP Session vs Closure) değişti, ama **Mindset** aynı: "Veri nerede duruyorsa, işlem orada yapılmalıdır."
 
 ### 🔍 JSF'in Kalbi: Request Processing Lifecycle
 
@@ -313,10 +286,13 @@ React Server Components (RSC) ile ağacın gövdesini tekrar sunucuya taşıdık
 
 Bir JSF sayfasına tıkladığınızda, sunucu tarafında bu **6 adım asla şaşmaz**. Modern frontend framework'lerinde `useEffect` karmaşası yaşarken, JSF 20 yıldır bu katı disiplini uygular.
 
-![JSF Lifecycle Diyagramı](images/diagram_05_jsf_lifecycle.png)
+
 
 ![JSF Lifecycle Faz Akışı](images/jsf_lifecycle_phases.png)
+
 ![JSF Lifecycle Faz Akışı detaylı](images/jsf_lifecycle_phases_v2.png)  
+
+![JSF Lifecycle Diyagramı](images/diagram_05_jsf_lifecycle.png)
 
 > [!TIP] Alternatif Görsel: **"Fabrika Montaj Hattı"**  
 > Ham madde (Request) girer → 1. İstasyon (Restore) → 2. İstasyon (Apply) ... → Ürün (Response) çıkar. Hatalı ürün (Validation Error) hattan erken atılır.
@@ -376,6 +352,34 @@ public String login() {
 
 > [!NOTE]  
 > **Dikkat ettiniz mi?** Sizin yazdığınız Java kodu (`login` metodu) ancak **5. aşamada** çalıştı. Önceki 4 aşamayı JSF sizin için halletti. Modern frameworklerde (React, Angular) ise validasyonu, veri binding'i, tip dönüşümünü **manuel olarak** kodlamak zorundasınız.
+
+### Component Tree: UI Nerede Yaşıyor?
+
+UI bileşenlerimiz (Button, Input, Panel) **nerede yaşıyor?** Bu sorunun cevabı, mimarinin kalbidir.
+
+![Component Tree Evrimi](images/11_component_tree_evolution.png)
+
+#### A. JSF: "Ağaç Sunucuda Yaşar"
+JSF'de `UIViewRoot` sunucu hafızasındadır (Heap). Tarayıcı sadece bir "yansıtıcıdır" (Renderer).
+*   **Avantaj:** Güvenli, veritabanına yakın.
+*   **Dezavantaj:** Sunucu belleği şişer (Session Replication derdi).
+
+#### B. React SPA: "Ağaç Tarayıcıya Taşındı"
+2010'larda ağacı söküp kullanıcının tarayıcısına (Virtual DOM) taşıdık.
+*   **Avantaj:** Sunucu rahatladı (Stateless), etkileşim hızlandı.
+*   **Bedel:** Kullanıcının telefonu ısındı, "Loading..." spinner'ları hayatımıza girdi.
+
+#### C. Modern Mimari (RSC): "Ağaç Eve Dönüyor"
+React Server Components (RSC) ile ağacın gövdesini tekrar sunucuya taşıdık, sadece yapraklarını (Interactivity) tarayıcıda bıraktık.
+Modern React (Next.js Server Actions), sadece veriyi değil, fonksiyonun o anki ortamını (Closure) dondurur.(javascript closure)
+
+> [!TIP] **"Kodun Kendisi" vs "Kodun Sonucu" Farkı**
+> Bunu bir **Restoran Menüsü** üzerinden anlayabiliriz:
+>
+> - **Client Side (Eski)**: Garson sana **Yemek Tarifi Kitabı** getirir. Sen masada oturup o tarife bakarak yemeği kendin yaparsın. *(Tarayıcı yorulur, JS indirir)*
+> - **Server Side (RSC)**: Aşçı mutfakta tarife bakar, yemeği yapar. Garson sana **Hazır Yemek** getirir. *(Tarayıcı sadece yer/gösterir)*
+
+![RSC Class Diyagramı](images/diagram_04_rsc_class.png)
 
 #### Gizli Kahraman: Component Tree (UIViewRoot)
 
@@ -1048,22 +1052,17 @@ Gelin, 20 yıl arayla yazılmış iki kod parçasına bakalım. Benzerlik şok e
 
 JSF'in en çok eleştirilen yanı `ViewState` (o devasa şifreli hidden input) idi. Modern mimari bunu nasıl çözdü?
 
-*   **JSF:** Sunucu durumunu (State) korumak için sayfaya gizli bir `input` gömerdi.
-*   **Next.js:** Fonksiyonun bağlamını (Context) korumak için **Closure** kullanır ve bunu şifreleyip HTML'e gömer.
+**Karşılaştırma:**
+
+*   **JSF (2006):** Sunucu durumunu (State) korumak için sayfaya gizli bir `<input type="hidden" name="javax.faces.ViewState">` gömerdi.
+*   **Next.js (2024):** Fonksiyonun bağlamını (Context) korumak için **Closure** kullanır ve bunu şifreleyip HTML'e gömer.
 
 Aslında ikisi de aynı şeyi yapar: **Stateless olan HTTP protokolü üzerinde, Stateful bir deneyim simüle etmek.**
 
-> **Ufuk Açıcı Not:** Modern mimari, "Stateless" dogmasından vazgeçip, "Akıllı State" (Smart State) kavramına geçiş yapmıştır. Artık her şeyi sunucuda tutmuyoruz (RAM tasarrufu), ama her şeyi istemciye de yüklemiyoruz (Network tasarrufu).
+> [!NOTE] Ufuk Açıcı Not
+> Modern mimari, "Stateless" dogmasından vazgeçip, "Akıllı State" (Smart State) kavramına geçiş yapmıştır. Artık her şeyi sunucuda tutmuyoruz (RAM tasarrufu), ama her şeyi istemciye de yüklemiyoruz (Network tasarrufu).
 
 ---
-
-## 5. Karmaşıklık Eğrisi: Neden Dönüyoruz?
-
-Neden SPA'dan SSR'a dönülüyor? Çünkü "Arızi Karmaşıklık" (Accidental Complexity) yönetilemez hale geldi.
-![Karmaşıklık Eğrisi](images/diagram_07_complexity_curve.png)
-
-*   **SPA + REST:** Basit bir "Merhaba Dünya" için bile DTO, Controller, Service, Axios, Redux, Store, Component gerekir. (10+ Dosya)
-*   **Modern Monolit:** Veritabanı ve UI yan yana. (2-3 Dosya). Tip güvenliği (Type Safety) uçtan uca otomatik.
 ## 7️⃣ Veri Perspektifi: Mimari Kararların Gerçek Maliyeti
 
 Mimari seçimler sadece "hangi framework" sorusu değildir. **Verinin nereden geldiği, nasıl işlendiği ve nereye gittiği** en kritik karardır.
@@ -1084,17 +1083,6 @@ Mimari seçimler sadece "hangi framework" sorusu değildir. **Verinin nereden ge
 
 ![N+1 Query Problemi](images/08_n_plus_one.png)
 
-<!-- ⚠️ EKSİK GÖRSEL: Bu dosya henüz oluşturulmamış -->
-
-<!-- 📸 GÖRSEL PROMPT: n_plus_one_problem.png
-Prompt: "Split comparison diagram:
-LEFT (Server-side JSF): Single arrow from 'Server' to 'Database' with '1 Query' label, 
-then single arrow to 'Browser' with complete HTML
-RIGHT (Client-side SPA): Arrow from 'Browser' to 'API' labeled '1', then 100 small arrows 
-back and forth labeled '+100 requests'. Red warning icon.
-Title: 'N+1 Problem: Server vs Client'
-Style: Network diagram with latency indicators."
-Boyut: 1400x600px, Format: PNG -->
 
 **Senaryo**: 100 kullanıcı listesi, her birinin departmanı gösterilecek.
 
@@ -1162,23 +1150,11 @@ const users = await fetch('/api/users'); // 1 istek
 
 ### Waterfall: Client'ta mı, Server'da mı?
 
-![Waterfall Karşılaştırması](images/12_waterfall_comparison.png)
+![Waterfall Karşılaştırması](images/waterfall_comparison.png)
 
 
-![Waterfall Karşılaştırması](/images/waterfall_comparison.png)
-<!-- ⚠️ EKSİK GÖRSEL: Bu dosya henüz oluşturulmamış -->
+![Waterfall Karşılaştırması](/images/diagram_12_waterfall_comparison)
 
-<!-- 📸 GÖRSEL PROMPT: waterfall_comparison.png
-Prompt: "Two waterfall/timeline diagrams stacked vertically:
-TOP (Client-side SPA): Long sequential bars showing:
-  'Page Load' -> 'JS Parse' -> 'API Call 1' -> 'Wait' -> 'Render' -> 'API Call 2' -> 'Wait'
-  Total time: ~800ms, lots of gray 'waiting' segments
-BOTTOM (Server-side): Compact parallel bars:
-  'Request' -> 'DB Queries (parallel)' -> 'HTML Generate' -> 'Response'
-  Total time: ~200ms, minimal waiting
-Color coding: Green=work, Gray=waiting, Red=network
-Title: 'Data Fetching Waterfall: Client vs Server'"
-Boyut: 1200x800px, Format: PNG -->
 
 **Client-side Data Fetching (SPA)**:
 ```
